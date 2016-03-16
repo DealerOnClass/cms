@@ -1,0 +1,27 @@
+//
+//  Var
+$breadcrumb__contrast:  $global__contrast;
+$breadcrumb__radius:    $global__radius;
+$breadcrumb__x:         $global__x;
+$breadcrumb__y:         $global__y;
+//
+//  Base
+.breadcrumb {
+    @include clearfix;
+
+    border: $one__pixel solid;
+    border-radius: $breadcrumb__radius;
+}
+
+.breadcrumb > li {
+    display: block;
+    float: left;
+
+    padding: $breadcrumb__y $breadcrumb__x;
+}
+
+@include breadcrumb-color-variation($default__palette);
+@include breadcrumb-color-variation($inverse__palette);
+@include breadcrumb-color-variation($primary__palette);
+@include breadcrumb-color-variation($neutral__palette);
+@include breadcrumb-color-variation($state__palette);

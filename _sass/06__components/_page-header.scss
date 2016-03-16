@@ -1,0 +1,12 @@
+//
+//  Units
+$page-header__color:  $primary__color;
+$page-header__x:      $global__x;
+$page-header__y:      rhythm($global__y);
+//
+//  Base
+.page-header {
+    text-transform: capitalize;
+
+    color: $page-header__color;
+}

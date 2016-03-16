@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+{% capture object-title %}{{ page.title | downcase }}{% endcapture %}
+{% capture object-title-class %}{{ page.title | downcase }}-{% endcapture %}
+{% capture object-title-id %}#{{ page.title | downcase }}-{% endcapture %}
+
+<section id="js-object-id" data-object-id="{{ object-title }}"></section>
+
+<section id="js-object-base" class="section page-section">
+    <header class="header page-header">
+        <h3>{{ object-title | append: " Base" }}</h3>
+    </header>
+    <div id="{{ object-title | prepend: '#' | append: '-base' }}" class="section page-section">
+        <h5>{{ object-title }}</h5>
+        {{ page.base }}
+        {% highlight html %}
+{{ page.base }}{% endhighlight %}
+    </div>
+</section>
+
+<section id="js-object-variations" class="section page-section">
+    <header class="header page-header">
+        <h3>{{ object-title | append: " Variations" }}</h3>
+    </header>
+    {% for variant in page.variants %}
+    <div id="{{ variant.id | prepend: object-title-id }}" class="section page-section">
+        <h5>{{ variant.id | prepend: object-title-class }}</h5>
+        {{ variant.base }}
+        {% highlight html %}
+{{ variant.base }}{% endhighlight %}
+    </div>
+    {% endfor %}
+</section>
+
+<section id="js-object-themes" class="section page-section">
+    <header class="header page-header">
+        <h3>{{ object-title | append: " Themes" }}</h3>
+    </header>
+    {% for palette in site.palettes %}
+    {% for color in palette.colors %}
+    <div id="{{ color | prepend: object-title-id }}" class="section page-section" data-object-color="{{ color }}">
+        <h5>{{ color | prepend: object-title-class }}</h5>
+        {{ page.base }}
+        {% highlight html %}
+{{ page.base }}{% endhighlight %}
+    </div>
+    {% endfor %}
+    {% endfor %}
+</section>
+
+<footer class="footer page-footer">
+    {% if page.next and page.next.categories contains "objects" %}
+    <a class="btn float--right" href="{{ page.next.url | prepend: site.baseurl }}">
+        Next: {{ page.next.title }}
+    </a>
+    {% endif %}
+    {% if page.previous and page.previous.categories contains "objects" %}
+    <a class="btn float--left" href="{{ page.previous.url | prepend: site.baseurl }}">
+        Previous: {{ page.previous.title }}
+    </a>
+    {% endif %}
+</footer>

@@ -1,0 +1,25 @@
+//
+//  Var
+$badge__contrast:  $global__contrast;
+$badge__radius:    $global__radius;
+$badge__x:         $global__x;
+$badge__y:         $global__y;
+//
+//  Base
+.badge {
+    line-height: 1;
+
+    display: inline-block;
+
+    padding: $badge__y $badge__x;
+
+    border: $one__pixel solid transparent;
+    border-radius: $badge__radius;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+@include badge-color-variation($default__palette);
+@include badge-color-variation($inverse__palette);
+@include badge-color-variation($primary__palette);
+@include badge-color-variation($neutral__palette);
+@include badge-color-variation($state__palette);

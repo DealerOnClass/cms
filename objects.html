@@ -1,0 +1,15 @@
+---
+layout:     page
+title:      Objects
+permalink:  /objects/
+navgroup:   "main"
+navorder:   3
+---
+<ul>
+    {% assign objects = site.objects | sort: 'listing-priority' %}
+    {% for object in objects %}
+    <li>
+        <a href="{{ object.url | prepend: site.baseurl }}">{{ object.object-title }}</a>
+    </li>
+    {% endfor %}
+</ul>

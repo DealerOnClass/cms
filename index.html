@@ -1,0 +1,49 @@
+---
+layout:     default
+title:      Home
+permalink:  /
+navgroup:   "main"
+navorder:   1
+---
+{% assign objects = site.objects %}
+{% for object in objects %}
+<section class="section site-section">
+
+    <header class="header page-header clearfix">
+        <h5 class="float--left">
+            {{ object.title }}
+        </h5>
+        <a class="btn btn-main float--right" href="{{ object.url | prepend: site.baseurl }}">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </header>
+
+    <div>
+        {{ object.base }}
+        {% highlight html %}
+{{ object.base }}{% endhighlight %}
+    </div>
+
+    <!--<h5>Variations</h5>-->
+    <!--<ul>-->
+        <!--{% capture object-title-class %}{{ object.title | downcase }}-{% endcapture %}-->
+        <!--{% for variant in object.variants %}-->
+        <!--<li>-->
+            <!--{{ variant.id | prepend: object-title-class }}-->
+        <!--</li>-->
+        <!--{% endfor %}-->
+    <!--</ul>-->
+
+    <!--<h5>Themes</h5>-->
+    <!--<ul>-->
+        <!--{% for palette in site.palettes %}-->
+        <!--{% for color in palette.colors %}-->
+        <!--<li>-->
+            <!--{{ color | prepend: object-title-class }}-->
+        <!--</li>-->
+        <!--{% endfor %}-->
+        <!--{% endfor %}-->
+    <!--</ul>-->
+
+</section>
+{% endfor %}

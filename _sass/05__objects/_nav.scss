@@ -1,0 +1,46 @@
+//
+//  Units
+$nav__x:  $global__x;
+$nav__y:  rhythm($global__y);
+//
+//  Base
+.nav {
+    @include clearfix;
+}
+
+.nav--navbar {
+    .nav__item {
+        display: block;
+        float: left;
+    }
+}
+
+.nav__group {
+    @include row($nav__x);
+}
+
+.nav__item {
+    @include column($nav__x);
+
+    padding-top: $nav__y;
+    padding-bottom: $nav__y;
+}
+
+.nav__item--active {
+    opacity: 0.5;
+}
+
+.nav__item--svg {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
