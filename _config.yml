@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
 #   General Build Settings
 #
 #   Url
-#baseurl: "/cms"            # remote
+baseurl: "/cms"             # remote
 baseurl: ""                 # local
 url: ""                     # the base hostname & protocol for your site
 permalink: pretty
