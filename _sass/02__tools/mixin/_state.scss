@@ -22,3 +22,10 @@
         @content;
     }
 }
+//
+@mixin state {
+    &:hover,
+    &:active {
+        @content;
+    }
+}

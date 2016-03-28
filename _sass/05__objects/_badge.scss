@@ -2,8 +2,8 @@
 //  Var
 $badge__contrast:  $global__contrast;
 $badge__radius:    $global__radius;
-$badge__x:         $global__x;
-$badge__y:         $global__y;
+$badge__x:         ($global__x / 2);
+$badge__y:         ($global__y / 2);
 //
 //  Base
 .badge {
@@ -16,8 +16,17 @@ $badge__y:         $global__y;
     border: $one__pixel solid transparent;
     border-radius: $badge__radius;
     background-color: rgba(0, 0, 0, 0.15);
-}
 
+    .btn &,
+    .list-group-item > &,
+    .nav & {
+        float: right;
+
+        margin-left: rhythm($global__x);
+    }
+}
+//
+//  Colors
 @include badge-color-variation($default__palette);
 @include badge-color-variation($inverse__palette);
 @include badge-color-variation($primary__palette);

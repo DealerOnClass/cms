@@ -1,0 +1,9 @@
+@mixin hero-color-variation($input__palette) {
+    @each $class__name, $color in $input__palette {
+        .hero-#{$class__name} {
+            color: check-color($color, 80, inherit, $white);
+
+            background-color: $color;
+        }
+    }
+}

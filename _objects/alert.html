@@ -1,4 +1,5 @@
 ---
+name: alert
 categories:         [objects]
 
 base: |
@@ -9,10 +10,12 @@ base: |
 variants:
     - id: dismissible
       base: |
-        <div class="alert alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">×</span>
-            </button>
-            <strong>Default!</strong> You successfully read this default alert message.
-        </div>
+          <div class="alert alert-dismissible">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+              </button>
+              <strong>Default!</strong> You successfully read this default alert message.
+          </div>
+
+theme: true
 ---

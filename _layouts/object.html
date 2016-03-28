@@ -2,11 +2,13 @@
 layout: default
 ---
 
-{% capture object-title %}{{ page.title | downcase }}{% endcapture %}
-{% capture object-title-class %}{{ page.title | downcase }}-{% endcapture %}
-{% capture object-title-id %}#{{ page.title | downcase }}-{% endcapture %}
+{% capture object-title %}{{ page.name | downcase }}{% endcapture %}
+{% capture object-title-class %}{{ page.name | downcase }}-{% endcapture %}
+{% capture object-title-id %}#{{ page.name | downcase }}-{% endcapture %}
 
-<section id="js-object-id" data-object-id="{{ object-title }}"></section>
+<!-- used for javascript - do not delete - start -->
+<span id="js-object-id" data-object-id="{{ object-title }}"></span>
+<!-- used for javascript - do not delete - end -->
 
 <section id="js-object-base" class="section page-section">
     <header class="header page-header">
@@ -20,6 +22,7 @@ layout: default
     </div>
 </section>
 
+{% if page.variants %}
 <section id="js-object-variations" class="section page-section">
     <header class="header page-header">
         <h3>{{ object-title | append: " Variations" }}</h3>
@@ -33,7 +36,9 @@ layout: default
     </div>
     {% endfor %}
 </section>
+{% endif %}
 
+{% if page.theme == true %}
 <section id="js-object-themes" class="section page-section">
     <header class="header page-header">
         <h3>{{ object-title | append: " Themes" }}</h3>
@@ -49,6 +54,7 @@ layout: default
     {% endfor %}
     {% endfor %}
 </section>
+{% endif %}
 
 <footer class="footer page-footer">
     {% if page.next and page.next.categories contains "objects" %}

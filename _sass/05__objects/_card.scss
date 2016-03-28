@@ -52,7 +52,8 @@ $card__y:         $global__y;
         border: $one__pixel solid;
     }
 }
-
+//
+//  Colors
 @include card-color-variation($default__palette);
 @include card-color-variation($inverse__palette);
 @include card-color-variation($primary__palette);

@@ -12,7 +12,8 @@ $alert__y:         $global__y;
     border: $one__pixel solid;
     border-radius: $alert__radius;
 }
-
+//
+//  Variations
 .alert-dismissible {
     .close {
         position: relative;
@@ -24,7 +25,8 @@ $alert__y:         $global__y;
         padding: $alert__y;
     }
 }
-
+//
+//  Colors
 @include alert-color-variation($default__palette);
 @include alert-color-variation($inverse__palette);
 @include alert-color-variation($primary__palette);

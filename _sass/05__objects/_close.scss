@@ -16,7 +16,7 @@ $close__icon-use:  true !default;
         &:after {
             font-family: $fa-font-name;
 
-            content: '#{$close__icon}';
+            content: "#{$close__icon}";
         }
 
         > span {

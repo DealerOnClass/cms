@@ -19,7 +19,19 @@ $btn__y:         $global__y;
     border: $one__pixel solid;
     border-radius: $btn__radius;
 }
+//
+//  Variations
+.btn-link {
+    border-color: transparent;
+}
 
+.btn-block {
+    display: block;
+
+    text-align: center;
+}
+//
+//  Colors
 @include btn-color-variation($default__palette);
 @include btn-color-variation($inverse__palette);
 @include btn-color-variation($primary__palette);
