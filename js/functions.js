@@ -2,7 +2,7 @@
  *  Theme Generation
  */
 var object = document.querySelector("#js-object-id").getAttribute("data-object-id");
-var themes = document.querySelectorAll("#js-object-themes [data-object-color]");
+var themes = document.querySelectorAll("#js-object-root [data-object-change]");
 
 /*
  *  For each theme section, wherever you find the "object-id", replace
@@ -10,17 +10,17 @@ var themes = document.querySelectorAll("#js-object-themes [data-object-color]");
  */
 forEach(themes, function (index, theme) {
     var base      = theme.querySelector("." + object);
-    var color     = theme.getAttribute("data-object-color");
     var highlight = theme.querySelector(".highlight");
     var textarea  = theme.querySelector(".object-copy__textarea");
-
-    var objectOldCode = highlight.innerHTML;
-    var objectNewCode = objectOldCode.replace(object, object + " " + object + "-" + color);
-    highlight.innerHTML = objectNewCode;
+    var color     = theme.getAttribute("data-object-change");
 
     var baseOldCode = base.outerHTML;
     var baseNewCode = baseOldCode.replace(object, object + " " + object + "-" + color);
     base.outerHTML = baseNewCode;
+
+    var objectOldCode = highlight.innerHTML;
+    var objectNewCode = objectOldCode.replace(object, object + " " + object + "-" + color);
+    highlight.innerHTML = objectNewCode;
 
     var textareaOldCode = base.outerHTML;
     var textareaNewCode = textareaOldCode.replace(object, object + " " + object + "-" + color);

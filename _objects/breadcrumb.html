@@ -8,7 +8,7 @@ name: "breadcrumb"
 
 base-grid: false
 base-grid-col: col-md-6
-base-hide-code: false
+base-hide-code: true
 base: |
     <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
@@ -18,7 +18,7 @@ base: |
 
 variants-grid: false
 variants-grid-col: col-md-6
-variants-hide-code: false
+variants-hide-code: true
 variants:
     - name: rounded
       base: |
@@ -28,10 +28,22 @@ variants:
               <li class="active">Data</li>
           </ol>
 
+size: true
+size-grid: false
+size-grid-col: col-md-3
+size-hide-code: true
+size-base-use: true
+size-base: |
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+    </ol>
+
 theme: true
 theme-grid: false
 theme-grid-col: col-md-6
-theme-hide-code: false
+theme-hide-code: true
 theme-base-use: true
 theme-base: |
     <ol class="breadcrumb">

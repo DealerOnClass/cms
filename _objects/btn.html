@@ -8,34 +8,30 @@ name: "btn"
 
 base-grid: false
 base-grid-col: col-md-6
-base-hide-code: false
+base-hide-code: true
 base: |
     <button type="button" class="btn">I'm a Button</button>
 
 variants-grid: false
 variants-grid-col: col-md-6
-variants-hide-code: false
+variants-hide-code: true
 variants:
-    - name: lg
+    - name: chicken
       base: |
-          <button type="button" class="btn btn-lg">I'm a Button</button>
+          <button type="button" class="btn btn-chicken">I'm a chicken Button</button>
 
-    - name: md
-      base: |
-          <button type="button" class="btn btn-md">I'm a Button</button>
-
-    - name: sm
-      base: |
-          <button type="button" class="btn btn-sm">I'm a Button</button>
-
-    - name: xs
-      base: |
-          <button type="button" class="btn btn-xs">I'm a Button</button>
+size: true
+size-grid: false
+size-grid-col: col-md-3
+size-hide-code: true
+size-base-use: true
+size-base: |
+    <button type="button" class="btn">I'm a Button</button>
 
 theme: true
-theme-grid: false
+theme-grid: true
 theme-grid-col: col-md-3
-theme-hide-code: false
+theme-hide-code: true
 theme-base-use: true
 theme-base: |
     <button type="button" class="btn">I'm a Button</button>

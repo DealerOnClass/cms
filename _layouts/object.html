@@ -26,7 +26,7 @@ layout: default
 <span id="js-object-id" data-object-id="{{ object-title-raw }}"></span>
 <!-- used for javascript - do not delete - end -->
 
-<div class="container page-container {{ page.name | prepend: 'page-' }}">
+<div id="js-object-root" class="container page-container {{ page.name | prepend: 'page-' }}">
 
 
 
@@ -121,6 +121,72 @@ layout: default
     {% endif %}
 
 
+    {% if page.size %}
+    <section id="js-object-themes" class="section">
+
+        <header class="header">
+            <h3 class="object-section-title">Sizes</h3>
+        </header>
+
+        {% for size in site.sizes %}
+        <div class="row object-row {% if page.theme-hide-code %}{{ 'object-hide-code' }}{% endif %}">
+            <div class="col-sm-12">
+                <h5 class="object-section-subtitle">{{ size | capitalize }}</h5>
+            </div>
+            {% if page.size-grid %}
+            <div id="{{ size | prepend: object-title-id }}" class="object-wrapper {{ page.size-grid-col }}" data-object-change="{{ size }}">
+                {% if page.size-base-use %}
+                {{ page.size-base }}
+                {% highlight html %}
+{{ page.size-base }}{% endhighlight %}
+                <div class="object-copy">
+                    <button class="object-copy__btn btn btn-xs" data-clipboard-target="{{ size | prepend: '#' | append: '-base-code' }}"><i class="fa fa-files-o"></i></button>
+                    <textarea class="object-copy__textarea" id="{{  | append: '-base-code' }}">
+                        {{ page.size-base }}
+                    </textarea>
+                </div>
+                {% else %}
+                {{ page.base }}
+                {% highlight html %}
+{{ page.base }}{% endhighlight %}
+                <div class="object-copy">
+                    <button class="object-copy__btn btn btn-xs" data-clipboard-target="{{ size | prepend: '#' | append: '-base-code' }}"><i class="fa fa-files-o"></i></button>
+                    <textarea class="object-copy__textarea" id="{{ size | append: '-base-code' }}">
+                        {{ page.base }}
+                    </textarea>
+                </div>
+                {% endif %}
+            </div>
+            {% else %}
+            <div id="{{  | prepend: object-title-id }}" class="object-wrapper col-sm-12" data-object-change="{{ size }}">
+                {% if page.size-base-use %}
+                {{ page.size-base }}
+                {% highlight html %}
+{{ page.size-base }}{% endhighlight %}
+                <div class="object-copy">
+                    <button class="object-copy__btn btn btn-xs" data-clipboard-target="{{ size | prepend: '#' | append: '-base-code' }}"><i class="fa fa-files-o"></i></button>
+                    <textarea class="object-copy__textarea" id="{{ size | append: '-base-code' }}">
+                        {{ page.size-base }}
+                    </textarea>
+                </div>
+                {% else %}
+                {{ page.base }}
+                {% highlight html %}
+{{ page.base }}{% endhighlight %}
+                <div class="object-copy">
+                    <button class="object-copy__btn btn btn-xs" data-clipboard-target="{{ size | prepend: '#' | append: '-base-code' }}"><i class="fa fa-files-o"></i></button>
+                    <textarea class="object-copy__textarea" id="{{ size | append: '-base-code' }}">
+                        {{ page.base }}
+                    </textarea>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+
 
     {% if page.theme %}
     <section id="js-object-themes" class="section">
@@ -132,10 +198,10 @@ layout: default
         {% for palette in site.palettes %}
         <h5 class="object-section-subtitle">{{ palette.id | capitalize }}</h5>
         <div class="row object-row {% if page.theme-hide-code %}{{ 'object-hide-code' }}{% endif %}">
-        {% for color in palette.colors %}
-        {% if page.theme-grid %}
-        <div id="{{ color | prepend: object-title-id }}" class="object-wrapper {{ page.theme-grid-col }}" data-object-color="{{ color }}">
-            {% if page.theme-base-use %}
+            {% for color in palette.colors %}
+            {% if page.theme-grid %}
+            <div id="{{ color | prepend: object-title-id }}" class="object-wrapper {{ page.theme-grid-col }}" data-object-change="{{ color }}">
+                {% if page.theme-base-use %}
                 {{ page.theme-base }}
                 {% highlight html %}
 {{ page.theme-base }}{% endhighlight %}
@@ -145,7 +211,7 @@ layout: default
                         {{ page.theme-base }}
                     </textarea>
                 </div>
-            {% else %}
+                {% else %}
                 {{ page.base }}
                 {% highlight html %}
 {{ page.base }}{% endhighlight %}
@@ -155,11 +221,11 @@ layout: default
                         {{ page.base }}
                     </textarea>
                 </div>
-            {% endif %}
-        </div>
-        {% else %}
-        <div id="{{ color | prepend: object-title-id }}" class="object-wrapper col-sm-12" data-object-color="{{ color }}">
-            {% if page.theme-base-use %}
+                {% endif %}
+            </div>
+            {% else %}
+            <div id="{{ color | prepend: object-title-id }}" class="object-wrapper col-sm-12" data-object-change="{{ color }}">
+                {% if page.theme-base-use %}
                 {{ page.theme-base }}
                 {% highlight html %}
 {{ page.theme-base }}{% endhighlight %}
@@ -169,7 +235,7 @@ layout: default
                         {{ page.theme-base }}
                     </textarea>
                 </div>
-            {% else %}
+                {% else %}
                 {{ page.base }}
                 {% highlight html %}
 {{ page.base }}{% endhighlight %}
@@ -179,10 +245,10 @@ layout: default
                         {{ page.base }}
                     </textarea>
                 </div>
+                {% endif %}
+            </div>
             {% endif %}
-        </div>
-        {% endif %}
-        {% endfor %}
+            {% endfor %}
         </div>
         {% endfor %}
     </section>

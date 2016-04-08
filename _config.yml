@@ -46,6 +46,12 @@ defaults:
       values:
         layout: page
 
+sizes:
+    - lg
+    - md
+    - sm
+    - xs
+
 #   Should match "_sass/01__settings/_colors.scss"
 palettes:
     - id: default

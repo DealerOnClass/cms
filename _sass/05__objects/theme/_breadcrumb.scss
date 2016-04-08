@@ -47,6 +47,9 @@ $breadcrumb__icon-use:  false !default;
     border-radius: ($breadcrumb__y * 2) + $global__line-height;
 }
 //
+//  Sizing
+@include breadcrumb-size-variation($breadcrumb__y, $breadcrumb__x, $default__sizing);
+//
 //  Colors
 @include breadcrumb-color-variation($default__palette);
 @include breadcrumb-color-variation($inverse__palette);
