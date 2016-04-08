@@ -6,10 +6,19 @@ $link__color: $primary__color;
 //  Headings
 $h5__font-size: $global__unit;
 $h6__font-size: $h5__font-size / $global__font-ratio;
+$h7__font-size: $h6__font-size / $global__font-ratio;
 $h4__font-size: $h5__font-size * $global__font-ratio;
 $h3__font-size: $h4__font-size * $global__font-ratio;
 $h2__font-size: $h3__font-size * $global__font-ratio;
 $h1__font-size: $h2__font-size * $global__font-ratio;
+//
+//  Sizing
+$default__sizing: (
+    'lg':     $h3__font-size,
+    'md':     $h4__font-size,
+    'sm':     $h6__font-size,
+    'xs':     $h7__font-size,
+) !default;
 //
 //  Fonts
 @include ff-batch($sans);
@@ -19,6 +28,13 @@ $h1__font-size: $h2__font-size * $global__font-ratio;
 //  Base
 html {
     font-size: ($global__font-size / 16) * 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
 }
 
 body {
@@ -34,8 +50,9 @@ h3,
 h4,
 h5,
 h6 {
+    line-height: 1;
     font-size: $h4__font-size;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .h1 {
@@ -71,6 +88,13 @@ ol {
 a {
     color: $link__color;
     text-decoration: none;
+}
+
+[disabled] {
+    @include state-and-self {
+        cursor: not-allowed;
+        opacity: 0.65;
+    }
 }
 
 strong,

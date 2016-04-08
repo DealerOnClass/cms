@@ -1,10 +1,36 @@
 ---
-name: badge
-categories:         [objects]
+navgroup: "objects"
+navorder: 1
+navtitle: "badge"
+category: [objects]
 
+name: "badge"
+
+base-grid: false
+base-grid-col: col-md-6
+base-hide-code: false
 base: |
-    <span class="badge" href="">11</span>
+    <span class="badge">11</span>
+
+variants-grid: false
+variants-grid-col: col-md-6
+variants-hide-code: false
+variants:
+    - name: link
+      base: |
+          <a class="badge" href="">11</a>
+
+    - name: rounded
+      base: |
+          <a class="badge badge-rounded" href="">11</a>
 
 theme: true
+theme-grid: false
+theme-grid-col: col
+theme-hide-code: false
+theme-base-use: true
+theme-base: |
+    <span class="badge">11</span>
+
 ---
 

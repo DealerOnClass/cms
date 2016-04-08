@@ -13,8 +13,8 @@
         //  Prevent columns from collapsing when empty
         min-height: 1px;
         //  Inner gutter via padding
-        padding-left: ($global__gutter / 2);
-        padding-right: ($global__gutter / 2);
+        padding-left: $global__gutter;
+        padding-right: $global__gutter;
     }
 }
 
@@ -84,16 +84,17 @@
 @mixin container-fixed($gutter: $global__gutter) {
     margin-right: auto;
     margin-left: auto;
-    padding-left: ($gutter / 2);
-    padding-right: ($gutter / 2);
+    padding-left: $global__gutter;
+    padding-right: $global__gutter;
+    max-width: 100%;
     @include clearfix;
     box-sizing: border-box;
 }
 
 //  Creates a wrapper for a series of columns
 @mixin make-row($gutter: $global__gutter) {
-    margin-left: ($gutter / -2);
-    margin-right: ($gutter / -2);
+    margin-left: negative($global__gutter);
+    margin-right: negative($global__gutter);
     @include clearfix;
 }
 

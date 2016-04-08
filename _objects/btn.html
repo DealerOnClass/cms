@@ -1,18 +1,43 @@
 ---
-name: btn
-categories:         [objects]
+navgroup: "objects"
+navorder: 1
+navtitle: "button"
+category: [objects]
 
+name: "btn"
+
+base-grid: false
+base-grid-col: col-md-6
+base-hide-code: false
 base: |
-    <a class="btn" href="#">Link</a>
+    <button type="button" class="btn">I'm a Button</button>
 
+variants-grid: false
+variants-grid-col: col-md-6
+variants-hide-code: false
 variants:
-    - id: link
+    - name: lg
       base: |
-            <a class="btn btn-link" href="#">Link</a>
+          <button type="button" class="btn btn-lg">I'm a Button</button>
 
-    - id: block
+    - name: md
       base: |
-            <a class="btn btn-block" href="#">Link</a>
+          <button type="button" class="btn btn-md">I'm a Button</button>
+
+    - name: sm
+      base: |
+          <button type="button" class="btn btn-sm">I'm a Button</button>
+
+    - name: xs
+      base: |
+          <button type="button" class="btn btn-xs">I'm a Button</button>
 
 theme: true
+theme-grid: false
+theme-grid-col: col-md-3
+theme-hide-code: false
+theme-base-use: true
+theme-base: |
+    <button type="button" class="btn">I'm a Button</button>
+
 ---

@@ -9,15 +9,34 @@ layout: compress
 
     <body>
 
-        {% include header.html %}
+        <nav class="oncanvas-nav nav nav--navbar site-navbar">
+            <a class="nav__item nav__item--svg" href="{{ site.baseurl }}/">
+                <object class="logo site-logo" data="{{ '/images/logo__symbol.svg' | prepend: site.baseurl }}" type="image/svg+xml">
+                    <img class="logo site-logo" src="{{ '/images/logo__symbol.svg' | prepend: site.baseurl }}" alt="">
+                </object>
+            </a>
+            {% assign pagelist = site.pages %}
+            {% assign navgroup = 'main' %}
+            {% include nav.html %}
+        </nav>
 
-        <main class="container">
+        <main class="offcanvas">
 
-            {{ content }}
+            <nav class="offcanvas-nav nav nav--sidebar site-sidebar">
+                {% assign pagelist = site.objects %}
+                {% assign navgroup = 'objects' %}
+                {% include nav.html %}
+            </nav>
+
+            <div class="offcanvas-body">
+                {{ content }}
+            </div>
 
         </main>
 
         {% include footer.html %}
+
+        {% include js.html %}
 
     </body>
 

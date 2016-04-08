@@ -1,26 +1,25 @@
 {
-  "name": "albertosilvaportfolio",
+  "name": "DealerOnCMS",
   "version": "1.0.0",
-  "description": "Alberto Silva Online Portfolio",
+  "description": "DealerOn CMS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asilvadesigns/portfolio.git"
+    "url": "git+https://github.com/dealeronclass/cms.git"
   },
   "keywords": [
-    "Alberto",
-    "Silva",
-    "Portfolio"
+    "DealerOn",
+    "CMS"
   ],
   "author": "Alberto Silva",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/asilvadesigns/portfolio/issues"
+    "url": "https://github.com/dealeronclass/cms/issues"
   },
-  "homepage": "https://github.com/asilvadesigns/portfolio#readme",
+  "homepage": "https://github.com/dealeronclass/cms#readme",
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",

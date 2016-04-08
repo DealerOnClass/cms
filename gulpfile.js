@@ -78,11 +78,11 @@ gulp.task('watch', function () {
     gulp.watch(
         [
             './*.html',
-            './_includes/*.css',
-            './_includes/*.html',
-            './_layouts/*.html',
-            './_posts/*',
-            './_projects/*'
+            './_includes/*',
+            './_layouts/*',
+            './_objects/*',
+            './_pages/*',
+            './_posts/*'
         ], [
             'jekyll-rebuild'
         ]);

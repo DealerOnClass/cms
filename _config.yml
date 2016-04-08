@@ -18,10 +18,6 @@ baseurl: "/cms"            # remote
 url: ""                     # the base hostname & protocol for your site
 permalink: pretty
 
-#   Require gems
-gems:
-    - jekyll-paginate
-
 #   Exclue files and directories
 exclude:
     - LICENSE
@@ -35,12 +31,20 @@ collections:
     objects:
         output: true
 
+    pages:
+        output: true
+
 #   Set collection default layout
 defaults:
     - scope:
         type: objects
       values:
         layout: object
+
+    - scope:
+        type: pages
+      values:
+        layout: page
 
 #   Should match "_sass/01__settings/_colors.scss"
 palettes:

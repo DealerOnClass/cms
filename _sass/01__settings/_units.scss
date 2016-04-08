@@ -4,10 +4,21 @@ $global__unit:      1em;
 //
 //  Global Units
 $global__contrast:  10%;
-$global__gutter:    ($global__unit * 0.5);
+$global__gutter:    ($global__unit * 0.75);
 $global__radius:    ($global__unit * 0.25);
 $global__x:         ($global__unit * 0.75);
 $global__y:         ($global__unit * 0.5);
+//
+//  Z-Index
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-navbar-sidebar:    1020 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+
 //
 //  Typography
 $global__font-ratio:   1.333;

@@ -1,7 +1,14 @@
 ---
-name: breadcrumb
-categories:         [objects]
+navgroup: "objects"
+navorder: 1
+navtitle: "breadcrumb"
+category: [objects]
 
+name: "breadcrumb"
+
+base-grid: false
+base-grid-col: col-md-6
+base-hide-code: false
 base: |
     <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
@@ -9,5 +16,28 @@ base: |
         <li class="active">Data</li>
     </ol>
 
+variants-grid: false
+variants-grid-col: col-md-6
+variants-hide-code: false
+variants:
+    - name: rounded
+      base: |
+          <ol class="breadcrumb breadcrumb-rounded">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Library</a></li>
+              <li class="active">Data</li>
+          </ol>
+
 theme: true
+theme-grid: false
+theme-grid-col: col-md-6
+theme-hide-code: false
+theme-base-use: true
+theme-base: |
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+    </ol>
+
 ---
