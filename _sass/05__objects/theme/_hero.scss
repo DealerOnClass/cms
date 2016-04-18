@@ -3,12 +3,28 @@
 $hero__contrast:  $global__contrast;
 $hero__radius:    $global__radius;
 $hero__x:         $global__x;
-$hero__y:         $global__y;
+$hero__y:         $global__y * 7;
 //
 //  Base
 .hero {
     padding-top: $hero__y;
     padding-bottom: $hero__y;
+}
+
+.hero-lg {
+    padding: $hero__y * ($global__line-height * 1.5) 0;
+}
+
+.hero-md {
+    padding: $hero__y * $global__line-height 0;
+}
+
+.hero-sm {
+    padding: $hero__y / $global__line-height 0;
+}
+
+.hero-xs {
+    padding: $hero__y / ($global__line-height * 2) 0;
 }
 //
 //  Colors

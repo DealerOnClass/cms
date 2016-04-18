@@ -98,7 +98,7 @@
 
   NestingDepth:
     enabled: true
-    max_depth: 2
+    max_depth: 3
 
   PlaceholderInExtend:
     enabled: true
@@ -131,7 +131,7 @@
 
   SelectorDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 4
 
   SelectorFormat:
     enabled: true

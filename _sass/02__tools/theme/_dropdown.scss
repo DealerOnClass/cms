@@ -1,7 +1,13 @@
 @mixin dropdown-color-variation($input__palette) {
     @each $class__name, $color in $input__palette {
-        .dropdown-menu-#{$class__name} {
-            background-color: $color;
+        .dropdown-#{$class__name} .dropdown-menu {
+
+            .dropdown-item,
+            li > a {
+                color: check-color($color, 80, inherit, $white);
+                border-color: $color;
+                background-color: $color;
+            }
         }
     }
 }

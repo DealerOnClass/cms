@@ -1,6 +1,95 @@
 ---
 navgroup: "objects"
 navorder: 1
-navtitle: "button group"
+navtitle: "Button Group"
 category: [objects]
+
+name: "btn-group"
+
+base-grid: false
+base-grid-col: col-md-6
+base-hide-code: true
+base: |
+    <div class="btn-group" aria-label="Basic example">
+        <a class="btn" href="#">Left</a>
+        <a class="btn" href="#">Middle</a>
+        <a class="btn" href="#">Right</a>
+    </div>
+
+variants-grid: false
+variants-grid-col: col-md-6
+variants-hide-code: true
+variants:
+    - name: nested
+      base: |
+          <div class="btn-group" aria-label="Basic example">
+              <div class="btn-group" aria-label="Basic example">
+                  <a class="btn" href="#">Left</a>
+                  <a class="btn" href="#">Middle</a>
+                  <a class="btn" href="#">Right</a>
+              </div>
+              <div class="btn-group" aria-label="Basic example">
+                  <a class="btn" href="#">Left</a>
+                  <a class="btn" href="#">Middle</a>
+                  <a class="btn" href="#">Right</a>
+              </div>
+          </div>
+
+    - name: vertical
+      base: |
+          <div class="btn-group-vertical" aria-label="Basic example">
+              <a class="btn" href="#">Left</a>
+              <a class="btn" href="#">Middle</a>
+              <a class="btn" href="#">Right</a>
+          </div>
+
+    - name: nested vertical
+      base: |
+          <div class="btn-group-vertical" aria-label="Basic example">
+              <div class="btn-group">
+                  <a class="btn" href="#">Left</a>
+                  <a class="btn" href="#">Middle</a>
+                  <a class="btn" href="#">Right</a>
+              </div>
+              <div class="btn-group">
+                  <a class="btn" href="#">Left</a>
+                  <a class="btn" href="#">Middle</a>
+                  <a class="btn" href="#">Right</a>
+              </div>
+          </div>
+
+    - name: states
+      base: |
+          <div class="btn-group" aria-label="Basic example">
+              <div class="btn-group" aria-label="Basic example">
+                  <a class="active btn" href="#">Left</a>
+                  <a class="btn" href="#">Middle</a>
+                  <a disabled class="btn" href="#">Right</a>
+              </div>
+          </div>
+
+size: true
+size-grid: false
+size-grid-col: col-md-3
+size-hide-code: true
+size-base-use: true
+size-base: |
+    <div class="btn-group">
+        <a class="btn" href="#">Left</a>
+        <a class="btn" href="#">Middle</a>
+        <a class="btn" href="#">Right</a>
+    </div>
+
+theme: true
+theme-grid: true
+theme-grid-col: col-md-3
+theme-hide-code: true
+theme-base-use: true
+theme-base: |
+    <div class="btn-group">
+        <a class="btn" href="#">Left</a>
+        <a class="btn" href="#">Middle</a>
+        <a class="btn" href="#">Right</a>
+    </div>
+
 ---

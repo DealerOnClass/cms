@@ -28,15 +28,29 @@
 
 .object-copy {
     position: absolute;
-    //  top: rhythm(negative($global__y * 3));
-    //  right: $global__x;
-    top: 0;
+    top: negative($global__y * 3);
     left: negative($global__x * 3);
 }
 
 .object-copy__btn {
     position: relative;
-    z-index: 100;
+    z-index: 3000;
+    border-radius: 50%;
+    height: rhythm(2);
+    width: rhythm(2);
+    transform: scale(0.25);
+    background-color: #dc143c;
+    border-color: #dc143c;
+    color: #dc143c;
+    transition-property: transform, color, box-shadow;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+        transform: scale(1);
+        box-shadow: 0 $three__pixels $nine__pixels rgba(0, 0, 0, 0.5);
+        color: $white;
+    }
 }
 
 .object-copy__textarea {

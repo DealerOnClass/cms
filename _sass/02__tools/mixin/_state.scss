@@ -30,6 +30,14 @@
     }
 }
 
+@mixin state-and-active {
+    &:hover,
+    &:active,
+    &.active {
+        @content;
+    }
+}
+
 @mixin state-and-self {
     &,
     &:hover,

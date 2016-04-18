@@ -13,8 +13,8 @@ description: > # this means to ignore newlines until "baseurl:"
 #   General Build Settings
 #
 #   Url
-baseurl: "/cms"            # remote
-#baseurl: ""                 # local
+#baseurl: "/cms"            # remote
+baseurl: ""                 # local
 url: ""                     # the base hostname & protocol for your site
 permalink: pretty
 
@@ -28,6 +28,9 @@ exclude:
 
 #   Output specified collections
 collections:
+    mockups:
+        output: true
+
     objects:
         output: true
 
@@ -36,6 +39,11 @@ collections:
 
 #   Set collection default layout
 defaults:
+    - scope:
+        type: mockups
+      values:
+        layout: mockup
+
     - scope:
         type: objects
       values:

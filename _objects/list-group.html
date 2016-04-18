@@ -1,4 +1,63 @@
 ---
 navgroup: "objects"
 navorder: 1
+navtitle: "list group"
+category: [objects]
+
+name: "list-group"
+
+base-grid: false
+base-grid-col: col-md-6
+base-hide-code: true
+base: |
+    <ul class="list-group">
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+
+variants-grid: false
+variants-grid-col: col-md-6
+variants-hide-code: true
+variants:
+    - name: linked
+      base: |
+          <div class="list-group">
+              <a href="" class="list-group-item">Cras justo odio</a>
+              <a href="" class="list-group-item">Porta ac consectetur ac</a>
+              <a href="" class="list-group-item">Vestibulum at eros</a>
+          </div>
+
+    - name: states
+      base: |
+          <div class="list-group">
+              <a href="" class="active list-group-item">Cras justo odio</a>
+              <a href="" class="list-group-item">Dapibus ac facilisis in</a>
+              <a disabled href="" class="list-group-item">Vestibulum at eros</a>
+          </div>
+
+size: true
+size-grid: false
+size-grid-col: col-md-3
+size-hide-code: true
+size-base-use: true
+size-base: |
+    <ul class="list-group">
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+
+theme: true
+theme-grid: false
+theme-grid-col: col-md-3
+theme-hide-code: true
+theme-base-use: true
+theme-base: |
+    <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+    </ul>
+
 ---

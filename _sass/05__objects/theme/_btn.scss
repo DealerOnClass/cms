@@ -18,6 +18,12 @@ $btn__y:         $global__y;
 
     border: $one__pixel solid;
     border-radius: $btn__radius;
+
+    &.active {
+        color: $white;
+        border-color: $primary__color;
+        background-color: $primary__color;
+    }
 }
 //
 //  Variations
@@ -28,7 +34,15 @@ $btn__y:         $global__y;
 .btn-block {
     display: block;
 
-    text-align: center;
+    width: 100%;
+
+    & + & {
+        margin-top: rhythm(0.5);
+    }
+}
+
+.btn-rounded {
+    border-radius: ($btn__y * 2) + $global__line-height;
 }
 //
 //  Sizing

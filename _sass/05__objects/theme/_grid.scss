@@ -61,6 +61,8 @@ $offcanvas-breakpoint-max:   ($offcanvas-breakpoint - 1) !default;
     @include make-grid(lg);
 }
 
+//
+//  Variations
 .col {
     @include column($grid__gutter);
     position: relative;
@@ -69,13 +71,69 @@ $offcanvas-breakpoint-max:   ($offcanvas-breakpoint - 1) !default;
     min-width: 10em;
 }
 
-.page-container {
-    padding-left: $grid__gutter * 5;
-    margin-top: rhythm(3);
+.gutter-x {
+    &.row [class*="col-"],
+    &[class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
-.page-card {
+//
+//  Page Specific
+.page-interior-container {
+    margin-top: rhythm(3);
+    padding-left: $grid__gutter * 5;
+
+    .object-row {
+        //
+    }
+}
+
+.page-interior-card {
     .card {
         max-width: 20em;
+    }
+}
+
+.page-interior-dropdown {
+    .dropdown-toggle,
+    .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        position: relative;
+    }
+}
+
+.page-interior-grid {
+    //  &.container {
+    //      max-width: 100%;
+    //  }
+
+    .object-wrapper [class*="col-"] {
+        background-color: rgba(0, 0, 0, 0.1);
+        background-clip: content-box;
+    }
+}
+
+.page-interior-media {
+    .media-body {
+        max-width: 28em;
+    }
+}
+
+.page-interior-modal {
+    .show-modal {
+        @include row($global__x);
+        position: relative;
+        display: block;
+
+        .modal-dialog {
+            @include column($global__x);
+            width: 100%;
+            margin-left: 0;
+        }
     }
 }

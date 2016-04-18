@@ -80,6 +80,7 @@ gulp.task('watch', function () {
             './*.html',
             './_includes/*',
             './_layouts/*',
+            './_mockups/*',
             './_objects/*',
             './_pages/*',
             './_posts/*'

@@ -46,6 +46,9 @@ $list-group__y:         $global__y;
     margin-bottom: 0;
 }
 //
+//  Sizing
+@include list-group-size-variation($list-group__y, $list-group__x, $default__sizing);
+//
 //  Colors
 @include list-group-color-variation($default__palette);
 @include list-group-color-variation($inverse__palette);

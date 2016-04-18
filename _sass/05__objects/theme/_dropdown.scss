@@ -16,6 +16,8 @@ $dropdown__y:         $global__y;
     z-index: $zindex-dropdown;
     top: 100%;
     left: 0;
+    padding: 0;
+    margin: 0;
 
     display: none;
     float: left;
@@ -28,45 +30,57 @@ $dropdown__y:         $global__y;
     }
 }
 
-.dropdown-menu > li {
+.dropdown-item,
+.dropdown-menu > li > a {
+    position: relative;
 
-    > a {
-        position: relative;
+    display: block;
+    clear: both;
 
-        display: block;
-        clear: both;
+    padding: $dropdown__y $dropdown__x;
 
-        padding: $dropdown__y $dropdown__x;
+    white-space: nowrap;
 
-        white-space: nowrap;
+    background-color: $white;
+    border-right: $one__pixel solid;
+    border-left: $one__pixel solid;
+}
 
-        background-color: $white;
-        border-right: $one__pixel solid;
-        border-left: $one__pixel solid;
-    }
+.dropdown-item:first-child,
+.dropdown-menu > li:first-child > a {
+    border-top: $one__pixel solid;
+    border-top-left-radius: $dropdown__radius;
+    border-top-right-radius: $dropdown__radius;
+}
 
-    &:first-child > a {
-        border-top: $one__pixel solid;
-        border-top-left-radius: $dropdown__radius;
-        border-top-right-radius: $dropdown__radius;
-    }
+.dropdown-item:last-child,
+.dropdown-menu > li:last-child > a {
+    border-bottom: $one__pixel solid;
+    border-bottom-left-radius: $dropdown__radius;
+    border-bottom-right-radius: $dropdown__radius;
+}
 
-    &:last-child > a {
-        border-bottom: $one__pixel solid;
-        border-bottom-right-radius: $dropdown__radius;
-        border-bottom-left-radius: $dropdown__radius;
-    }
-
-    > .active,
-    &.active > a,
-    &.open > a {
-        @include state-and-self {
-            color: $white;
-            border-color: transparent;
-            background-color: $primary__color;
-        }
+.dropdown-item.active,
+.dropdown-menu > .active > a,
+.dropdown-menu > .open > a {
+    @include state-and-self {
+        color: $white;
+        border-color: transparent;
+        background-color: $primary__color;
     }
 }
+
+.dropdown-toggle {
+    &:after {
+        @include caret(top, 4px, 0);
+        margin-left: half($dropdown__x);
+
+        display: inline-block;
+
+        content: "";
+    }
+}
+
 //
 //  Colors
 @include dropdown-color-variation($default__palette);

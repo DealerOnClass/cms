@@ -11,7 +11,7 @@ $footer__y: rhythm($global__y);
 
 .site-footer {
     color: $white;
-    background-color: $inverse__color;
+    background-color: tint($inverse__color, 70%);
 
     a {
         color: inherit;

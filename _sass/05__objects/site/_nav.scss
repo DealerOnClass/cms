@@ -1,7 +1,8 @@
 //
 //  Units
-$nav__x:  $global__x;
-$nav__y:  rhythm($global__y / 2);
+$nav__x:      $global__x;
+$nav__y:      rhythm($global__y / 2);
+$nav__y--lg:  ($nav__y * 1.5);
 //
 //  Base
 .nav {
@@ -11,6 +12,14 @@ $nav__y:  rhythm($global__y / 2);
 .nav--sidebar {
     .nav__item {
         //
+    }
+
+    .nav__group {
+        margin: 0;
+
+        .nav__item {
+            padding-left: ($nav__x * 3);
+        }
     }
 }
 
@@ -68,7 +77,58 @@ $nav__y:  rhythm($global__y / 2);
         left: 0;
     }
 }
+//
+//  Offcanvas Var
+$oncanvas-nav-height: ($nav__y--lg * 2) + $global__line-height;
+$offcanvas-nav-width: 15em;
+//
+//  Offcanvas Base
+%position-fixed {
+    position: fixed;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
 
+.oncanvas-nav {
+    @extend %position-fixed;
+
+    z-index: $zindex-navbar-fixed;
+    border-radius: 0;
+    width: 100%;
+}
+
+.offcanvas {
+    //  display: flex;
+    margin-top: $oncanvas-nav-height;
+}
+
+.offcanvas-nav {
+    @extend %position-fixed;
+
+    //  flex: 0 0 auto;
+    width: $offcanvas-nav-width;
+    margin-top: $oncanvas-nav-height;
+    height: calc(100% - #{$oncanvas-nav-height});
+    overflow-y: auto;
+}
+
+.offcanvas-nav-header {
+    padding-top: ($nav__y * 3);
+    padding-bottom: $nav__y;
+}
+
+.offcanvas-nav-body {
+    //
+}
+
+.offcanvas-body {
+    //  flex: 1 1 100%;
+    width: calc(100% - #{$offcanvas-nav-width});
+    margin-left: $offcanvas-nav-width;
+}
+//
+//  Context Specific
 .page-navbar,
 .site-navbar,
 .site-sidebar {
@@ -84,6 +144,11 @@ $nav__y:  rhythm($global__y / 2);
 .site-navbar {
     color: $white;
     background-color: $primary__color;
+
+    .nav__item {
+        padding-top: $nav__y--lg;
+        padding-bottom: $nav__y--lg;
+    }
 }
 
 .site-sidebar {
