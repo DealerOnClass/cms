@@ -3143,6 +3143,17 @@ var Tooltip = (function ($) {
 
         return style;
       }     //  Added by Dr.Scss End
+    }, {    //  Added by Dr.Scss Start
+      key: 'getSize',
+      value: function getSize() {
+        var style = this.element.getAttribute('data-size');
+
+        //  if (!style) {
+        //    style = typeof this.config.style === 'function' ? this.config.style.call(this.element) : this.config.style;
+        //  }
+
+        return style;
+      }     //  Added by Dr.Scss End
     }, {
       key: 'cleanupTether',
       value: function cleanupTether() {
@@ -3409,7 +3420,7 @@ var Popover = (function ($) {
     placement: 'right',
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h5 class="popover-title"></h5>' + '<div class="popover-content"></div></div>'
+    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<div class="popover-title"><h5></h5></div>' + '<div class="popover-content"></div></div>'
   });
 
   var DefaultType = $.extend({}, Tooltip.DefaultType, {
@@ -3479,12 +3490,14 @@ var Popover = (function ($) {
       value: function setContent() {
         var $tip = $(this.getTipElement());
         var style = $(this.getStyle());                 //  Added by Dr.Scss
+        var size  = $(this.getSize());                  //  Added by Dr.Scss
 
         // we use append for html objects to maintain js events
         this.setElementContent($tip.find(Selector.TITLE), this.getTitle());
         this.setElementContent($tip.find(Selector.CONTENT), this._getContent());
 
         $tip.addClass("popover-" + style.selector);     //  Added by Dr.Scss
+        $tip.addClass("popover-" + size.selector);      //  Added by Dr.Scss
         $tip.removeClass(ClassName.FADE).removeClass(ClassName.IN);
 
         this.cleanupTether();

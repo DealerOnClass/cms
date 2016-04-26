@@ -112,16 +112,17 @@ $nav__y:         $global__y;
 
     > li > a {
         text-align: center;
+        white-space: nowrap;
     }
 
     > .dropdown .dropdown-menu {
         top: auto;
         left: auto;
     }
+}
 
-    &:after {
-        display: none;
-    }
+.nav.nav-justified:after {
+    display: none;
 }
 
 .nav-flush {

@@ -1,4 +1,58 @@
 ---
 navgroup: "objects"
 navorder: 1
+navtitle: "pager"
+category: [objects]
+
+name: "pager"
+
+base-grid: false
+base-grid-col: col-md-6
+base-hide-code: true
+base: |
+    <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+
+variants-grid: false
+variants-grid-col: col-md-6
+variants-hide-code: true
+variants:
+    - name: floats
+      base: |
+          <ul class="pager">
+              <li class="previous"><a href="#">Previous</a></li>
+              <li class="next"><a href="#">Next</a></li>
+          </ul>
+
+    - name: states
+      base: |
+          <ul class="pager">
+              <li><a class="active" href="#">Previous</a></li>
+              <li><a disabled href="#">Next</a></li>
+          </ul>
+
+size: true
+size-grid: false
+size-grid-col: col-md-3
+size-hide-code: true
+size-base-use: true
+size-base: |
+    <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+
+theme: true
+theme-grid: true
+theme-grid-col: col-md-3
+theme-hide-code: true
+theme-base-use: true
+theme-base: |
+    <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+
 ---

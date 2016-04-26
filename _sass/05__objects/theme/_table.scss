@@ -17,6 +17,10 @@ $table--hover__bg:          tint($gray__01, $table__contrast * 3);
     > tfoot {
         > tr {
 
+            > th {
+                text-align: left;
+            }
+
             > th,
             > td {
                 padding: $table__y $table__x;

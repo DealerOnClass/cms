@@ -15,15 +15,15 @@ forEach(themes, function (index, theme) {
     var color     = theme.getAttribute("data-object-change");
 
     var baseOldCode = base.outerHTML;
-    var baseNewCode = baseOldCode.replace(object, object + " " + object + "-" + color);
+    var baseNewCode = baseOldCode.replace('class="' + object, 'class="' + object + ' ' + object + '-' + color);
     base.outerHTML = baseNewCode;
 
     var objectOldCode = highlight.innerHTML;
-    var objectNewCode = objectOldCode.replace(object, object + " " + object + "-" + color);
+    var objectNewCode = objectOldCode.replace('class="' + object, 'class="' + object + ' ' + object + '-' + color);
     highlight.innerHTML = objectNewCode;
 
     var textareaOldCode = base.outerHTML;
-    var textareaNewCode = textareaOldCode.replace(object, object + " " + object + "-" + color);
+    var textareaNewCode = textareaOldCode.replace('class="' + object, 'class="' + object + ' ' + object + '-' + color);
     textarea.innerHTML = textareaNewCode;
 });
 
@@ -54,3 +54,19 @@ for (var i = 0; i < btns.length; i++) {
 function showTooltip(elem) {
     elem.classList.add('copied');
 }
+/**************************
+ *  Popovers
+ */
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
+});
+/**************************
+ *  Nav
+ */
+var offcanvasBody      = document.querySelector("body");
+var offcanvasNavToggle = document.querySelector("#offcanvas-nav-toggle");
+
+offcanvasNavToggle.addEventListener("click", function(){
+    offcanvasBody.classList.toggle("offcanvas-is-open");
+});

@@ -34,7 +34,7 @@
 
 .object-copy__btn {
     position: relative;
-    z-index: 3000;
+    z-index: $zindex-object-copy;
     border-radius: 50%;
     height: rhythm(2);
     width: rhythm(2);
