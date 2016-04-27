@@ -143,6 +143,33 @@ $offcanvas-nav-width: 15em;
     //
 }
 
+.offcanvas-backdrop {
+    position: fixed;
+    z-index: $zindex-navbar-fixed - 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &.invisible {
+        visibility: hidden;
+    }
+
+    &.fade {
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    &.in {
+        opacity: 0.5;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        display: none;
+    }
+}
+
 .offcanvas-body {
     width: calc(100% - #{$offcanvas-nav-width});
     margin-left: $offcanvas-nav-width;
