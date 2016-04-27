@@ -15,6 +15,7 @@
 //  Default mixins and functions.
 @import
     "02__tools/function/color",
+    "02__tools/function/decimal",
     "02__tools/function/math",
     "02__tools/function/rhythm",
     "02__tools/function/unitless",
@@ -32,9 +33,9 @@
     "02__tools/theme/card",
     "02__tools/theme/caret",
     "02__tools/theme/dropdown",
-    //  "02__tools/theme/form",
     "02__tools/theme/grid",
     "02__tools/theme/hero",
+    "02__tools/theme/input-group",
     "02__tools/theme/list-group",
     "02__tools/theme/modal",
     "02__tools/theme/nav",
@@ -42,6 +43,7 @@
     "02__tools/theme/pager",
     "02__tools/theme/pagination",
     "02__tools/theme/panel",
+    //  "02__tools/theme/form",
     "02__tools/theme/popover",
     "02__tools/theme/progress-bar",
     "02__tools/theme/table",
@@ -81,7 +83,7 @@
     "05__objects/theme/grid",
     "05__objects/theme/hero",
     "05__objects/theme/img",
-    //  "05__objects/theme/input-groups",
+    "05__objects/theme/input-group",
     //  "05__objects/theme/labels",
     "05__objects/theme/list-groups",
     "05__objects/theme/list",
@@ -127,6 +129,7 @@
     "07__trumps/bg",
     "07__trumps/extend",
     "07__trumps/floats",
+    "07__trumps/sr",
     "07__trumps/text";
 
 //

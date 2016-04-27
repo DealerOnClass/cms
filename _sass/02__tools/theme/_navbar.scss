@@ -111,7 +111,13 @@
         $y: ($unit__y * strip-unit($size));
 
         .navbar-#{$class__name} {
-            padding: $y $x;
+
+            .nav > li > a,
+            .navbar-brand,
+            .navbar-toggle {
+                padding-top: $y;
+                padding-bottom: $y;
+            }
         }
     }
 }

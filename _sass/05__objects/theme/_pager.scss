@@ -47,6 +47,13 @@ $pager__previous__icon:  $fa-var-angle-left;
     }
 }
 
+.pager-rounded {
+
+    > li > a {
+        border-radius: ($pager__y * 2) + $global__line-height;
+    }
+}
+
 @if $pager__use-icon {
     .pager {
 

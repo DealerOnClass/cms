@@ -14,10 +14,11 @@ $h1__font-size: $h2__font-size * $global__font-ratio;
 //
 //  Sizing
 $default__sizing: (
-    'lg':     $h3__font-size,
-    'md':     $h4__font-size,
-    'sm':     $h6__font-size,
-    'xs':     $h7__font-size,
+    'xl':     decimal-ceil($h2__font-size),
+    'lg':     decimal-ceil($h3__font-size),
+    'md':     decimal-ceil($h4__font-size),
+    'sm':     decimal-ceil($h6__font-size),
+    'xs':     decimal-ceil($h7__font-size),
 ) !default;
 //
 //  Fonts

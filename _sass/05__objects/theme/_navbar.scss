@@ -17,8 +17,12 @@ $navbar__y:         $global__y;
 
 .navbar > .container,
 .navbar > .container-fluid {
-    margin-right: negative($global__gutter / 2);
-    margin-left: negative($global__gutter / 2);
+    margin-right: negative($global__gutter);
+    margin-left: negative($global__gutter);
+}
+
+.navbar > .container-fluid {
+    max-width: initial;
 }
 
 .navbar .dropdown-menu {

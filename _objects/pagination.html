@@ -24,6 +24,18 @@ variants-grid: false
 variants-grid-col: col-md-6
 variants-hide-code: true
 variants:
+    - name: rounded
+      base: |
+          <ul class="pagination pagination-rounded">
+              <li><a class="active" href="#" aria-label="Previous"></a></li>
+              <li><a href="#" disabled>1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#" aria-label="Next"></a></li>
+          </ul>
+
     - name: states
       base: |
           <ul class="pagination">
