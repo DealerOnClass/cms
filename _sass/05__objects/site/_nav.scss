@@ -102,8 +102,12 @@ $offcanvas-nav-width: 15em;
     margin-top: $oncanvas-nav-height;
 }
 
-.offcanvas-is-open .offcanvas-nav {
-    transform: translateX(0);
+.offcanvas-is-open {
+    overflow: hidden;
+
+    .offcanvas-nav {
+        transform: translateX(0);
+    }
 }
 
 .offcanvas-nav {
