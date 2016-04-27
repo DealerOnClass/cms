@@ -103,7 +103,7 @@ $offcanvas-nav-width: 15em;
 }
 
 .offcanvas-is-open .offcanvas-nav {
-    left: 0;
+    transform: translateX(0);
 }
 
 .offcanvas-nav {
@@ -114,12 +114,12 @@ $offcanvas-nav-width: 15em;
     margin-top: $oncanvas-nav-height;
     height: calc(100% - #{$oncanvas-nav-height});
     overflow-y: auto;
-    transition-property: left;
+    transition-property: transform;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
 
     @media (max-width: $screen-sm-max) {
-        left: negative($offcanvas-nav-width);
+        transform: translateX(negative($offcanvas-nav-width));
     }
 }
 
@@ -127,6 +127,10 @@ $offcanvas-nav-width: 15em;
     .fa {
         font-size: 14px;
         line-height: floor($global__font-size * $global__line-height) * 1px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        display: none;
     }
 }
 

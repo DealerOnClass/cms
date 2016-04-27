@@ -83,7 +83,8 @@ gulp.task('watch', function () {
             './_mockups/*',
             './_objects/*',
             './_pages/*',
-            './_posts/*'
+            './_posts/*',
+            './js/*'
         ], [
             'jekyll-rebuild'
         ]);

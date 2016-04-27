@@ -54,6 +54,7 @@
 }
 
 .object-copy__textarea {
+    z-index: -1;
     height: 0;
     width: 0;
     border: 0 none;
