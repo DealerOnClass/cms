@@ -29,7 +29,7 @@ navorder:   1
                         <h3>UI Components</h3>
                         <ul>
                             {% for object in site.objects %}
-                            <li><a href="{{ object.url | prepend: site.baseurl }}">{{ object.title }}</a></li>
+                            <li><a class="text-capitalize" href="{{ object.url | prepend: site.baseurl }}">{{ object.navtitle }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
