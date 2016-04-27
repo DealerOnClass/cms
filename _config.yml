@@ -54,7 +54,9 @@ defaults:
       values:
         layout: page
 
+#   Should match "_sass/04__base/_typography.scss"
 sizes:
+    - xl
     - lg
     - md
     - sm
