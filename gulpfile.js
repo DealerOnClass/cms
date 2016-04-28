@@ -8,11 +8,14 @@
 var gulp         = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync  = require('browser-sync'),
-    cssnano      = require('gulp-cssnano'),
     childProcess = require('child_process'),
+    concat       = require('gulp-concat'),
+    cssnano      = require('gulp-cssnano'),
     plumber      = require('gulp-plumber'),
+    rename       = require('gulp-rename'),
     sass         = require('gulp-sass'),
-    sassdoc      = require('sassdoc');
+    sassdoc      = require('sassdoc'),
+    uglify       = require('gulp-uglify');
 
 //
 //  Messages
@@ -36,7 +39,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
 
 //
 //  Jekyll Serve
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'scripts', 'jekyll-build'], function() {
     browserSync.init({
         server: '_site',
         notify: true
@@ -72,9 +75,32 @@ gulp.task('sassdoc', function() {
 });
 
 //
+//  Scripts
+gulp.task('scripts', function() {
+    gulp.src([
+        './js/jquery.js',
+        './js/tether.js',
+        './js/bootstrap.js',
+        './js/clipboard.min.js',
+        './js/functions.js',
+        './js/nav.js',
+        './js/table.js'
+    ])
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('./js/'))
+        .pipe(rename('scripts.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./js/'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
+//
 //  Watch
 gulp.task('watch', function () {
     gulp.watch('./_sass/**/*.scss', ['sass']);
+    gulp.watch('./js/**/*.js', ['scripts']);
     gulp.watch(
         [
             './*.html',
@@ -92,7 +118,7 @@ gulp.task('watch', function () {
 
 //
 //  Production
-gulp.task('production', ['sass', 'sassdoc', 'jekyll-build']);
+gulp.task('production', ['sass', 'sassdoc', 'scripts', 'jekyll-build']);
 
 //
 //  Default
