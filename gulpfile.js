@@ -87,10 +87,10 @@ gulp.task('scripts', function() {
         './js/table.js'
     ])
         .pipe(concat('scripts.js'))
-        .pipe(gulp.dest('./js/'))
+        .pipe(gulp.dest('./_includes/'))
         .pipe(rename('scripts.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./js/'))
+        .pipe(gulp.dest('./_includes/'))
         .pipe(browserSync.reload({
             stream: true
         }));
