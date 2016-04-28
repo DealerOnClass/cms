@@ -1,6 +1,4 @@
-/**************************
- *  Theme Generation
- */
+//  Theme Generation
 var object = document.querySelector("#js-object-id");
 if ( object != null ) {
     var objectID = object.getAttribute("data-object-id");
@@ -30,17 +28,14 @@ forEach(themes, function (index, theme) {
     textarea.innerHTML = textareaNewCode;
 });
 
-/*
- *  Utilities
- */
+//  Utilities
 function forEach(array, callback, scope) {
     for (var i = 0; i < array.length; i++) {
         callback.call(scope, i, array[i]);
     }
 };
-/**************************
- *  Clipboard.Js
- */
+
+//  Clipboard.Js
 var copyBtns = document.querySelectorAll('.object-copy__btn');
 if ( copyBtns != null ) {
     var clipboard = new Clipboard('.object-copy__btn');
@@ -59,9 +54,8 @@ for (var i = 0; i < copyBtns.length; i++) {
 function showTooltip(elem) {
     elem.classList.add('copied');
 }
-/**************************
- *  Popovers
- */
+
+//  Popovers
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();

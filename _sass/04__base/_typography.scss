@@ -14,11 +14,11 @@ $h1__font-size: $h2__font-size * $global__font-ratio;
 //
 //  Sizing
 $default__sizing: (
-    'xl':     decimal-ceil($h2__font-size),
-    'lg':     decimal-ceil($h3__font-size),
-    'md':     decimal-ceil($h4__font-size),
-    'sm':     decimal-ceil($h6__font-size),
-    'xs':     decimal-ceil($h7__font-size),
+    "xl":     decimal-ceil($h2__font-size),
+    "lg":     decimal-ceil($h3__font-size),
+    "md":     decimal-ceil($h4__font-size),
+    "sm":     decimal-ceil($h6__font-size),
+    "xs":     decimal-ceil($h7__font-size),
 ) !default;
 //
 //  Fonts
@@ -29,6 +29,7 @@ $default__sizing: (
 //  Base
 html {
     font-size: ($global__font-size / 16) * 100%;
+
     box-sizing: border-box;
 }
 
@@ -39,7 +40,7 @@ html {
 }
 
 body {
-    font-family: 'Avenir', serif;
+    font-family: "Avenir", serif;
     line-height: $global__line-height;
 
     color: $body__color;
@@ -79,6 +80,11 @@ h6 {
     font-size: $h6__font-size;
 }
 
+.lead {
+    //  essentially half-way between h4 and h5
+    font-size: (($h4__font-size - $h5__font-size) / 2) + $global__unit;
+}
+
 p,
 ul,
 ol {
@@ -86,8 +92,9 @@ ol {
 }
 
 a {
-    color: $link__color;
     text-decoration: none;
+
+    color: $link__color;
 
     &:active {
         box-shadow: inset 0 $three__pixels $five__pixels rgba(0, 0, 0, 0.125);
@@ -96,9 +103,10 @@ a {
 
 [disabled] {
     @include state-and-self {
-        box-shadow: none;
         cursor: not-allowed;
+
         opacity: 0.65;
+        box-shadow: none;
     }
 }
 
@@ -107,9 +115,9 @@ em {
     font-weight: 700;
 }
 
-[type='submit'],
-[type='reset'],
-[type='button'],
+[type="submit"],
+[type="reset"],
+[type="button"],
 button {
     font: inherit;
     line-height: normal;
@@ -126,4 +134,26 @@ button {
     background: none;
 
     appearance: button;
+}
+
+dt {
+    font-weight: 600;
+}
+
+.dl-horizontal {
+    dd {
+        @include clearfix;
+    }
+
+    dt {
+        @include truncate(auto);
+
+        float: left;
+
+        width: rhythm(5);
+    }
+
+    dd {
+        margin-left: rhythm(5) + $global__gutter;
+    }
 }

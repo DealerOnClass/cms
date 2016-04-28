@@ -46,6 +46,10 @@ $breadcrumb__icon-use:  false !default;
 .breadcrumb-rounded {
     border-radius: ($breadcrumb__y * 2) + $global__line-height;
 }
+
+.breadcrumb-flush {
+    border-radius: 0;
+}
 //
 //  Sizing
 @include breadcrumb-size-variation($breadcrumb__y, $breadcrumb__x, $default__sizing);

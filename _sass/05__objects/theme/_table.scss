@@ -237,6 +237,12 @@ $table--hover__bg:          tint($gray__01, $table__contrast * 3);
         }
     }
 }
+
+.table-sticky {
+    thead {
+        background-color: $white;
+    }
+}
 //
 //  Colors
 @include table-color-variation($default__palette);

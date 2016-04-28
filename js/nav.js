@@ -1,6 +1,4 @@
-/**************************
- *  Nav
- */
+//  Nav
 var pageBody           = document.querySelector("body");
 var offcanvasBody      = document.querySelector(".offcanvas-body");
 var offcanvasNav       = document.querySelector(".offcanvas-nav");

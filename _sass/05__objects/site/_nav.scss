@@ -124,6 +124,8 @@ $offcanvas-nav-width: 15em;
 
     @media (max-width: $screen-sm-max) {
         transform: translateX(negative($offcanvas-nav-width));
+        height: 100%;
+        margin-top: 0;
     }
 }
 
@@ -149,7 +151,7 @@ $offcanvas-nav-width: 15em;
 
 .offcanvas-backdrop {
     position: fixed;
-    z-index: $zindex-navbar-fixed - 1;
+    z-index: $zindex-offcanvas-backdrop;
     top: 0;
     right: 0;
     bottom: 0;
