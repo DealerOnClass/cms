@@ -54,7 +54,7 @@ $nav__y--lg: ($nav__y * 1.5);
     padding-bottom: $nav__y;
 
     transition-timing-function: ease-in-out;
-    transition-duration: 0.2s;
+    transition-duration: 0.25s;
     transition-property: background, color;
     text-transform: capitalize;
 
@@ -141,7 +141,7 @@ $offcanvas-nav-width: 15em;
     margin-top: $oncanvas-nav-height;
 
     transition-timing-function: ease-in-out;
-    transition-duration: 0.2s;
+    transition-duration: 0.25s;
     transition-property: transform;
 
     @media (max-width: $screen-sm-max) {
@@ -199,7 +199,7 @@ $offcanvas-nav-width: 15em;
     }
 
     &.fade {
-        transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.25s ease-in-out;
     }
 
     &.in {
@@ -216,7 +216,7 @@ $offcanvas-nav-width: 15em;
     margin-left: $offcanvas-nav-width;
 
     transition-timing-function: ease-in-out;
-    transition-duration: 0.2s;
+    transition-duration: 0.25s;
     transition-property: width, margin-left;
 
     @media (max-width: $screen-sm-max) {
@@ -236,7 +236,7 @@ $offcanvas-nav-width: 15em;
     width: 200%;
 
     transition-timing-function: ease-in-out;
-    transition-duration: 0.35s;
+    transition-duration: 0.25s;
     transition-property: transform;
     transform: translateX(0);
     backface-visibility: hidden;
