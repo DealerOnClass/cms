@@ -84,7 +84,8 @@ gulp.task('scripts', function() {
         './js/clipboard.min.js',
         './js/functions.js',
         './js/nav.js',
-        './js/table.js'
+        './js/table.js',
+        './js/slide.js'
     ])
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('./_includes/'))
@@ -107,7 +108,8 @@ gulp.task('watch', function () {
             './_includes/*',
             './_layouts/*',
             './_mockups/*',
-            './_objects/*',
+            './_objects-custom/*',
+            './_objects-bootstrap/*',
             './_pages/*',
             './_posts/*',
             './js/*'

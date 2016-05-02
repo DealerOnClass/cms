@@ -13,6 +13,7 @@ $dropdown__use-btn__color:  false;
 }
 
 .dropdown-menu {
+    list-style: none;
     position: absolute;
     z-index: $zindex-dropdown;
     top: 100%;

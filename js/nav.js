@@ -2,10 +2,11 @@
 var pageBody           = document.querySelector("body");
 var offcanvasBody      = document.querySelector(".offcanvas-body");
 var offcanvasNav       = document.querySelector(".offcanvas-nav");
-var offcanvasNavToggle = document.querySelector("#offcanvas-nav-toggle");
+var navbarNavToggle    = document.querySelector("#navbar-nav-toggle");
+var sidebarNavToggle   = document.querySelector("#sidebar-nav-toggle");
 
 //  Initialize body
-pageBody.classList.add("offcanvas-is-closed");
+pageBody.classList.add("mobile-nav-is-closed", "desktop-nav-is-open");
 
 //  Initialize backdrop
 var offcanvasBackdrop = document.createElement("div");
@@ -18,23 +19,43 @@ function insertAfter(newNode, referenceNode) {
 }
 
 //  Toggle offcanvas menu
-offcanvasNavToggle.addEventListener("click", function(){
-    if ( pageBody.classList.contains("offcanvas-is-closed") ) {
-        pageBody.classList.add("offcanvas-is-open");
-        pageBody.classList.remove("offcanvas-is-closed");
+navbarNavToggle.addEventListener("click", function() {
+    navbarNavToggle.disabled = true;
+    if ( pageBody.classList.contains("mobile-nav-is-closed") ) {
+        pageBody.classList.add("mobile-nav-is-open");
+        pageBody.classList.remove("mobile-nav-is-closed");
         offcanvasBackdrop.classList.add("in");
         offcanvasBackdrop.classList.remove("invisible");
-    } else if ( pageBody.classList.contains("offcanvas-is-open") ) {
-        pageBody.classList.add("offcanvas-is-closed");
-        pageBody.classList.remove("offcanvas-is-open");
+    } else if ( pageBody.classList.contains("mobile-nav-is-open") ) {
+        pageBody.classList.add("mobile-nav-is-closed");
+        pageBody.classList.remove("mobile-nav-is-open");
         offcanvasBackdrop.classList.remove("in");
         setTimeout(function() {
             offcanvasBackdrop.classList.add("invisible");
         }, 200)
     }
+    navbarNavToggle.disabled = false;
+});
+
+sidebarNavToggle.addEventListener("click", function() {
+    if ( pageBody.classList.contains("desktop-nav-is-closed") ) {
+        sidebarNavToggle.setAttribute("disabled", true);
+        pageBody.classList.add("desktop-nav-is-open");
+        pageBody.classList.remove("desktop-nav-is-closed");
+        setTimeout(function() {
+            sidebarNavToggle.removeAttribute("disabled");
+        }, 200)
+    } else if ( pageBody.classList.contains("desktop-nav-is-open") ) {
+        sidebarNavToggle.setAttribute("disabled", true);
+        pageBody.classList.add("desktop-nav-is-closed");
+        pageBody.classList.remove("desktop-nav-is-open");
+        setTimeout(function() {
+            sidebarNavToggle.removeAttribute("disabled");
+        }, 200)
+    }
 });
 
 offcanvasBackdrop.addEventListener("click", function() {
-    offcanvasNavToggle.click();
+    navbarNavToggle.click();
 });
 

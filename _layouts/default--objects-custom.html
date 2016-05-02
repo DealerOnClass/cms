@@ -5,9 +5,9 @@ layout: compress
 
 <html>
 
-    {% include head.html %}
+    {% include head--objects-custom.html %}
 
-    <body onload="PopulateThemes()">
+    <body>
 
         <nav class="oncanvas-nav nav nav--navbar site-navbar">
             <button id="navbar-nav-toggle" class="nav__item navbar-nav-toggle">
@@ -38,18 +38,18 @@ layout: compress
                         {% assign navgroup = 'mockups' %}
                         {% include nav.html %}
                     </div>
-                    <a href="" class="nav__item dropdown-toggle collapsed" data-toggle="collapse" data-target="#objects-custom">
+                    <a href="" class="nav__item dropdown-toggle collapsed" data-toggle="collapse" data-target="#collapse__cobjects">
                         Custom Components
                     </a>
-                    <div id="objects-custom" class="nav__group collapse in">
+                    <div id="collapse__cobjects" class="nav__group collapse in">
                         {% assign pagelist = site.objects-custom %}
                         {% assign navgroup = 'objects-custom' %}
                         {% include nav.html %}
                     </div>
-                    <a href="" class="nav__item dropdown-toggle collapsed" data-toggle="collapse" data-target="#objects-bootstrap">
+                    <a href="" class="nav__item dropdown-toggle collapsed" data-toggle="collapse" data-target="#collapse__objects">
                         Bootstrap Components
                     </a>
-                    <div id="objects-bootstrap" class="nav__group collapse in">
+                    <div id="collapse__objects" class="nav__group collapse in">
                         {% assign pagelist = site.objects-bootstrap %}
                         {% assign navgroup = 'objects' %}
                         {% include nav.html %}
@@ -72,3 +72,4 @@ layout: compress
     </body>
 
 </html>
+

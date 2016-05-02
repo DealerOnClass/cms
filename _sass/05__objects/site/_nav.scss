@@ -1,8 +1,8 @@
 //
 //  Units
-$nav__x:      $global__x;
-$nav__y:      rhythm($global__y / 2);
-$nav__y--lg:  ($nav__y * 1.5);
+$nav__x: $global__x;
+$nav__y: rhythm($global__y / 2);
+$nav__y--lg: ($nav__y * 1.5);
 //
 //  Base
 .nav {
@@ -49,12 +49,14 @@ $nav__y--lg:  ($nav__y * 1.5);
     @include column($nav__x);
 
     display: block;
-    text-transform: capitalize;
+
     padding-top: $nav__y;
     padding-bottom: $nav__y;
-    transition-property: background, color;
-    transition-duration: 0.2s;
+
     transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    transition-property: background, color;
+    text-transform: capitalize;
 
     &:hover {
         background-color: rgba(0, 0, 0, 0.1);
@@ -69,12 +71,13 @@ $nav__y--lg:  ($nav__y * 1.5);
     position: relative;
 
     &:after {
-        content: "";
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+
+        content: "";
     }
 }
 //
@@ -85,24 +88,27 @@ $offcanvas-nav-width: 15em;
 //  Offcanvas Base
 %position-fixed {
     position: fixed;
-    backface-visibility: hidden;
     top: 0;
     left: 0;
+
+    backface-visibility: hidden;
 }
 
 .oncanvas-nav {
     @extend %position-fixed;
 
     z-index: $zindex-navbar-fixed;
-    border-radius: 0;
+
     width: 100%;
+
+    border-radius: 0;
 }
 
 .offcanvas {
     margin-top: $oncanvas-nav-height;
 }
 
-.offcanvas-is-open {
+.mobile-nav-is-open {
     overflow: hidden;
 
     .offcanvas-nav {
@@ -110,32 +116,61 @@ $offcanvas-nav-width: 15em;
     }
 }
 
+.desktop-nav-is-closed {
+    @media (min-width: $screen-sm-min) {
+        .offcanvas-nav {
+            transform: translateX(negative($offcanvas-nav-width));
+        }
+
+        .offcanvas-body {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
 .offcanvas-nav {
     @extend %position-fixed;
 
     z-index: $zindex-offcanvas;
-    width: $offcanvas-nav-width;
-    margin-top: $oncanvas-nav-height;
-    height: calc(100% - #{$oncanvas-nav-height});
+
     overflow-y: auto;
-    transition-property: transform;
-    transition-duration: 0.2s;
+
+    width: $offcanvas-nav-width;
+    height: calc(100% - #{$oncanvas-nav-height});
+    margin-top: $oncanvas-nav-height;
+
     transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    transition-property: transform;
 
     @media (max-width: $screen-sm-max) {
-        transform: translateX(negative($offcanvas-nav-width));
         height: 100%;
         margin-top: 0;
+
+        transform: translateX(negative($offcanvas-nav-width));
     }
 }
 
-.offcanvas-nav-toggle {
+.navbar-nav-toggle {
     .fa {
         font-size: 14px;
-        line-height: floor($global__font-size * $global__line-height) * 1px;
+        //  line-height: floor($global__font-size * $global__line-height) * 1px;
     }
 
+    &[disabled]:hover {
+        cursor: pointer;
+    }
+}
+
+#navbar-nav-toggle {
     @media (min-width: $screen-sm-min) {
+        display: none;
+    }
+}
+
+#sidebar-nav-toggle {
+    @media (max-width: $screen-sm-max) {
         display: none;
     }
 }
@@ -146,7 +181,7 @@ $offcanvas-nav-width: 15em;
 }
 
 .offcanvas-nav-body {
-    //
+    width: 100%;
 }
 
 .offcanvas-backdrop {
@@ -179,15 +214,44 @@ $offcanvas-nav-width: 15em;
 .offcanvas-body {
     width: calc(100% - #{$offcanvas-nav-width});
     margin-left: $offcanvas-nav-width;
-    transition-property: width, margin-left;
-    transition-duration: 0.2s;
+
     transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    transition-property: width, margin-left;
 
     @media (max-width: $screen-sm-max) {
         width: 100%;
         margin-left: 0;
     }
 }
+//
+//  Slide Over
+.slide-over-wrapper {
+    overflow-x: hidden;
+}
+
+.slide-over {
+    position: relative;
+
+    width: 200%;
+
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.35s;
+    transition-property: transform;
+    transform: translateX(0);
+    backface-visibility: hidden;
+}
+
+.slide-over-item {
+    float: left;
+
+    width: 50%;
+}
+
+.slide-over-is-visible {
+    transform: translateX(-40%);
+}
+
 //
 //  Context Specific
 .page-navbar,

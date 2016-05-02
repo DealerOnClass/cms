@@ -31,7 +31,10 @@ collections:
     mockups:
         output: true
 
-    objects:
+    objects-bootstrap:
+        output: true
+
+    objects-custom:
         output: true
 
     pages:
@@ -45,9 +48,14 @@ defaults:
         layout: mockup
 
     - scope:
-        type: objects
+        type: objects-bootstrap
       values:
-        layout: object
+        layout: object-bootstrap
+
+    - scope:
+        type: objects-custom
+      values:
+        layout: object-custom
 
     - scope:
         type: pages

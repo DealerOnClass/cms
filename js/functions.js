@@ -1,32 +1,34 @@
 //  Theme Generation
-var object = document.querySelector("#js-object-id");
-if ( object != null ) {
-    var objectID = object.getAttribute("data-object-id");
-};
-var themes = document.querySelectorAll("#js-object-root [data-object-change]");
+function PopulateThemes() {
+    var object = document.querySelector("#js-object-id");
+    if ( object != null ) {
+        var objectID = object.getAttribute("data-object-id");
+    };
+    var themes = document.querySelectorAll("#js-object-root [data-object-change]");
 
-/*
- *  For each theme section, wherever you find the "object-id", replace
- *  it with the current theme color. eg. "alert" becomes "alert alert-color".
- */
-forEach(themes, function (index, theme) {
-    var base      = theme.querySelector("." + objectID);
-    var highlight = theme.querySelector(".highlight");
-    var textarea  = theme.querySelector(".object-copy__textarea");
-    var color     = theme.getAttribute("data-object-change");
+    /*
+     *  For each theme section, wherever you find the "object-id", replace
+     *  it with the current theme color. eg. "alert" becomes "alert alert-color".
+     */
+    forEach(themes, function (index, theme) {
+        var base      = theme.querySelector("." + objectID);
+        var highlight = theme.querySelector(".highlight");
+        var textarea  = theme.querySelector(".object-copy__textarea");
+        var color     = theme.getAttribute("data-object-change");
 
-    var baseOldCode = base.outerHTML;
-    var baseNewCode = baseOldCode.replace('class="' + objectID, 'class="' + objectID + ' ' + objectID + '-' + color);
-    base.outerHTML = baseNewCode;
+        var baseOldCode = base.outerHTML;
+        var baseNewCode = baseOldCode.replace('class="' + objectID, 'class="' + objectID + ' ' + objectID + '-' + color);
+        base.outerHTML = baseNewCode;
 
-    var objectOldCode = highlight.innerHTML;
-    var objectNewCode = objectOldCode.replace('class="' + objectID, 'class="' + objectID + ' ' + objectID + '-' + color);
-    highlight.innerHTML = objectNewCode;
+        var objectOldCode = highlight.innerHTML;
+        var objectNewCode = objectOldCode.replace('class="' + objectID, 'class="' + objectID + ' ' + objectID + '-' + color);
+        highlight.innerHTML = objectNewCode;
 
-    var textareaOldCode = base.outerHTML;
-    var textareaNewCode = textareaOldCode.replace('class="' + objectID, 'class="' + objectID + ' ' + objectID + '-' + color);
-    textarea.innerHTML = textareaNewCode;
-});
+        var textareaOldCode = base.outerHTML;
+        var textareaNewCode = textareaOldCode.replace('class="' + objectID, 'class="' + objectID + ' ' + objectID + '-' + color);
+        textarea.innerHTML = textareaNewCode;
+    });
+}
 
 //  Utilities
 function forEach(array, callback, scope) {
