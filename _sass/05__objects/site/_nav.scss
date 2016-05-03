@@ -231,25 +231,38 @@ $offcanvas-nav-width: 15em;
 }
 
 .slide-over {
+    @include clearfix;
+
     position: relative;
 
     width: 200%;
 
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.25s;
-    transition-property: transform;
+    transition: transform 0.25s ease-in-out;
     transform: translateX(0);
     backface-visibility: hidden;
+    font-smoothing: antialiased;
+}
+
+.slide-over-is-visible {
+    transform: translateX(-50%);
 }
 
 .slide-over-item {
     float: left;
 
     width: 50%;
+
 }
 
-.slide-over-is-visible {
-    transform: translateX(-40%);
+.slide-over-toggle-wrapper {
+    padding: 0 !important;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.slide-over-toggle-wrapper .btn {
+    padding-left: ($global__x * $global__line-height);
+    padding-right: ($global__x * $global__line-height);
 }
 
 //

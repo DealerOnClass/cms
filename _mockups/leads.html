@@ -62,22 +62,22 @@ navorder:   1
                         <!--<button type="submit" class="btn btn-xs">Submit</button>-->
                     </form>
                 </li>
-                <li>
-                    <form class="navbar-form form-inline">
-                        <input class="form-control" placeholder="Email" type="email">
+                <!--<li>-->
+                    <!--<form class="navbar-form form-inline">-->
+                        <!--<input class="form-control" placeholder="Email" type="email">-->
                         <!--<button type="submit" class="btn btn-xs">Submit</button>-->
-                    </form>
-                </li>
-                <li>
-                    <form class="navbar-form form-inline">
-                        <input class="form-control" placeholder="Phone" type="tel">
+                        <!--</form>-->
+                    <!--</li>-->
+                <!--<li>-->
+                    <!--<form class="navbar-form form-inline">-->
+                        <!--<input class="form-control" placeholder="Phone" type="tel">-->
                         <!--<button type="submit" class="btn btn-xs">Submit</button>-->
-                    </form>
-                </li>
-                <li class="navbar-text">Start:</li>
+                        <!--</form>-->
+                    <!--</li>-->
+                <!--<li class="navbar-text">Start:</li>-->
                 <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                        <strong>2/19/2016</strong>
+                        Start: <strong>2/19/2016</strong>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li>
@@ -97,10 +97,10 @@ navorder:   1
                         </li>
                     </ul>
                 </li>
-                <li class="navbar-text">End:</li>
+                <!--<li class="navbar-text">End:</li>-->
                 <li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                        <strong>3/19/2016 </strong>
+                        End: <strong>3/19/2016 </strong>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li>
@@ -138,8 +138,8 @@ navorder:   1
         <div class="slide-over-wrapper">
             <div id="js-slide-over" class="slide-over slide-over-is-hidden">
                 <div class="slide-over-item slide-over-item-visible">
-                    <div class="table-responsive">
-                        <table class="table table-flush table-sticky">
+                    <div id="js-slide-table" class="table-responsive fade in">
+                        <table class="table table-flush">
                             <thead>
                                 <tr>
                                     <th>Source</th>
@@ -147,7 +147,8 @@ navorder:   1
                                     <th>From</th>
                                     <th>Name</th>
                                     <th>Date</th>
-                                    <th></th>
+                                    <th>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -157,9 +158,10 @@ navorder:   1
                                     <td>brisinn@gmail.com</td>
                                     <td>Brian Sinn</td>
                                     <td>1/21/2016 9:54:00 AM</td>
-                                    <td>
-                                        <button class="btn btn-xs slide-over-toggle">
-                                            <i class="fa fa-angle-right"></i>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
                                         </button>
                                     </td>
                                 </tr>
@@ -169,10 +171,11 @@ navorder:   1
                                     <td>brijeshchawla@yahoo.com</td>
                                     <td>Brijesh Chawla</td>
                                     <td>1/21/2016 9:11:00 AM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -181,10 +184,11 @@ navorder:   1
                                     <td>vaeav@hotmail.com</td>
                                     <td>Veronica Rincon Rojas</td>
                                     <td>1/20/2016 10:47:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -193,10 +197,11 @@ navorder:   1
                                     <td>chuckm@lefeld.com</td>
                                     <td>Chuck Meyer</td>
                                     <td>1/20/2016 9:57:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -205,10 +210,11 @@ navorder:   1
                                     <td>wellsc@stolaf.edu</td>
                                     <td>Colin Wells</td>
                                     <td>1/20/2016 6:21:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -217,10 +223,11 @@ navorder:   1
                                     <td>cvang019@gmail.com</td>
                                     <td>Chang Vang</td>
                                     <td>1/20/2016 11:14:00 AM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -229,10 +236,11 @@ navorder:   1
                                     <td>Melissajsherlock@hotmail.com</td>
                                     <td>Melissa Sherlock</td>
                                     <td>1/19/2016 9:47:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -241,10 +249,11 @@ navorder:   1
                                     <td>KBWEAVER@COMCAST.NET</td>
                                     <td>KEITH WEAVER</td>
                                     <td>1/19/2016 5:19:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -253,10 +262,11 @@ navorder:   1
                                     <td>kwagenmann@gmail.com</td>
                                     <td>Kayla Wagenmann</td>
                                     <td>1/19/2016 5:14:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -265,10 +275,11 @@ navorder:   1
                                     <td>Aelmi88@ggmail.com</td>
                                     <td>Abdikarim Elmi</td>
                                     <td>1/19/2016 1:00:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -277,10 +288,11 @@ navorder:   1
                                     <td>abximan@yahoo.com</td>
                                     <td>Mike Graf</td>
                                     <td>1/18/2016 10:17:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -289,10 +301,11 @@ navorder:   1
                                     <td>mackenzie.millette@lutherbrookdalehonda.com</td>
                                     <td>Mackenzie Millette</td>
                                     <td>1/18/2016 10:15:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -301,10 +314,11 @@ navorder:   1
                                     <td>Bzeller@hamhwe.com</td>
                                     <td>Brad Zeller</td>
                                     <td>1/18/2016 9:08:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -313,10 +327,11 @@ navorder:   1
                                     <td>JKRAMER91191@GMAIL.COM</td>
                                     <td>JOSHUA KRAMER</td>
                                     <td>1/18/2016 11:04:00 AM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -325,10 +340,11 @@ navorder:   1
                                     <td>fetsumberhankidanu84@gmail.com</td>
                                     <td>Fetsum Kidanu</td>
                                     <td>1/17/2016 10:33:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -337,10 +353,11 @@ navorder:   1
                                     <td>a_srihari@hotmail.com</td>
                                     <td>Srihari Appasamy</td>
                                     <td>1/17/2016 6:14:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -349,10 +366,11 @@ navorder:   1
                                     <td>pjk2124@gmail.com</td>
                                     <td>Patty LeMay</td>
                                     <td>1/16/2016 8:30:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -361,10 +379,11 @@ navorder:   1
                                     <td>lpapasodora@yahoo.com</td>
                                     <td>Lou Ann Papasodora</td>
                                     <td>1/16/2016 3:22:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -373,10 +392,11 @@ navorder:   1
                                     <td>blinky2bob@yahoo.com</td>
                                     <td>Bob Streit</td>
                                     <td>1/16/2016 12:46:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -385,10 +405,11 @@ navorder:   1
                                     <td>stevebasinger@charter.net</td>
                                     <td>Steve Basinger</td>
                                     <td>1/16/2016 12:46:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -397,10 +418,11 @@ navorder:   1
                                     <td>treetis@gmail.com</td>
                                     <td>Treetis Ebben</td>
                                     <td>1/15/2016 5:27:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -409,10 +431,11 @@ navorder:   1
                                     <td>sreitenour@gmail.com</td>
                                     <td>Steve Reitenour</td>
                                     <td>1/15/2016 4:44:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -421,10 +444,11 @@ navorder:   1
                                     <td>sreitenour@gmail.com</td>
                                     <td>Steve Reitenour</td>
                                     <td>1/15/2016 4:43:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -433,10 +457,11 @@ navorder:   1
                                     <td>bgdiehl@yahoo.com</td>
                                     <td>Brenden Diehl</td>
                                     <td>1/15/2016 4:32:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -445,10 +470,11 @@ navorder:   1
                                     <td>Rkc5150@aol.com</td>
                                     <td>Russell Cirelli</td>
                                     <td>1/15/2016 4:04:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -457,10 +483,11 @@ navorder:   1
                                     <td>alijased@gmail.com</td>
                                     <td>Alija Triviski</td>
                                     <td>1/15/2016 3:49:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -469,10 +496,11 @@ navorder:   1
                                     <td>cross2014@gmail.com</td>
                                     <td>Chandler Ross</td>
                                     <td>1/15/2016 12:39:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -481,10 +509,11 @@ navorder:   1
                                     <td>davidkarsjens@gmail.com</td>
                                     <td>David Karsjens</td>
                                     <td>1/15/2016 12:00:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -493,10 +522,11 @@ navorder:   1
                                     <td>ferrellda22@gmail.com</td>
                                     <td>Dave Ferrell</td>
                                     <td>1/15/2016 10:46:00 AM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -505,10 +535,11 @@ navorder:   1
                                     <td>Tdue22@gmail.com</td>
                                     <td>Tom Duevel</td>
                                     <td>1/15/2016 9:20:00 AM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -517,10 +548,11 @@ navorder:   1
                                     <td>se65188@gmail.com</td>
                                     <td>Steven Barnes</td>
                                     <td>1/14/2016 7:27:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -529,10 +561,11 @@ navorder:   1
                                     <td>johnl.choiniere@gmail.com</td>
                                     <td>John Choiniere</td>
                                     <td>1/14/2016 6:53:00 PM</td>
-                                    <td>
-                                        <a class="btn btn-xs" href="">
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
+                                    <td class="slide-over-toggle-wrapper">
+                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link slide-over-open">
+                                            <i class="fa fa-chevron-right">
+                                            </i>
+                                        </button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -540,6 +573,13 @@ navorder:   1
                     </div>
                 </div>
                 <div class="slide-over-item slide-over-item-hidden">
+                    <div class="clearfix" style="margin-top: 4em;">
+                        <div class="pull-left">
+                            <button onclick="SlideClose(this)" class="btn btn-xs btn-link slide-over-close">
+                                <i class="fa fa-chevron-left"></i> Go Back
+                            </button>
+                        </div>
+                    </div>
                     <p>Consectetur illo nesciunt repellendus nemo asperiores maiores voluptatum dolor. Corporis voluptatibus nisi perferendis magnam at, commodi error. Recusandae ex sunt odit natus ipsam. Magnam et id earum magnam explicabo debitis.</p>
                     <p>Elit maxime doloribus ipsum quaerat harum quis aliquam exercitationem. Molestias suscipit sunt consequatur doloremque esse debitis voluptatem? Fugit tempora modi consequuntur cumque aperiam corrupti impedit. Nam omnis temporibus est eum.</p>
                     <p>Lorem nesciunt ipsum suscipit est cumque obcaecati asperiores? Quae nisi mollitia non perferendis quo veniam dolor vitae excepturi magni temporibus assumenda qui. Repellat omnis molestiae illo atque ab, maxime. Repellendus.</p>
