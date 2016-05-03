@@ -265,6 +265,15 @@ $offcanvas-nav-width: 15em;
     padding-right: ($global__x * $global__line-height);
 }
 
+.table-clone {
+    backface-visibility: hidden;
+    transform: translateY(0px) !important;
+}
+
+.table-clone.is-animated {
+    transition: transform 0.25s ease-in-out;
+}
+
 //
 //  Context Specific
 .page-navbar,

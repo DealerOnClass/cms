@@ -5740,9 +5740,17 @@ if ( slideOver != null ) {
 
 function SlideOpen(el) {
     var self = el;
-    //  animate tr
+    //  initialize tr
     initTR(self.parentNode.parentNode);
-    //  slide table
+    //  animate tr
+    setTimeout(function() {
+        $("#js-table-clone").addClass("is-animated");
+    }, 250)
+    //  $("#js-table-clone").css({
+    //      "-webkit-transform" : "translateY(0px)",
+    //              "transform" : "translateY(0px)"
+    //  });
+    //  fade out table
     slideTable.classList.remove("in");
     //  slide over
     setTimeout(function() {
@@ -5755,7 +5763,7 @@ function SlideClose(el) {
     //  destroy tr
     var destroy = document.querySelector("#js-table-clone");
     destroy.classList.add("fade");
-    //  slide table
+    //  fade in table
     slideTable.classList.add("in");
     //  slide over
     setTimeout(function() {
@@ -5765,14 +5773,12 @@ function SlideClose(el) {
     //   destroy tr
     setTimeout(function() {
         $(destroy).remove();
-    }, 1000)
+    }, 100)
 };
 
 function initTR(el) {
     //  get distance to parent container
     var distanceToParent = el.offsetTop;
-    //  store distance in attr
-    el.setAttribute("data-offset", distanceToParent);
     //  set td widths in style attr
     initTD(el);
     //  create clone
@@ -5782,12 +5788,14 @@ function initTR(el) {
     //  set clone id
     clone.setAttribute("id", "js-tr-clone");
     //  wrap clone
-    $("#js-tr-clone").wrap("<table id='js-table-clone' class='table table-flush is-not-animated'><tbody>")
-    //  add animation class
-    $("#js-table-clone").addClass("is-animated");
-    //  set negative margin for "illusion"
+    $("#js-tr-clone").wrap("<table id='js-table-clone' class='table table-flush table-clone'><tbody>")
+    //  get negative margin for "illusion"
     var marginBottom = $("#js-table-clone").height();
-    $("#js-table-clone").css("margin-bottom", marginBottom * -1);
+    //  set initial position
+    $("#js-table-clone").css({
+        "margin-bottom": marginBottom * -1,
+        "transform": "translateY(" + distanceToParent + "px)"
+    });
 }
 
 function initTD(el) {
