@@ -16,10 +16,6 @@ function SlideOpen(el) {
     setTimeout(function() {
         $("#js-table-clone").addClass("is-animated");
     }, 250)
-    //  $("#js-table-clone").css({
-    //      "-webkit-transform" : "translateY(0px)",
-    //              "transform" : "translateY(0px)"
-    //  });
     //  fade out table
     slideTable.classList.remove("in");
     //  slide over
@@ -30,20 +26,28 @@ function SlideOpen(el) {
 };
 
 function SlideClose(el) {
-    //  destroy tr
+    //  get tr
     var destroy = document.querySelector("#js-table-clone");
-    destroy.classList.add("fade");
-    //  fade in table
-    slideTable.classList.add("in");
     //  slide over
+    slideOver.classList.remove("slide-over-is-visible");
+    slideOver.classList.add("slide-over-is-hidden");
+    //  animate tr
     setTimeout(function() {
-        slideOver.classList.remove("slide-over-is-visible");
-        slideOver.classList.add("slide-over-is-hidden");
+        destroy.classList.remove("is-animated");
+        destroy.classList.add("is-initial");
+    }, 250)
+    //  fade in table
+    setTimeout(function() {
+        slideTable.classList.add("in");
     }, 500)
-    //   destroy tr
+    //  fade tr
+    setTimeout(function() {
+        destroy.classList.add("fade");
+    }, 1000)
+    //  destroy tr
     setTimeout(function() {
         $(destroy).remove();
-    }, 100)
+    }, 1500)
 };
 
 function initTR(el) {

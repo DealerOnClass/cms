@@ -267,11 +267,19 @@ $offcanvas-nav-width: 15em;
 
 .table-clone {
     backface-visibility: hidden;
-    transform: translateY(0px) !important;
+
+    &.is-animated {
+        transition: transform 0.25s ease-in-out;
+        transform: translateY(0px) !important;
+    }
+
+    &.is-initial {
+        transition: transform 0.25s ease-in-out;
+        transform: initial;
+    }
 }
 
 .table-clone.is-animated {
-    transition: transform 0.25s ease-in-out;
 }
 
 //
