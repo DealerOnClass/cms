@@ -376,6 +376,12 @@ $navbar__y:         $global__y;
         border-radius: 0;
     }
 }
+
+.navbar-borderless {
+    & {
+        border-color: transparent;
+    }
+}
 //
 //  Sizing
 @include navbar-size-variation($navbar__y, $navbar__x, $default__sizing);

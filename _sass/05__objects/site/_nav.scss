@@ -262,6 +262,8 @@ $offcanvas-nav-width: 15em;
 }
 
 .slide-over-item {
+    overflow: hidden;
+
     float: left;
 
     width: 50%;
