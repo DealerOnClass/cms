@@ -228,6 +228,12 @@ $offcanvas-nav-width: 15em;
 //  Slide Over
 .slide-over-wrapper {
     overflow-x: hidden;
+
+    //  &.slid-over {
+    //      .table-clone .slide-over-toggle-wrapper {
+    //          visibility: hidden;
+    //      }
+    //  }
 }
 
 .slide-over {
@@ -243,8 +249,16 @@ $offcanvas-nav-width: 15em;
     font-smoothing: antialiased;
 }
 
+//
+//  to offset pixel blurring, using 49 instead of 50
 .slide-over-is-visible {
-    transform: translateX(-50%);
+    transform: translateX(-49%);
+}
+
+//
+//  to center because of above adjustment
+.slide-over-item-hidden {
+    padding-right: 2%;
 }
 
 .slide-over-item {
@@ -266,6 +280,8 @@ $offcanvas-nav-width: 15em;
 }
 
 .table-clone {
+    position: relative;
+    z-index: 500;
     backface-visibility: hidden;
 
     &.is-animated {
@@ -277,9 +293,6 @@ $offcanvas-nav-width: 15em;
         transition: transform 0.25s ease-in-out;
         transform: initial;
     }
-}
-
-.table-clone.is-animated {
 }
 
 //

@@ -1,15 +1,15 @@
 //  Slide
-
 var slideOver = document.querySelector("#js-slide-over");
 
 if ( slideOver != null ) {
+    var slideWrapr = document.querySelector("#js-slide-wrapper");
     var slideTable = document.querySelector("#js-slide-table");
-    //  var slideOpen  = document.querySelectorAll(".slide-over-open");
-    //  var slideClose = document.querySelectorAll(".slide-over-close");
 };
 
 function SlideOpen(el) {
     var self = el;
+    //  set wrapper state
+    slideWrapr.classList.add("slid-over");
     //  initialize tr
     initTR(self.parentNode.parentNode);
     //  animate tr
@@ -26,12 +26,14 @@ function SlideOpen(el) {
 };
 
 function SlideClose(el) {
-    //  get tr
+    //  get table
     var destroy = document.querySelector("#js-table-clone");
     //  slide over
     slideOver.classList.remove("slide-over-is-visible");
     slideOver.classList.add("slide-over-is-hidden");
-    //  animate tr
+    //  reset toggle
+    resetToggle("#js-tr-clone .slide-over-toggle");
+    //  animate table
     setTimeout(function() {
         destroy.classList.remove("is-animated");
         destroy.classList.add("is-initial");
@@ -42,9 +44,10 @@ function SlideClose(el) {
     }, 500)
     //  fade tr
     setTimeout(function() {
-        destroy.classList.add("fade");
+        destroy.classList.remove("in");
+        slideWrapr.classList.remove("slid-over");
     }, 1000)
-    //  destroy tr
+    //  destroy table
     setTimeout(function() {
         $(destroy).remove();
     }, 1500)
@@ -53,16 +56,21 @@ function SlideClose(el) {
 function initTR(el) {
     //  get distance to parent container
     var distanceToParent = el.offsetTop;
-    //  set td widths in style attr
+    //  init TD
     initTD(el);
     //  create clone
     clone = el.cloneNode(true);
     //  place clone
     $(slideOver).before(clone);
+    //  refresh TD
+    resetTD(el)
     //  set clone id
     clone.setAttribute("id", "js-tr-clone");
     //  wrap clone
-    $("#js-tr-clone").wrap("<table id='js-table-clone' class='table table-flush table-clone'><tbody>")
+    var existingTableClasses = $("#js-slide-table > .table").attr("class");
+    $("#js-tr-clone").wrap("<table id='js-table-clone' class='" + existingTableClasses + " table-clone fade in'><tbody>")
+    //  init toggle
+    initToggle("#js-tr-clone .slide-over-toggle");
     //  get negative margin for "illusion"
     var marginBottom = $("#js-table-clone").height();
     //  set initial position
@@ -77,4 +85,20 @@ function initTD(el) {
     forEach(tds, function (index, td) {
         td.style.width = td.offsetWidth + "px";
     });
+}
+
+function resetTD(el) {
+    var tds = el.children;
+    forEach(tds, function (index, td) {
+        td.removeAttribute("style");
+    });
+}
+
+function initToggle(el) {
+    $(el).attr("onclick", "SlideClose(this)")
+    $(el).find(".fa").removeClass("fa-chevron-right").addClass("fa-remove");
+}
+
+function resetToggle(el) {
+    $(el).find(".fa").removeClass("fa-remove").addClass("fa-chevron-right");
 }

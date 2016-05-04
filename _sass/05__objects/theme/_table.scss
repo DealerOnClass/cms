@@ -244,6 +244,9 @@ $table--hover__bg:          tint($gray__01, $table__contrast * 3);
     }
 }
 //
+//  Sizing
+@include table-size-variation($table__y, $table__x, $default__sizing);
+//
 //  Colors
 @include table-color-variation($default__palette);
 @include table-color-variation($inverse__palette);

@@ -583,21 +583,17 @@ navorder:   1
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
-                            <table class="table table-condensed table-borderless table-striped">
+                            <table class="table table-borderless table-condensed">
                                 <thead>
                                     <tr>
-                                        <td width="40%" colspan="2"><strong>Personal Details:</strong></td>
+                                        <td colspan="2"><strong>Personal Details:</strong></td>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!--<tr>-->
-                                        <!--<td>Salutation:</td>-->
-                                        <!--<td>-->
-                                        <!--</td>-->
-                                    <!--</tr>-->
                                     <tr>
-                                        <td>Lead Source:</td>
-                                        <td>Website - ePrice Inventory New</td>
+                                        <td>Salutation:</td>
+                                        <td>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>First Name:</td>
@@ -630,46 +626,68 @@ navorder:   1
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Email:</td>
+                                        <td>Primary Email:</td>
                                         <td>519698554@qq.com</td>
                                     </tr>
-                                    <!--<tr>-->
-                                        <!--<td>Secondary Email:</td>-->
-                                        <!--<td>-->
-                                        <!--</td>-->
-                                    <!--</tr>-->
                                     <tr>
-                                        <td>Phone:</td>
+                                        <td>Secondary Email:</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Home Phone:</td>
                                         <td>(818) 658-4156</td>
                                     </tr>
-                                    <!--<tr>-->
-                                        <!--<td>Work Phone:</td>-->
-                                        <!--<td>-->
-                                        <!--</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td>Mobile Phone:</td>-->
-                                        <!--<td>-->
-                                        <!--</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td>Fax:</td>-->
-                                        <!--<td>-->
-                                        <!--</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td>Company:</td>-->
-                                        <!--<td>-->
-                                        <!--</td>-->
-                                    <!--</tr>-->
+                                    <tr>
+                                        <td>Work Phone:</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mobile Phone:</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fax:</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Company:</td>
+                                        <td>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
-                        </div>
-                        <div class="col-sm-6">
-                            <table class="table table-condensed table-borderless table-striped">
+                            <table class="table table-borderless table-condensed">
                                 <thead>
                                     <tr>
-                                        <th width="40%" colspan="2"><strong>Campaign Information:</strong></th>
+                                        <td colspan="2">Prospect Info:</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Prospect Type:</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ad Source:</td>
+                                        <td>Website - ePrice Inventory New</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Comments:</td>
+                                        <td>
+                                            <div id="lead-comments">
+                                                I have received price of 2016 civic automatic sedan LX around 18000 dollars. Also there is extra 500 dollars rebate. I am interested in your price of this car, thank you! </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-borderless table-condensed">
+                                <thead>
+                                    <tr>
+                                        <td colspan="2">Campaign Information:</td>
                                     </tr>
                                 </thead>
                                 <tbody>
