@@ -5800,6 +5800,7 @@ function initTR(el) {
     resetTD(el)
     //  set self state && change to "last only"
     el.classList.add("bg-main", "last-visited");
+    el.classList.remove("bg-success");
     $(".last-visited").not(el).removeClass("bg-main").addClass("bg-success");
     //  set clone id
     clone.setAttribute("id", "js-tr-clone");
