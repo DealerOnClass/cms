@@ -78,8 +78,13 @@ function initTR(el) {
     resetTD(el)
     //  set self state
     el.classList.add("bg-main", "last-visited");
-    el.classList.remove("text-success");
-    $(".last-visited").not(el).removeClass("bg-main").addClass("text-success");
+    $(".last-visited").not(el).removeClass("bg-main");
+
+        //  //  set self state
+        //  el.classList.add("bg-main", "last-visited");
+        //  el.classList.remove("text-success");
+        //  $(".last-visited").not(el).removeClass("bg-main").addClass("text-success");
+
     //  set clone id
     clone.setAttribute("id", "js-tr-clone");
     //  wrap clone

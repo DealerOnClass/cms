@@ -1,7 +1,16 @@
 //
 //  Base
-.text-muted {
+.text-muted-25 {
+    opacity: 0.25;
+}
+
+.text-muted,
+.text-muted-50 {
     opacity: 0.5;
+}
+
+.text-muted-75 {
+    opacity: 0.75;
 }
 
 .text-capitalize {
