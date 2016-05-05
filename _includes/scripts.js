@@ -5772,15 +5772,18 @@ function SlideClose(el) {
     setTimeout(function() {
         slideTable.classList.add("in");
     }, 500)
+    //  fade out tr
+    setTimeout(function() {
+        $("#js-tbody-clone").removeClass("in");
+    }, 750)
     //  fade tr
     setTimeout(function() {
-        destroy.classList.remove("in");
         slideWrapr.classList.remove("slid-over");
     }, 1000)
-    //  destroy table
+    //  destroy tr
     setTimeout(function() {
         $(destroy).remove();
-    }, 1500)
+    }, 1250)
 };
 
 function initTR(el) {
@@ -5798,7 +5801,7 @@ function initTR(el) {
     clone.setAttribute("id", "js-tr-clone");
     //  wrap clone
     var existingTableClasses = $("#js-slide-table > .table").attr("class");
-    $("#js-tr-clone").wrap("<table id='js-table-clone' class='" + existingTableClasses + " table-clone fade in'><tbody>")
+    $("#js-tr-clone").wrap("<table id='js-table-clone' class='" + existingTableClasses + " table-clone'><tbody id='js-tbody-clone' class='fade in'>")
     //  init toggle
     initToggle("#js-tr-clone .slide-over-toggle");
     //  get negative margin for "illusion"

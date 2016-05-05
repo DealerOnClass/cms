@@ -31,6 +31,9 @@ $badge__y:         ($global__y / 2);
     border-radius: ($badge__y * 2) + $global__line-height;
 }
 //
+//  Sizing
+@include badge-size-variation($badge__y, $badge__x, $default__sizing);
+//
 //  Colors
 @include badge-color-variation($default__palette);
 @include badge-color-variation($inverse__palette);

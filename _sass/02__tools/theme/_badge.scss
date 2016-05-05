@@ -7,3 +7,14 @@
     }
 }
 
+@mixin badge-size-variation($unit__y, $unit__x, $input__palette) {
+    @each $class__name, $size in $input__palette {
+
+        $x: ($unit__x * strip-unit($size));
+        $y: ($unit__y * strip-unit($size));
+
+        .badge-#{$class__name} {
+            padding: $y $x;
+        }
+    }
+}

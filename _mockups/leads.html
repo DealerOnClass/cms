@@ -4,7 +4,12 @@ title:      Leads Screen
 navgroup:   "mockups"
 navorder:   2
 ---
-<div class="hero hero-md" style="padding-bottom: 0">
+<ol class="breadcrumb breadcrumb-default breadcrumb-flush">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Library</a></li>
+    <li class="active">Data</li>
+</ol>
+<div class="hero hero-sm" style="padding-bottom: 0">
     <div class="container">
         <div class="pull-left">
             <h3>Search Leads</h3>
@@ -14,7 +19,7 @@ navorder:   2
         </div>
     </div>
 </div>
-<div class="hero">
+<div class="hero hero-sm" style="padding-bottom: 0">
     <div class="container">
         <nav class="navbar navbar-default navbar-borderless">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse0">
@@ -75,9 +80,10 @@ navorder:   2
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-text" style="margin-right: 0;">From:</li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                            Start: <strong>2/19/2016</strong>
+                            <strong>2/19/2016</strong>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li>
@@ -97,9 +103,10 @@ navorder:   2
                             </li>
                         </ul>
                     </li>
+                    <li class="navbar-text" style="margin-right: 0; margin-left: 0;">to:</li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                            End: <strong>3/19/2016 </strong>
+                           <strong>3/19/2016 </strong>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li>
@@ -123,26 +130,29 @@ navorder:   2
             </div>
         </nav>
     </div>
+</div>
+<div class="hero hero-sm">
     <div class="container">
         <div id="js-slide-wrapper" class="slide-over-wrapper">
             <div id="js-slide-over" class="slide-over slide-over-is-hidden">
                 <div class="slide-over-item slide-over-item-visible">
                     <div id="js-slide-table" class="table-responsive fade in">
-                        <table class="table table-flush table-xl">
+                        <table class="table table-right-flush table-lg table-striped table-borderless">
                             <thead>
+                                <!--sortable thetm..-->
                                 <tr>
-                                    <th>Source</th>
-                                    <th>Ref ID</th>
-                                    <th>From</th>
-                                    <th>Name</th>
-                                    <th>Date</th>
+                                    <th><a href=""><i class="fa fa-sort-alpha-desc fa-sm"></i> <strong>Source</strong></a></th>
+                                    <th><a href=""><i class="fa fa-sort-numeric-desc fa-sm"></i> <strong>Lead ID</strong></a></th>
+                                    <th><a href=""><i class="fa fa-sort-alpha-desc fa-sm"></i> <strong>From</strong></a></th>
+                                    <th><a href=""><i class="fa fa-sort-alpha-desc fa-sm"></i> <strong>Name</strong></a></th>
+                                    <th><a href=""><i class="fa fa-sort-numeric-desc fa-sm"></i> <strong>Date</strong></a></th>
                                     <th>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Website - ePrice Details New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Details New</td>
                                     <td>6751895</td>
                                     <td>brisinn@gmail.com</td>
                                     <td>Brian Sinn</td>
@@ -155,7 +165,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website Mobile - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-mobile fa-fw"></i> ePrice Inventory New</td>
                                     <td>6751738</td>
                                     <td>brijeshchawla@yahoo.com</td>
                                     <td>Brijesh Chawla</td>
@@ -168,7 +178,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6750929</td>
                                     <td>vaeav@hotmail.com</td>
                                     <td>Veronica Rincon Rojas</td>
@@ -181,7 +191,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website Mobile - ePrice Inventory Used</td>
+                                    <td><i class="text-muted fa fa-mobile fa-fw"></i> ePrice Inventory Used</td>
                                     <td>6750747</td>
                                     <td>chuckm@lefeld.com</td>
                                     <td>Chuck Meyer</td>
@@ -194,7 +204,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6749723</td>
                                     <td>wellsc@stolaf.edu</td>
                                     <td>Colin Wells</td>
@@ -207,7 +217,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - Value Your Trade</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> Value Your Trade</td>
                                     <td>6747317</td>
                                     <td>cvang019@gmail.com</td>
                                     <td>Chang Vang</td>
@@ -220,7 +230,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website Mobile - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-mobile fa-fw"></i> ePrice Inventory New</td>
                                     <td>6745665</td>
                                     <td>Melissajsherlock@hotmail.com</td>
                                     <td>Melissa Sherlock</td>
@@ -233,7 +243,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6744591</td>
                                     <td>KBWEAVER@COMCAST.NET</td>
                                     <td>KEITH WEAVER</td>
@@ -246,7 +256,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - Contact Us</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> Contact Us</td>
                                     <td>6744571</td>
                                     <td>kwagenmann@gmail.com</td>
                                     <td>Kayla Wagenmann</td>
@@ -259,7 +269,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website Mobile - ePrice Details Used</td>
+                                    <td><i class="text-muted fa fa-mobile fa-fw"></i> ePrice Details Used</td>
                                     <td>6743148</td>
                                     <td>Aelmi88@ggmail.com</td>
                                     <td>Abdikarim Elmi</td>
@@ -272,7 +282,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6740946</td>
                                     <td>abximan@yahoo.com</td>
                                     <td>Mike Graf</td>
@@ -285,20 +295,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Details Used</td>
-                                    <td>6740938</td>
-                                    <td>mackenzie.millette@lutherbrookdalehonda.com</td>
-                                    <td>Mackenzie Millette</td>
-                                    <td>1/18/2016 10:15:00 PM</td>
-                                    <td class="slide-over-toggle-wrapper">
-                                        <button onclick="SlideOpen(this)" class="btn btn-xs btn-link text-main slide-over-toggle">
-                                            <i class="fa fa-chevron-right">
-                                            </i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Website Mobile - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-mobile fa-fw"></i> ePrice Inventory New</td>
                                     <td>6740684</td>
                                     <td>Bzeller@hamhwe.com</td>
                                     <td>Brad Zeller</td>
@@ -311,7 +308,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6737443</td>
                                     <td>JKRAMER91191@GMAIL.COM</td>
                                     <td>JOSHUA KRAMER</td>
@@ -324,7 +321,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6736125</td>
                                     <td>fetsumberhankidanu84@gmail.com</td>
                                     <td>Fetsum Kidanu</td>
@@ -337,7 +334,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6735246</td>
                                     <td>a_srihari@hotmail.com</td>
                                     <td>Srihari Appasamy</td>
@@ -363,7 +360,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6730920</td>
                                     <td>lpapasodora@yahoo.com</td>
                                     <td>Lou Ann Papasodora</td>
@@ -376,7 +373,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Details Used</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Details Used</td>
                                     <td>6730171</td>
                                     <td>blinky2bob@yahoo.com</td>
                                     <td>Bob Streit</td>
@@ -389,7 +386,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Details Used</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Details Used</td>
                                     <td>6730169</td>
                                     <td>stevebasinger@charter.net</td>
                                     <td>Steve Basinger</td>
@@ -402,7 +399,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory Used</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory Used</td>
                                     <td>6727162</td>
                                     <td>treetis@gmail.com</td>
                                     <td>Treetis Ebben</td>
@@ -415,7 +412,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6726941</td>
                                     <td>sreitenour@gmail.com</td>
                                     <td>Steve Reitenour</td>
@@ -428,7 +425,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6726931</td>
                                     <td>sreitenour@gmail.com</td>
                                     <td>Steve Reitenour</td>
@@ -441,7 +438,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6726864</td>
                                     <td>bgdiehl@yahoo.com</td>
                                     <td>Brenden Diehl</td>
@@ -454,7 +451,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website Mobile - ePrice Inventory Used</td>
+                                    <td><i class="text-muted fa fa-mobile fa-fw"></i> ePrice Inventory Used</td>
                                     <td>6726696</td>
                                     <td>Rkc5150@aol.com</td>
                                     <td>Russell Cirelli</td>
@@ -467,7 +464,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory Used</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory Used</td>
                                     <td>6726617</td>
                                     <td>alijased@gmail.com</td>
                                     <td>Alija Triviski</td>
@@ -480,7 +477,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - Value Your Trade</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> Value Your Trade</td>
                                     <td>6725593</td>
                                     <td>cross2014@gmail.com</td>
                                     <td>Chandler Ross</td>
@@ -493,7 +490,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6725366</td>
                                     <td>davidkarsjens@gmail.com</td>
                                     <td>David Karsjens</td>
@@ -506,7 +503,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory Used</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory Used</td>
                                     <td>6724949</td>
                                     <td>ferrellda22@gmail.com</td>
                                     <td>Dave Ferrell</td>
@@ -519,7 +516,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website Mobile - ePrice Details Used</td>
+                                    <td><i class="text-muted fa fa-mobile fa-fw"></i> ePrice Details Used</td>
                                     <td>6724568</td>
                                     <td>Tdue22@gmail.com</td>
                                     <td>Tom Duevel</td>
@@ -532,7 +529,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6722843</td>
                                     <td>se65188@gmail.com</td>
                                     <td>Steven Barnes</td>
@@ -545,7 +542,7 @@ navorder:   2
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Website - ePrice Inventory New</td>
+                                    <td><i class="text-muted fa fa-laptop fa-fw"></i> ePrice Inventory New</td>
                                     <td>6722693</td>
                                     <td>johnl.choiniere@gmail.com</td>
                                     <td>John Choiniere</td>
@@ -570,40 +567,118 @@ navorder:   2
                             </button>
                         </div>
                     </div>
-                    <div class="bg-main">
-                        <ul class="nav nav-main nav-tabs nav-flush">
-                            <li class="active">
-                                <a href="#tab1" data-toggle="tab">Contact Details</a>
-                            </li>
-                            <li>
-                                <a href="#tab2" data-toggle="tab">Campaign Details</a>
-                            </li>
-                            <li>
-                                <a href="#tab3" data-toggle="tab">Lead Details</a>
-                            </li>
-                            <li>
-                                <a href="#tab4" data-toggle="tab">Purchase Vehicle</a>
-                            </li>
-                            <li>
-                                <a href="#tab5" data-toggle="tab">Trade-In Vehicle</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tab-content well well-inverse">
-                        <div id="tab1" class="tab-pane active">
-                            Contact Details
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <ul class="nav nav-default nav-pills nav-stacked">
+                                <li class="active">
+                                    <a href="#tab1" data-toggle="tab">Contact Details</a>
+                                </li>
+                                <li>
+                                    <a href="#tab2" data-toggle="tab">Campaign Details</a>
+                                </li>
+                                <li>
+                                    <a href="#tab3" data-toggle="tab">Lead Details</a>
+                                </li>
+                                <li>
+                                    <a href="#tab4" data-toggle="tab">Purchase Vehicle</a>
+                                </li>
+                                <li>
+                                    <a href="#tab5" data-toggle="tab">Trade-In Vehicle</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div id="tab2" class="tab-pane fade">
-                            Campaign Details
-                        </div>
-                        <div id="tab3" class="tab-pane fade">
-                            Lead Details
-                        </div>
-                        <div id="tab4" class="tab-pane fade">
-                            Purchase Vehicle
-                        </div>
-                        <div id="tab5" class="tab-pane fade">
-                            Trade-In Vehicle
+                        <div class="col-sm-9">
+                            <div class="tab-content well well-default">
+                                <div id="tab1" class="tab-pane active">
+                                    <div class="table-responsive">
+                                        <table class="table table-flush table-borderless table-xs">
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Lead Source:</strong></td>
+                                                    <td>Website - ePrice Inventory New</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>First:</strong></td>
+                                                    <td>Jintian</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Last:</strong></td>
+                                                    <td>Pan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Address:</strong></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>City:</strong></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>State:</strong></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Zip:</strong></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Email:</strong></td>
+                                                    <td>519698554@qq.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Phone:</strong></td>
+                                                    <td>(818) 658-4156</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab-pane fade">
+                                    <div class="table-responsive">
+                                        <table class="table table-flush table-borderless">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Campaign Name:</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Medium:</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Source:</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Campaign Term:</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Campaign Content:</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Entry URL:</td>
+                                                    <td>http://www.lutherbrookdalehonda.com/</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Referrer:</td>
+                                                    <td>http://www.kbb.com/dealers/brooklyn-center_mn/luther-brookdale-honda/70799/?vehicleid=412776</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="tab3" class="tab-pane fade">
+                                    Lead Details
+                                </div>
+                                <div id="tab4" class="tab-pane fade">
+                                    Purchase Vehicle
+                                </div>
+                                <div id="tab5" class="tab-pane fade">
+                                    Trade-In Vehicle
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
