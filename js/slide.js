@@ -49,6 +49,7 @@ function SlideClose(el) {
     //  fade tr
     setTimeout(function() {
         slideWrapr.classList.remove("slid-over");
+        console.log("here we should change the last state");
     }, 1000)
     //  destroy tr
     setTimeout(function() {
@@ -67,6 +68,9 @@ function initTR(el) {
     $(slideOver).before(clone);
     //  refresh TD
     resetTD(el)
+    //  set self state && change to "last only"
+    el.classList.add("bg-main", "last-visited");
+    $(".last-visited").not(el).removeClass("bg-main").addClass("bg-success");
     //  set clone id
     clone.setAttribute("id", "js-tr-clone");
     //  wrap clone
