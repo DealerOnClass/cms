@@ -5737,13 +5737,16 @@ if ( slideOver != null ) {
 };
 
 function SlideOpen(el) {
+    var self = el;
     //  disable all toggles
     disableToggle(".slide-over-toggle");
-    var self = el;
     //  set wrapper state
     slideWrapr.classList.add("slid-over");
     //  initialize tr
     initTR(self.parentNode.parentNode);
+    //  count siblings
+    var siblings = prevAll(self.parentNode.parentNode).length;
+    if (siblings > 7) { $("html, body").animate({ scrollTop: 0 }, 500); };
     //  animate tr
     setTimeout(function() {
         $("#js-table-clone").addClass("is-animated");
@@ -5785,7 +5788,6 @@ function SlideClose(el) {
     //  fade tr
     setTimeout(function() {
         slideWrapr.classList.remove("slid-over");
-        console.log("here we should change the last state");
     }, 1000)
     //  destroy tr
     setTimeout(function() {
@@ -5860,4 +5862,12 @@ function disableToggle(el) {
 
 function enableToggle(el) {
     $(el).removeAttr("disabled");
+}
+
+function prevAll(element) {
+    var result = [];
+
+    while (element = element.previousElementSibling)
+        result.push(element);
+    return result;
 }
