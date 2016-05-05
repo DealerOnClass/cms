@@ -68,10 +68,10 @@ function initTR(el) {
     $(slideOver).before(clone);
     //  refresh TD
     resetTD(el)
-    //  set self state && change to "last only"
+    //  set self state
     el.classList.add("bg-main", "last-visited");
-    el.classList.remove("bg-success");
-    $(".last-visited").not(el).removeClass("bg-main").addClass("bg-success");
+    el.classList.remove("text-success");
+    $(".last-visited").not(el).removeClass("bg-main").addClass("text-success");
     //  set clone id
     clone.setAttribute("id", "js-tr-clone");
     //  wrap clone
