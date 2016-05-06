@@ -5810,11 +5810,12 @@ function initTR(el) {
     $(slideOver).before(clone);
     //  refresh TD
     resetTD(el)
-    //  set self state
-    el.classList.add("bg-main", "last-visited");
-    $(".last-visited").not(el).removeClass("bg-main");
 
-        //  //  set self state
+        //  set self state
+        el.classList.add("bg-main", "last-visited");
+        $(".last-visited").not(el).removeClass("bg-main");
+
+        //  //  set self state && remember last
         //  el.classList.add("bg-main", "last-visited");
         //  el.classList.remove("text-success");
         //  $(".last-visited").not(el).removeClass("bg-main").addClass("text-success");

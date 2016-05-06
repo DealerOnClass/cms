@@ -109,8 +109,8 @@ gulp.task('watch', function () {
             './_includes/*',
             './_layouts/*',
             './_mockups/*',
-            './_objects-custom/*',
             './_objects-bootstrap/*',
+            './_objects-utilities/*',
             './_pages/*',
             './_posts/*',
             './js/*'
