@@ -282,6 +282,14 @@ $offcanvas-nav-width: 15em;
     padding-right: ($global__x * $global__line-height);
 }
 
+.slide-over-toggle[disabled] {
+    @include state-and-self {
+        cursor: pointer;
+
+        opacity: 1;
+    }
+}
+
 .table-clone {
     position: relative;
     z-index: 500;
