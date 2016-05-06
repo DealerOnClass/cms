@@ -5745,8 +5745,9 @@ function SlideOpen(el) {
     //  initialize tr
     initTR(TR);
     //  scroll up if greater than 7 previous items
-    var siblings = prevAll(TR).length;
-    if (siblings > 7) { $("html, body").animate({ scrollTop: 0 }, 500); };
+        //  var siblings = prevAll(TR).length;
+        //  if (siblings > 7) { $("html, body").animate({ scrollTop: 0 }, 500); };
+        $("html, body").animate({ scrollTop: 0 }, 500);
     //  store scroll position
     $("body").attr("data-scroll", $(this).scrollTop());
     //  animate tr
@@ -5785,20 +5786,17 @@ function SlideClose(el) {
     setTimeout(function() {
         slideTable.classList.add("in");
     }, 500)
-    //  fade out tr
+    //
     setTimeout(function() {
+        //  fade out tr
         $("#js-tbody-clone").removeClass("in");
-    }, 750)
-    //  fade tr
-    setTimeout(function() {
+        //  fade in slide
         slideWrapr.classList.remove("slid-over");
-    }, 1000)
-    //  destroy tr
-    setTimeout(function() {
+        //  destroy tr
         $(destroy).remove();
         //  enable all toggles
         enableToggle(".slide-over-toggle");
-    }, 1250)
+    }, 750)
 };
 
 function initTR(el) {

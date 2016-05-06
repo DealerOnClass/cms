@@ -38,18 +38,18 @@ layout: compress
                         {% assign navgroup = 'mockups' %}
                         {% include nav.html %}
                     </div>
-                    <a href="" class="nav__item dropdown-toggle collapsed" data-toggle="collapse" data-target="#objects-custom">
-                        Custom Components
+                    <a href="" class="nav__item dropdown-toggle collapsed" data-toggle="collapse" data-target="#objects-utilities">
+                        Utilities
                     </a>
-                    <div id="objects-custom" class="nav__group collapse">
-                        {% assign pagelist = site.objects-custom %}
-                        {% assign navgroup = 'objects-custom' %}
+                    <div id="objects-utilities" class="nav__group collapse in">
+                        {% assign pagelist = site.objects-utilities %}
+                        {% assign navgroup = 'utilities' %}
                         {% include nav.html %}
                     </div>
                     <a href="" class="nav__item dropdown-toggle collapsed" data-toggle="collapse" data-target="#objects-bootstrap">
-                        Bootstrap Components
+                        UI Kit
                     </a>
-                    <div id="objects-bootstrap" class="nav__group collapse">
+                    <div id="objects-bootstrap" class="nav__group collapse in">
                         {% assign pagelist = site.objects-bootstrap %}
                         {% assign navgroup = 'objects' %}
                         {% include nav.html %}

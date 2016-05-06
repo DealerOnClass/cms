@@ -34,7 +34,7 @@ collections:
     objects-bootstrap:
         output: true
 
-    objects-custom:
+    objects-utilities:
         output: true
 
     pages:
@@ -50,12 +50,12 @@ defaults:
     - scope:
         type: objects-bootstrap
       values:
-        layout: object-bootstrap
+        layout: object
 
     - scope:
-        type: objects-custom
+        type: objects-utilities
       values:
-        layout: object-custom
+        layout: object
 
     - scope:
         type: pages
