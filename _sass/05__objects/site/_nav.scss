@@ -311,6 +311,11 @@ $offcanvas-nav-width: 15em;
     }
 }
 
+.is-sticky {
+    position: relative;
+    z-index: 1000;
+}
+
 //
 //  Context Specific
 .page-navbar,

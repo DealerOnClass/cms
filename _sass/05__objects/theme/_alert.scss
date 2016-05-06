@@ -26,6 +26,9 @@ $alert__y:         $global__y;
     }
 }
 //
+//  Sizing
+@include alert-size-variation($alert__y, $alert__x, $default__sizing);
+//
 //  Colors
 @include alert-color-variation($default__palette);
 @include alert-color-variation($inverse__palette);

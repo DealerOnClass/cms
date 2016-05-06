@@ -85,7 +85,8 @@ gulp.task('scripts', function() {
         './js/functions.js',
         './js/nav.js',
         './js/table.js',
-        './js/slide.js'
+        './js/slide.js',
+        './js/sticky.js'
     ])
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('./_includes/'))

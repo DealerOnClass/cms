@@ -141,3 +141,9 @@ $offcanvas-breakpoint-max:   ($offcanvas-breakpoint - 1) !default;
         display: block;
     }
 }
+
+.page-interior-card {
+    .card {
+        margin-bottom: rhythm(1);
+    }
+}

@@ -15,6 +15,7 @@ $breadcrumb__icon-use:  false !default;
 
     border: $one__pixel solid;
     border-radius: $breadcrumb__radius;
+    margin-bottom: 0;
 }
 
 .breadcrumb > li {
@@ -45,10 +46,18 @@ $breadcrumb__icon-use:  false !default;
 //  Variations
 .breadcrumb-rounded {
     border-radius: ($breadcrumb__y * 2) + $global__line-height;
+
+    > li > a {
+        //
+    }
 }
 
 .breadcrumb-flush {
     border-radius: 0;
+
+    > li > a {
+        //
+    }
 }
 //
 //  Sizing

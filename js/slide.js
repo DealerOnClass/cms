@@ -7,16 +7,18 @@ if ( slideOver != null ) {
 };
 
 function SlideOpen(el) {
-    var self = el;
+    var TR = el.parentNode.parentNode;
     //  disable all toggles
     disableToggle(".slide-over-toggle");
     //  set wrapper state
     slideWrapr.classList.add("slid-over");
     //  initialize tr
-    initTR(self.parentNode.parentNode);
-    //  count siblings
-    var siblings = prevAll(self.parentNode.parentNode).length;
+    initTR(TR);
+    //  scroll up if greater than 7 previous items
+    var siblings = prevAll(TR).length;
     if (siblings > 7) { $("html, body").animate({ scrollTop: 0 }, 500); };
+    //  store scroll position
+    $("body").attr("data-scroll", $(this).scrollTop());
     //  animate tr
     setTimeout(function() {
         $("#js-table-clone").addClass("is-animated");
@@ -42,6 +44,8 @@ function SlideClose(el) {
     slideOver.classList.add("slide-over-is-hidden");
     //  reset toggle
     resetToggle("#js-tr-clone .slide-over-toggle");
+    //  reset scroll position
+    $("html, body").animate({ scrollTop: $("body").attr("data-scroll") }, 500);
     //  animate table
     setTimeout(function() {
         destroy.classList.remove("is-animated");

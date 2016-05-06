@@ -16,6 +16,11 @@
 
         .btn-#{$class__name} {
             padding: $y $x;
+
+            &.btn-rounded {
+                padding-left: ($x * 1.5);
+                padding-right: ($x * 1.5);
+            }
         }
     }
 }
