@@ -71,6 +71,7 @@ function SlideClose(el) {
 
 function initTR(el) {
     //  get distance to parent container
+    //  minus height of table head
     var distanceToParent = el.offsetTop;
     //  init TD
     initTD(el);
@@ -107,6 +108,7 @@ function initTR(el) {
 }
 
 function initTD(el) {
+    console.log(el);
     var tds = el.children;
     forEach(tds, function (index, td) {
         td.style.width = td.offsetWidth + "px";

@@ -277,5 +277,30 @@
 //  Sticky Init
 $(document).ready(function() {
     var stickyOffset = $(".oncanvas-nav").height();
+    console.log(stickyOffset);
     $(".js-sticky").sticky({topSpacing: stickyOffset });
+
+    var otherOffset = $("#js-slide-table-head").height();
+    console.log(otherOffset);
+    console.log(stickyOffset + otherOffset);
+    initStickyTable(".table-sticky", ".table-sticky-wrapper");
+    $("#js-turkey").sticky({topSpacing: stickyOffset + otherOffset - 15 });
+    //  $(".slide-over-item-visible").css({
+    //      "margin-bottom": otherOffset * -1
+    //  });
 });
+
+function initStickyTable(table, parent) {
+    var table  = document.querySelector(table);
+    var parent = $(parent);
+
+    var tr     = table.getElementsByTagName("TR");
+    initTD(tr[0]);
+
+    var clone = table.cloneNode(true);
+    clone.setAttribute("id", "js-chicken");
+    $("#js-slide-wrapper").prepend(clone);
+
+    $("#js-chicken").find("tbody").remove();
+    $("#js-chicken").wrap("<div id='js-turkey'>");
+}

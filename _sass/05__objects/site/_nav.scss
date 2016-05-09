@@ -324,6 +324,24 @@ $offcanvas-nav-width: 15em;
     z-index: 1000;
 }
 
+#js-slide-table-head {
+    visibility: hidden;
+}
+
+#js-turkey #js-slide-table-head {
+    visibility: visible;
+}
+
+//  #js-turkey-sticky-wrapper #js-turkey thead {
+//      transition-property: background-color, color;
+//      transition-duration: 0.25s;
+//      transition-timing-function: ease-in-out;
+//  }
+//
+//  #js-turkey-sticky-wrapper.is-sticky #js-turkey thead {
+//      background-color: rgba(0, 0, 0, 0.1);
+//      color: $white;
+//  }
 //
 //  Context Specific
 .page-navbar,
