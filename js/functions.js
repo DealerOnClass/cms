@@ -56,9 +56,3 @@ for (var i = 0; i < copyBtns.length; i++) {
 function showTooltip(elem) {
     elem.classList.add('copied');
 }
-
-//  Popovers
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="popover"]').popover();
-});

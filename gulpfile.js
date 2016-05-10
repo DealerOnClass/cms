@@ -84,9 +84,10 @@ gulp.task('scripts', function() {
         './js/clipboard.min.js',
         './js/functions.js',
         './js/nav.js',
-        './js/table.js',
+        './js/scrollbar.js',
         './js/slide.js',
-        './js/sticky.js'
+        './js/sticky.js',
+        './js/init.js'
     ])
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('./_includes/'))

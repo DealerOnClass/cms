@@ -10,6 +10,7 @@ $card__y:         $global__y;
     position: relative;
 
     border-radius: $card__radius;
+    margin-bottom: rhythm(1);
 }
 
 .card-header,
@@ -258,3 +259,4 @@ $card__y:         $global__y;
 @include card-color-variation($primary__palette);
 @include card-color-variation($neutral__palette);
 @include card-color-variation($state__palette);
+@include card-color-variation($classic__palette);

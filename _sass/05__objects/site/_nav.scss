@@ -18,9 +18,13 @@ $nav__y--lg:   ($nav__y * 1.5);
     .nav__group {
         margin: 0;
 
-        .nav__item {
-            padding-left: ($nav__x * 3);
+        .nav__item:last-child {
+            margin-bottom: rhythm(1);
         }
+
+        //  .nav__item {
+        //      padding-left: ($nav__x * 3);
+        //  }
     }
 }
 
@@ -50,13 +54,14 @@ $nav__y--lg:   ($nav__y * 1.5);
     @include column($nav__x);
 
     display: block;
+    position: relative;
 
     padding-top: $nav__y;
     padding-bottom: $nav__y;
 
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.25s;
-    transition-property: background, color;
+    //  transition-timing-function: ease-in-out;
+    //  transition-duration: 0.25s;
+    //  transition-property: background, color;
     text-transform: capitalize;
 
     &:hover {
@@ -131,6 +136,9 @@ $offcanvas-nav-width: 15em;
 }
 
 .offcanvas-nav {
+    border-right: $one__pixel solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 $two__pixels $three__pixels rgba(0, 0, 0, 0.1);
+
     @extend %position-fixed;
 
     z-index: $zindex-offcanvas;
@@ -216,6 +224,9 @@ $offcanvas-nav-width: 15em;
     width: calc(100% - #{$offcanvas-nav-width});
     margin-left: $offcanvas-nav-width;
 
+    //  padding: rhythm(0.5);
+    background-color: tint($inverse__color, 94%);
+
     transition-timing-function: ease-in-out;
     transition-duration: 0.25s;
     transition-property: width, margin-left;
@@ -275,11 +286,11 @@ $offcanvas-nav-width: 15em;
     padding: 0 !important;
     vertical-align: middle;
     text-align: right;
-}
 
-.slide-over-toggle-wrapper .btn {
-    padding-left: ($global__x * $global__line-height);
-    padding-right: ($global__x * $global__line-height);
+    .btn {
+        padding-left: ($global__x * $global__line-height);
+        padding-right: ($global__x * $global__line-height);
+    }
 }
 
 .slide-over-toggle[disabled] {
@@ -295,8 +306,8 @@ $offcanvas-nav-width: 15em;
     z-index: 500;
     backface-visibility: hidden;
 
-    border-radius: $global__radius;
-    overflow: hidden;
+    //  border-radius: $global__radius;
+    //  overflow: hidden;
 
     > tbody > tr > td {
         background-color: $primary__color;
@@ -319,9 +330,13 @@ $offcanvas-nav-width: 15em;
     }
 }
 
+.is_stuck,
+.is-sticky {
+    z-index: 1000;
+}
+
 .is-sticky {
     position: relative;
-    z-index: 1000;
 }
 
 #js-slide-table-head {
@@ -330,6 +345,14 @@ $offcanvas-nav-width: 15em;
 
 #js-turkey #js-slide-table-head {
     visibility: visible;
+}
+
+#something {
+    transition: top 0.25s ease-in-out;
+}
+
+.slide-is-active #something {
+    top: 0 !important;
 }
 
 //  #js-turkey-sticky-wrapper #js-turkey thead {
@@ -353,7 +376,8 @@ $offcanvas-nav-width: 15em;
 }
 
 .page-navbar {
-    background-color: $default__color;
+    //  background-color: $default__color;
+    background-color: $white;
 }
 
 .site-navbar {
@@ -367,14 +391,43 @@ $offcanvas-nav-width: 15em;
 }
 
 .site-sidebar {
-    color: tint($inverse__color, 40%);
-    background-color: $inverse__color;
+    //  color: tint($inverse__color, 40%);
+    //  background-color: $inverse__color;
+    background-color: $white;
 
-    .nav__item:hover {
-        color: tint($inverse__color, 55%);
+    .dropdown-toggle {
+        color: saturate($primary__color, 20%);
+        font-size: ems-to-pixels($h6__font-size);
+        font-weight: 600;
+        padding-top: ($nav__y * 2);
+        padding-bottom: ($nav__y * 2);
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+
+        &:after {
+            float: right;
+            position: relative;
+            //  top: (($global__line-height / 2.5) * $global__unit);
+        }
     }
 
+    .nav__group {
+        //  color: tint($inverse__color, 60%);
+    }
+
+    .nav__item:hover,
     .nav__item.active {
-        color: tint($inverse__color, 80%);
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .nav__item.active:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: $three__pixels;
+        background-color: saturate($primary__color, 20%);
     }
 }

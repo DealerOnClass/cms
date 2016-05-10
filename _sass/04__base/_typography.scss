@@ -76,7 +76,8 @@ h6 {
     font-size: $h5__font-size;
 }
 
-.h6 {
+.h6,
+.small {
     font-size: $h6__font-size;
 }
 
@@ -155,5 +156,19 @@ dt {
 
     dd {
         margin-left: rhythm(5) + $global__gutter;
+    }
+}
+
+hr {
+    margin-top: $global__y * 2;
+    margin-bottom: $global__y * 2;
+
+    border-top: $one__pixel solid rgba(0,0,0,0.20);
+    border-right: 0 none;
+    border-bottom: 0 none;
+    border-left: 0 none;
+
+    &.divider {
+        margin: 0;
     }
 }

@@ -6,16 +6,17 @@ $breadcrumb__x:         $global__x;
 $breadcrumb__y:         $global__y;
 //
 //  Options
-$breadcrumb__icon:      $fa-var-close;
-$breadcrumb__icon-use:  false !default;
+$breadcrumb__icon:      $fa-var-angle-right;
+$breadcrumb__icon-use:  true !default;
 //
 //  Base
 .breadcrumb {
     @include clearfix;
 
     border: $one__pixel solid;
-    border-radius: $breadcrumb__radius;
-    margin-bottom: 0;
+    //  border-radius: $breadcrumb__radius;
+    box-shadow: 0 $two__pixels $three__pixels rgba(0, 0, 0, 0.1);
+    margin-bottom: rhythm(1);
 }
 
 .breadcrumb > li {
@@ -69,3 +70,4 @@ $breadcrumb__icon-use:  false !default;
 @include breadcrumb-color-variation($primary__palette);
 @include breadcrumb-color-variation($neutral__palette);
 @include breadcrumb-color-variation($state__palette);
+@include breadcrumb-color-variation($classic__palette);

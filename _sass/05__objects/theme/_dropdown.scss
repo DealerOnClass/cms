@@ -6,6 +6,10 @@ $dropdown__x:               $global__x;
 $dropdown__y:               $global__y;
 $dropdown__use-btn__color:  false;
 //
+//  Options
+$dropdown__icon:      $fa-var-angle-down;
+$dropdown__icon-use:  true !default;
+//
 //  Base
 .dropup,
 .dropdown {
@@ -74,12 +78,18 @@ $dropdown__use-btn__color:  false;
 
 .dropdown-toggle {
     &:after {
-        @include caret(top, 4px, 0);
-        margin-left: half($dropdown__x);
+        @if $dropdown__icon-use {
+            font-family: $fa-font-name;
 
-        display: inline-block;
+            content: "#{$dropdown__icon}";
+        } @else {
+            @include caret(top, 4px, 0);
+            margin-left: half($dropdown__x);
 
-        content: "";
+            display: inline-block;
+
+            content: "";
+        }
     }
 }
 

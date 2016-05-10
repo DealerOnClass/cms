@@ -21,7 +21,9 @@
         .breadcrumb-#{$class__name} > li {
             &.active,
             > a {
-                padding: $y 0 $y $x;
+                padding-top: $y;
+                padding-bottom: $y;
+                //  padding: $y 0 $y $x;
             }
 
             > a:after {

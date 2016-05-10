@@ -1,10 +1,10 @@
-//  Slide
-var slideOver = document.querySelector("#js-slide-over");
-
-if ( slideOver != null ) {
-    var slideWrapr = document.querySelector("#js-slide-wrapper");
-    var slideTable = document.querySelector("#js-slide-table");
-};
+//  //  Slide
+//  var slideOver = document.querySelector("#js-slide-over");
+//
+//  if ( slideOver != null ) {
+//      var slideWrapr = document.querySelector("#js-slide-wrapper");
+//      var slideTable = document.querySelector("#js-slide-table");
+//  };
 
 function SlideOpen(el) {
     var TR = el.parentNode.parentNode;
@@ -27,6 +27,7 @@ function SlideOpen(el) {
     //  fade out table
     slideTable.classList.remove("in");
     //  slide over
+    pageBody.classList.add("slide-is-active");
     setTimeout(function() {
         slideOver.classList.remove("slide-over-is-hidden");
         slideOver.classList.add("slide-over-is-visible");
@@ -41,6 +42,7 @@ function SlideClose(el) {
     //  get table
     var destroy = document.querySelector("#js-table-clone");
     //  slide over
+    pageBody.classList.remove("slide-is-active");
     slideOver.classList.remove("slide-over-is-visible");
     slideOver.classList.add("slide-over-is-hidden");
     //  reset toggle

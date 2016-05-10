@@ -5,27 +5,17 @@
             color: check-color($color, 80, inherit, $white);
             background-color: $color;
 
-            > thead > tr,
-            > tbody > tr,
-            > tfoot > tr {
-
-                > td,
-                > th {
-                    border-color: shade($color, $table__contrast);
-                }
+            td,
+            th {
+                border-color: shade($color, $table__contrast);
             }
 
             &.table-bordered {
                 border-color: shade($color, $table__contrast);
 
-                > thead > tr,
-                > tbody > tr,
-                > tfoot > tr {
-
-                    > td,
-                    > th {
-                        border-color: shade($color, $table__contrast);
-                    }
+                td,
+                th {
+                    border-color: shade($color, $table__contrast);
                 }
             }
 
@@ -42,12 +32,10 @@
 
             &.table-hover {
 
-                > thead > tr:hover,
-                > tbody > tr:hover,
-                > tfoot > tr:hover {
+                tr:hover {
 
-                    > td,
-                    > th {
+                    td,
+                    th {
                         background-color: shade($color, $table__contrast);
                     }
                 }
@@ -57,36 +45,26 @@
 
         .table {
 
-            > thead > tr,
-            > tbody > tr,
-            > tfoot > tr {
-
-                > td.#{$class__name},
-                > th.#{$class__name},
-                &.#{$class__name} > td,
-                &.#{$class__name} > th {
-                    color: check-color($color, 80, inherit, $white);
-                    border-color: $color;
-                    background-color: $color;
-                }
+            td.#{$class__name},
+            th.#{$class__name},
+            tr.#{$class__name} td,
+            tr.#{$class__name} th {
+                color: check-color($color, 80, inherit, $white);
+                border-color: $color;
+                background-color: $color;
             }
         }
 
         .table-hover {
 
-            > thead > tr,
-            > tbody > tr,
-            > tfoot > tr {
-
-                > td.#{$class__name}:hover,
-                > th.#{$class__name}:hover,
-                &.#{$class__name}:hover > td,
-                &:hover > .#{$class__name},
-                &.#{$class__name}:hover > th {
-                    color: check-color($color, 80, inherit, $white);
-                    border-color: shade($color, $table__contrast);
-                    background-color: shade($color, $table__contrast);
-                }
+            td.#{$class__name}:hover,
+            th.#{$class__name}:hover,
+            tr.#{$class__name}:hover td,
+            tr:hover .#{$class__name},
+            tr.#{$class__name}:hover th {
+                color: check-color($color, 80, inherit, $white);
+                border-color: shade($color, $table__contrast);
+                background-color: shade($color, $table__contrast);
             }
         }
     }
@@ -100,17 +78,10 @@
 
         .table-#{$class__name} {
 
-            > thead,
-            > tbody,
-            > tfoot {
-                > tr {
-
-                    > th,
-                    > td {
-                        padding-top: $y;
-                        padding-bottom: $y;
-                    }
-                }
+            th,
+            td {
+                padding-top: $y;
+                padding-bottom: $y;
             }
         }
     }

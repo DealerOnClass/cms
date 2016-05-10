@@ -144,8 +144,8 @@ $navbar__y:         $global__y;
     }
 
     .form-control {
-        border-top: 0;
-        border-bottom: 0;
+        //  border-top: 0;
+        //  border-bottom: 0;
         border-color: transparent;
         border-radius: 0;
         background-color: rgba(0, 0, 0, 0.1);
@@ -392,3 +392,4 @@ $navbar__y:         $global__y;
 @include navbar-color-variation($primary__palette);
 @include navbar-color-variation($neutral__palette);
 @include navbar-color-variation($state__palette);
+@include navbar-color-variation($classic__palette);

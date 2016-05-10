@@ -70,3 +70,8 @@ $state__palette: (
 $opacity__palette: (
     '20':         rgba(0, 0, 0, 0.2),
 ) !default;
+
+$classic__palette: (
+    'white':    $white,
+    'black':    $black,
+) !default;

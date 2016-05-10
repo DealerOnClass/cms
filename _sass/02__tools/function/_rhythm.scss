@@ -22,3 +22,10 @@
 //      //  #{$property}: $rhythm-rem-px;
 //      #{$property}: $rhythm-rem;
 //  }
+//
+@function ems-to-pixels($input) {
+    $input: strip-unit($input);
+    $output: ($input * $global__font-size) * $one__pixel;
+    $output: decimal-ceil($output);
+    @return $output;
+}
