@@ -23,6 +23,7 @@ $pager__previous__icon:  $fa-var-angle-left;
     }
 
     > li > a {
+        display: inline-block;
         padding: $pager__y $pager__x;
 
         border: $one__pixel solid;
@@ -51,6 +52,33 @@ $pager__previous__icon:  $fa-var-angle-left;
 
     > li > a {
         border-radius: ($pager__y * 2) + $global__line-height;
+    }
+}
+
+.pager-flush {
+
+    > li > a {
+        border-radius: 0;
+    }
+}
+
+.pager-justified {
+    display: flex;
+
+    > li {
+        flex: 1 0 auto;
+    }
+
+    > li > a {
+        display: block;
+    }
+
+    .previous {
+        text-align: left;
+    }
+
+    .next {
+        text-align: right;
     }
 }
 
@@ -97,3 +125,4 @@ $pager__previous__icon:  $fa-var-angle-left;
 @include pager-color-variation($primary__palette);
 @include pager-color-variation($neutral__palette);
 @include pager-color-variation($state__palette);
+@include pager-color-variation($classic__palette);

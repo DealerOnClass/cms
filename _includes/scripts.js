@@ -7700,26 +7700,38 @@ function prevAll(element) {
 //
 //  Sticky Init
 $(document).ready(function() {
-    var stickyOffset = $(".oncanvas-nav").height();
-    var otherOffset = $("#js-slide-table-head").height();
 
-    $(".js-navbar-sticky").sticky({
-        topSpacing: stickyOffset,
-        responsiveWidth: true
-    });
-
-    $("#something-else").sticky({
-        topSpacing: stickyOffset + otherOffset - 8,
-        responsiveWidth: true
-    });
-
+    customSticky(".js-navbar-sticky");
+    customSticky("#something-else");
     initStickyTable(".table-sticky", ".table-sticky-wrapper");
+
+    var anotherOffset = $("#js-slide-table-head").height();
 
     $("#something").css({
         "position": "relative",
-        "top": otherOffset + 1
+        "top": anotherOffset
     });
 });
+
+function customSticky(sticky_el) {
+    var self    = $(sticky_el);
+    var offset  = self.attr("data-sticky-offset");
+    if (offset) {
+        var offsets = offset.split(",");
+        var offsetTotal   = 0;
+
+        $.each(offsets, function(index, value) {
+            offsetTotal += $(value).height();
+        });
+
+        $(self).sticky({
+            topSpacing: offsetTotal,
+            responsiveWidth: true
+        });
+    } else {
+        return
+    }
+};
 
 function initStickyTable(table, parent) {
     var table  = document.querySelector(table);

@@ -529,11 +529,31 @@
 //  Sticky Init
 $(document).ready(function() {
 
-    customSticky(".js-navbar-sticky");
-    customSticky("#something-else");
-    initStickyTable(".table-sticky", ".table-sticky-wrapper");
+    //  var sticky_offset = $("[data-sticky-offset]");
+    //  sticky_offset.each( function() {
+    //      var self = $(this);
+    //      console.log(self.attr("data-sticky-offset") + " is " + self.height() + " px tall.");
+    //  });
 
+    var stickyOffset = $(".oncanvas-nav").height();
+    var otherOffset = $(".js-navbar-sticky").height();
     var anotherOffset = $("#js-slide-table-head").height();
+
+    //  $(".js-navbar-sticky").sticky({
+    //      topSpacing: stickyOffset,
+    //      responsiveWidth: true
+    //  });
+
+    //  customSticky(".js-navbar-sticky", ".oncanvas-nav");
+
+    customSticky(".js-navbar-sticky");
+
+    $("#something-else").sticky({
+        topSpacing: stickyOffset + otherOffset,
+        responsiveWidth: true
+    });
+
+    initStickyTable(".table-sticky", ".table-sticky-wrapper");
 
     $("#something").css({
         "position": "relative",
@@ -544,22 +564,31 @@ $(document).ready(function() {
 function customSticky(sticky_el) {
     var self    = $(sticky_el);
     var offset  = self.attr("data-sticky-offset");
-    if (offset) {
-        var offsets = offset.split(",");
-        var offsetTotal   = 0;
+    var offsets = offset.split(",");
 
-        $.each(offsets, function(index, value) {
-            offsetTotal += $(value).height();
-        });
+    $.each(offsets, function(index, value) {
+        console.log($(value).height());
+    });
 
-        $(self).sticky({
-            topSpacing: offsetTotal,
-            responsiveWidth: true
-        });
-    } else {
-        return
-    }
+    //  var offset = $(hold).height();
+
+    //  console.log(offsets);
+
+    //  $(self).sticky({
+    //      topSpacing: offset,
+    //      responsiveWidth: true
+    //  });
 };
+
+//  function customSticky(sticky_el, sticky_offset) {
+//      var self   = $(sticky_el);
+//      var offset = $(sticky_offset).height();
+//
+//      $(self).sticky({
+//          topSpacing: offset,
+//          responsiveWidth: true
+//      });
+//  };
 
 function initStickyTable(table, parent) {
     var table  = document.querySelector(table);

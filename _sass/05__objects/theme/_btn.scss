@@ -34,9 +34,9 @@ $btn__y:         $global__y;
 
     width: 100%;
 
-    & + & {
-        margin-top: rhythm(0.5);
-    }
+    //  & + & {
+    //      margin-top: rhythm(0.5);
+    //  }
 }
 
 .btn-rounded {

@@ -14,9 +14,10 @@
                 }
             }
 
-            .panel-heading.current {
-                @extend %panel-active-item;
-            }
+            //  used for accordion
+            //  .panel-heading.current {
+            //      @extend %panel-active-item;
+            //  }
 
             %panel-active-item {
                 border-color: shade($color, $panel__contrast);
@@ -28,9 +29,10 @@
                 border-color: $gray__02;
             }
 
-            &.panel-wizard:before {
-                color: shade($color, $panel__contrast * 1.5);
-            }
+            //  used for accordion
+            //  &.panel-wizard:before {
+            //      color: shade($color, $panel__contrast * 1.5);
+            //  }
         }
     }
 }

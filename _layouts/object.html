@@ -8,18 +8,22 @@ layout: default
 {% capture object-title-id %}#{{ page.name | downcase }}-{% endcapture %}
 
 <header class="header page-header">
-    <nav class="nav nav--navbar nav--pagination page-navbar">
+    <ul class="pager pager-white pager-flush pager-md pager-justified page-navbar">
         {% if page.previous and page.previous.category contains "objects" %}
-        <a class="nav__item nav__item--prev" href="{{ page.previous.url | prepend: site.baseurl }}">
-            Prev: {{ page.previous.navtitle }}
-        </a>
+        <li class="previous">
+            <a href="{{ page.previous.url | prepend: site.baseurl }}">
+                {{ page.previous.navtitle | capitalize }}
+            </a>
+        </li>
         {% endif %}
         {% if page.next and page.next.category contains "objects" %}
-        <a class="nav__item nav__item--next" href="{{ page.next.url | prepend: site.baseurl }}">
-            Next: {{ page.next.navtitle }}
-        </a>
+        <li class="next">
+            <a href="{{ page.next.url | prepend: site.baseurl }}">
+                {{ page.next.navtitle | capitalize }}
+            </a>
+        </li>
         {% endif %}
-    </nav>
+    </ul>
 </header>
 
 <!-- used for javascript - do not delete - start -->

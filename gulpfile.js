@@ -89,6 +89,7 @@ gulp.task('scripts', function() {
         './js/sticky.js',
         './js/init.js'
     ])
+        .pipe(plumber())
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest('./_includes/'))
         .pipe(rename('scripts.min.js'))

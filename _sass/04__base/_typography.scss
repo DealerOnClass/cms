@@ -163,10 +163,9 @@ hr {
     margin-top: $global__y * 2;
     margin-bottom: $global__y * 2;
 
-    border-top: $one__pixel solid rgba(0,0,0,0.20);
-    border-right: 0 none;
-    border-bottom: 0 none;
-    border-left: 0 none;
+    border: 0 none;
+    height: $one__pixel;
+    background-color: rgba(0,0,0,0.20);
 
     &.divider {
         margin: 0;
