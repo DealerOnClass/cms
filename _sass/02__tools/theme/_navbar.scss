@@ -7,7 +7,9 @@
 
             a,
             button {
-                color: inherit;
+                @if ($color != white) {
+                    color: inherit;
+                }
 
                 @include state {
                     background-color: shade($color, $navbar__contrast);
@@ -114,6 +116,7 @@
 
             .nav > li > a,
             .navbar-brand,
+            .form-control,
             .navbar-toggle {
                 padding-top: $y;
                 padding-bottom: $y;

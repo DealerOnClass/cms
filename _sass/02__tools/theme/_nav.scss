@@ -20,9 +20,14 @@
             > .active > a,
             > .open > a {
                 @include state-and-self {
-                    color: inherit;
                     border-color: transparent;
-                    background-color: shade($color, $nav__contrast * 3);
+                    @if ($color == white) {
+                        color: $white;
+                        background-color: $primary__color;
+                    } @else {
+                        color: inherit;
+                        background-color: shade($color, $nav__contrast * 3);
+                    }
                 }
             }
 

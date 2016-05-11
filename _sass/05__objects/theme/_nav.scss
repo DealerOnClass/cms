@@ -30,7 +30,6 @@ $nav__y:         $global__y;
     }
 }
 
-
 .nav-tabs,
 .nav-pills {
 
@@ -90,7 +89,6 @@ $nav__y:         $global__y;
         margin-left: 0;
     }
 }
-
 
 .nav-justified {
     display: table;
@@ -165,3 +163,4 @@ $nav__y:         $global__y;
 @include nav-color-variation($primary__palette);
 @include nav-color-variation($neutral__palette);
 @include nav-color-variation($state__palette);
+@include nav-color-variation($classic__palette);

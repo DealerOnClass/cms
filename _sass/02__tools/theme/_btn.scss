@@ -18,8 +18,8 @@
             padding: $y $x;
 
             &.btn-rounded {
-                padding-left: ($x * 1.5);
-                padding-right: ($x * 1.5);
+                padding-left: ($x * 2);
+                padding-right: ($x * 2);
             }
         }
     }

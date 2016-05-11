@@ -537,8 +537,7 @@ $(document).ready(function() {
     });
 
     $("#something-else").sticky({
-        //  topSpacing: stickyOffset + otherOffset - 12,
-        topSpacing: stickyOffset,
+        topSpacing: stickyOffset + otherOffset - 8,
         responsiveWidth: true
     });
 
