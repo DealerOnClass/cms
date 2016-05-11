@@ -396,17 +396,12 @@ $offcanvas-nav-width: 15em;
     box-shadow: 0 $two__pixels $three__pixels rgba(0, 0, 0, 0.1);
 }
 
-.page-navbar,
+//  .page-navbar,
 .site-navbar,
 .site-sidebar {
     a {
         color: inherit;
     }
-}
-
-.page-navbar {
-    //  background-color: $default__color;
-    background-color: $white;
 }
 
 .site-navbar {
@@ -420,43 +415,36 @@ $offcanvas-nav-width: 15em;
 }
 
 .site-sidebar {
-    //  color: tint($inverse__color, 40%);
-    //  background-color: $inverse__color;
     background-color: $white;
 
     .dropdown-toggle {
-        color: saturate($primary__color, 20%);
-        //  font-size: ems-to-pixels($h6__font-size);
-        //  font-weight: 600;
-        //  padding-top: ($nav__y * 2);
-        //  padding-bottom: ($nav__y * 2);
-        //  text-transform: uppercase;
-        //  letter-spacing: 0.2em;
+        font-weight: 600;
+            //  color: saturate($primary__color, 20%);
 
         &:after {
-            float: right;
-            position: relative;
-            //  top: (($global__line-height / 2.5) * $global__unit);
+            display: none;
+                //  float: right;
+                //  position: relative;
         }
     }
 
-    .nav__group {
-        //  color: tint($inverse__color, 60%);
+    .nav__item:hover {
     }
 
-    .nav__item:hover,
     .nav__item.active {
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        color: saturate($primary__color, 20%);
+            //  background-color: rgba(0, 0, 0, 0.1);
     }
 
-    .nav__item.active:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: $three__pixels;
-        background-color: saturate($accent__color, 40%);
-    }
+        //  .nav__item.active:before {
+        //      content: "";
+        //      display: block;
+        //      position: absolute;
+        //      top: 0;
+        //      left: 0;
+        //      height: 100%;
+        //      width: $three__pixels;
+        //      background-color: saturate($accent__color, 40%);
+        //  }
 }

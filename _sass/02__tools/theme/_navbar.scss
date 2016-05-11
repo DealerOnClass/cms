@@ -12,7 +12,7 @@
                 }
 
                 @include state {
-                    background-color: shade($color, $navbar__contrast);
+                    background-color: shade($color, $navbar__contrast * .5);
                 }
             }
 
