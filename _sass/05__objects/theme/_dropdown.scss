@@ -9,95 +9,101 @@ $dropdown__use-btn__color:  false;
 //  Options
 $dropdown__icon:      $fa-var-angle-down;
 $dropdown__icon-use:  true !default;
-//
-//  Base
-.dropup,
-.dropdown {
-    position: relative;
-}
+@if $output__global {
+    @if $output__dropdown {
+        //
+        //  Base
+        .dropup,
+        .dropdown {
+            position: relative;
+        }
 
-.dropdown-menu {
-    list-style: none;
-    position: absolute;
-    z-index: $zindex-dropdown;
-    top: 100%;
-    left: 0;
-    padding: 0;
-    margin: 0;
+        .dropdown-menu {
+            list-style: none;
+            position: absolute;
+            z-index: $zindex-dropdown;
+            top: 100%;
+            left: 0;
+            padding: 0;
+            margin: 0;
 
-    display: none;
-    float: left;
+            display: none;
+            float: left;
 
-    border-radius: $dropdown__radius;
-    background-color: $white;
+            border-radius: $dropdown__radius;
+            background-color: $white;
 
-    .open > & {
-        display: block;
-    }
-}
+            .open > & {
+                display: block;
+            }
+        }
 
-.dropdown-item,
-.dropdown-menu > li > a {
-    position: relative;
+        .dropdown-item,
+        .dropdown-menu > li > a {
+            position: relative;
 
-    display: block;
-    clear: both;
+            display: block;
+            clear: both;
 
-    padding: $dropdown__y $dropdown__x;
+            padding: $dropdown__y $dropdown__x;
 
-    white-space: nowrap;
+            white-space: nowrap;
 
-    background-color: $white;
-    border-right: $one__pixel solid;
-    border-left: $one__pixel solid;
-}
+            background-color: $white;
+            border-right: $one__pixel solid;
+            border-left: $one__pixel solid;
+        }
 
-.dropdown-item:first-child,
-.dropdown-menu > li:first-child > a {
-    border-top: $one__pixel solid;
-    border-top-left-radius: $dropdown__radius;
-    border-top-right-radius: $dropdown__radius;
-}
+        .dropdown-item:first-child,
+        .dropdown-menu > li:first-child > a {
+            border-top: $one__pixel solid;
+            border-radius: $dropdown__radius $dropdown__radius 0 0;
+        }
 
-.dropdown-item:last-child,
-.dropdown-menu > li:last-child > a {
-    border-bottom: $one__pixel solid;
-    border-bottom-left-radius: $dropdown__radius;
-    border-bottom-right-radius: $dropdown__radius;
-}
+        .dropdown-item:last-child,
+        .dropdown-menu > li:last-child > a {
+            border-bottom: $one__pixel solid;
+            border-radius: 0 0 $dropdown__radius $dropdown__radius;
+        }
 
-.dropdown-item.active,
-.dropdown-menu > .active > a,
-.dropdown-menu > .open > a {
-    @include state-and-self {
-        color: $white;
-        border-color: transparent;
-        background-color: $primary__color;
-    }
-}
+        .dropdown-item.active,
+        .dropdown-menu > .active > a,
+        .dropdown-menu > .open > a {
+            @include state-and-self {
+                color: $white;
+                border-color: transparent;
+                background-color: $primary__color;
+            }
+        }
 
-.dropdown-toggle {
-    &:after {
-        @if $dropdown__icon-use {
-            font-family: $fa-font-name;
+        .dropdown-toggle {
+            &:after {
+                @if $dropdown__icon-use {
+                    font-family: $fa-font-name;
 
-            content: "#{$dropdown__icon}";
-        } @else {
-            @include caret(top, 4px, 0);
-            margin-left: half($dropdown__x);
+                    content: "#{$dropdown__icon}";
+                } @else {
+                    @include caret(top, 4px, 0);
+                    margin-left: half($dropdown__x);
 
-            display: inline-block;
+                    display: inline-block;
 
-            content: "";
+                    content: "";
+                }
+            }
+        }
+
+        //
+        //  Colors
+        @if $output__global--theme {
+            @if $output__dropdown--theme {
+                @include dropdown-color-variation($default__palette);
+                @include dropdown-color-variation($inverse__palette);
+                @include dropdown-color-variation($primary__palette);
+                @include dropdown-color-variation($neutral__palette);
+                @include dropdown-color-variation($state__palette);
+                @include dropdown-color-variation($classic__palette);
+            }
         }
     }
 }
-
-//
-//  Colors
-@include dropdown-color-variation($default__palette);
-@include dropdown-color-variation($inverse__palette);
-@include dropdown-color-variation($primary__palette);
-@include dropdown-color-variation($neutral__palette);
-@include dropdown-color-variation($state__palette);
-

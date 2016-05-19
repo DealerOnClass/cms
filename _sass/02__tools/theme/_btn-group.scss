@@ -4,6 +4,23 @@
             color: check-color($color, 80, inherit, $white);
             border-color: $color;
             background-color: $color;
+
+            @include state-and-active {
+                color: check-color($color, 80, inherit, $white);
+                background-color: shade($color, $btn__contrast);
+            }
+
+            &[disabled] {
+                @include state-and-self {
+                    background-color: $color;
+                }
+            }
+        }
+
+        .btn-group-#{$class__name}.open > .btn,
+        .btn-group-#{$class__name} .btn-group.open > .btn {
+            color: check-color($color, 80, inherit, $white);
+            background-color: shade($color, $btn__contrast);
         }
     }
 }

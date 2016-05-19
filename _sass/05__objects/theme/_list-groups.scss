@@ -4,54 +4,66 @@ $list-group__contrast:  $global__contrast;
 $list-group__radius:    $global__radius;
 $list-group__x:         $global__x;
 $list-group__y:         $global__y;
-//
-//  Base
-.list-group {
-    padding-left: 0;
+@if $output__global {
+    @if $output__list-groups {
+        //
+        //  Base
+        .list-group {
+            padding-left: 0;
 
-    list-style: none;
-    border-radius: $list-group__radius;
+            list-style: none;
+            border-radius: $list-group__radius;
+        }
+
+        .list-group-item {
+            position: relative;
+
+            display: block;
+
+            padding: $list-group__y $list-group__x;
+            border: $one__pixel solid;
+
+            &.active {
+                color: $white;
+                border-color: transparent;
+                background-color: $primary__color;
+            }
+
+            &:first-child {
+                border-top-left-radius: $list-group__radius;
+                border-top-right-radius: $list-group__radius;
+            }
+
+            &:last-child {
+                border-bottom-right-radius: $list-group__radius;
+                border-bottom-left-radius: $list-group__radius;
+            }
+
+            & + & {
+                border-top: 0 none;
+            }
+        }
+
+        .list-group-item-text {
+            margin-bottom: 0;
+        }
+        //
+        //  Sizing
+        @if $output__global--sizes {
+            @if $output__list-groups--sizes {
+                @include list-group-size-variation($list-group__y, $list-group__x, $default__sizing);
+            }
+        }
+        //
+        //  Colors
+        @if $output__global--theme {
+            @if $output__list-groups--theme {
+                @include list-group-color-variation($default__palette);
+                @include list-group-color-variation($inverse__palette);
+                @include list-group-color-variation($primary__palette);
+                @include list-group-color-variation($neutral__palette);
+                @include list-group-color-variation($state__palette);
+            }
+        }
+    }
 }
-
-.list-group-item {
-    position: relative;
-
-    display: block;
-
-    padding: $list-group__y $list-group__x;
-    border: $one__pixel solid;
-
-    &.active {
-        color: $white;
-        border-color: transparent;
-        background-color: $primary__color;
-    }
-
-    &:first-child {
-        border-top-left-radius: $list-group__radius;
-        border-top-right-radius: $list-group__radius;
-    }
-
-    &:last-child {
-        border-bottom-right-radius: $list-group__radius;
-        border-bottom-left-radius: $list-group__radius;
-    }
-
-    & + & {
-        border-top: 0 none;
-    }
-}
-
-.list-group-item-text {
-    margin-bottom: 0;
-}
-//
-//  Sizing
-@include list-group-size-variation($list-group__y, $list-group__x, $default__sizing);
-//
-//  Colors
-@include list-group-color-variation($default__palette);
-@include list-group-color-variation($inverse__palette);
-@include list-group-color-variation($primary__palette);
-@include list-group-color-variation($neutral__palette);
-@include list-group-color-variation($state__palette);

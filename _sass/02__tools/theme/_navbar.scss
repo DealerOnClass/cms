@@ -16,12 +16,15 @@
                 }
             }
 
-            .navbar-nav > .open > a,
-            .navbar-nav > .active > a,
-            .navbar-nav > li > .active,
             .open > a,
             .active > a,
             .active {
+            //  .navbar-nav > .open > a,
+            //  .navbar-nav > .active > a,
+            //  .navbar-nav > li > .active,
+            //  .open > a,
+            //  .active > a,
+            //  .active {
                 @include state-and-self {
                     background-color: shade($color, $navbar__contrast * 1.5);
                 }
@@ -118,8 +121,7 @@
             .navbar-brand,
             .form-control,
             .navbar-toggle {
-                padding-top: $y;
-                padding-bottom: $y;
+                padding: $y $unit__x;
             }
         }
     }

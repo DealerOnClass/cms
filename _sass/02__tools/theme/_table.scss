@@ -80,8 +80,7 @@
 
             th,
             td {
-                padding-top: $y;
-                padding-bottom: $y;
+                padding: $y $unit__x;
             }
         }
     }

@@ -8,14 +8,12 @@
     vertical-align: middle;
 
     @if $direction == top {
-        border-top: $size solid;
-        border-right: $size solid transparent;
-        border-left: $size solid transparent;
+        border: $size solid transparent;
+        border-top-color: currentColor;
     }
 
     @if $direction == bottom {
-        border-right: $size solid transparent;
-        border-bottom: $size solid;
-        border-left: $size solid transparent;
+        border: $size solid transparent;
+        border-bottom-color: currentColor;
     }
 }

@@ -40,7 +40,11 @@
                 background-color: shade($color, $nav__contrast);
 
                 > li > a {
+                    border-color: shade($color, $nav__contrast);
+                    background-color: shade($color, $nav__contrast);
+
                     @include state {
+                        border-color: shade($color, $nav__contrast * 2);
                         background-color: shade($color, $nav__contrast * 2);
                     }
                 }

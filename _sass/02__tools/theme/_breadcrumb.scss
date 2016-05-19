@@ -2,11 +2,13 @@
     @each $class__name, $color in $input__palette {
         .breadcrumb-#{$class__name} {
             color: check-color($color, 80, inherit, $white);
-            border: 0 none;
+            border-color: transparent;
             background-color: $color;
 
             > li > a {
-                color: inherit;
+                @include state {
+                    background-color: shade($color, $breadcrumb__contrast);
+                }
             }
         }
     }
@@ -21,9 +23,7 @@
         .breadcrumb-#{$class__name} > li {
             &.active,
             > a {
-                padding-top: $y;
-                padding-bottom: $y;
-                //  padding: $y 0 $y $x;
+                padding: $y $unit__x;
             }
 
             > a:after {

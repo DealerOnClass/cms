@@ -21,6 +21,30 @@ variants-grid: false
 variants-grid-col: col-md-6
 variants-hide-code: true
 variants:
+    - name: dropdown
+      base: |
+          <div class="btn-group" aria-label="Basic example">
+              <div class="btn-group" aria-label="Basic example">
+                  <div class="btn-group">
+                      <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                  </div>
+                  <a class="btn" href="#">Middle</a>
+                  <a class="btn" href="#">Right</a>
+              </div>
+              <div class="btn-group" aria-label="Basic example">
+                  <a class="btn" href="#">Left</a>
+                  <a class="btn" href="#">Middle</a>
+                  <a class="btn" href="#">Right</a>
+              </div>
+          </div>
+
     - name: nested
       base: |
           <div class="btn-group" aria-label="Basic example">

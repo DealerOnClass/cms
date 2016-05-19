@@ -8,19 +8,23 @@ $close__y:         $global__y;
 //  Options
 $close__icon:      $fa-var-close;
 $close__icon-use:  true !default;
-//
-//  Base
-.close {
-    line-height: 1;
-    @if $close__icon-use {
-        &:after {
-            font-family: $fa-font-name;
+@if $output__global {
+    @if $output__close {
+        //
+        //  Base
+        .close {
+            line-height: 1;
+            @if $close__icon-use {
+                &:after {
+                    font-family: $fa-font-name;
 
-            content: "#{$close__icon}";
-        }
+                    content: "#{$close__icon}";
+                }
 
-        > span {
-            display: none;
+                > span {
+                    display: none;
+                }
+            }
         }
     }
 }

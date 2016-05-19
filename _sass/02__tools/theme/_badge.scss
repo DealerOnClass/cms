@@ -4,6 +4,12 @@
             color: check-color($color, 80, inherit, $white);
             background-color: $color;
         }
+
+        a.badge-#{$class__name} {
+            @include state {
+                background-color: shade($color, $badge__contrast);
+            }
+        }
     }
 }
 

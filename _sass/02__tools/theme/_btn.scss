@@ -4,6 +4,16 @@
             color: check-color($color, 80, inherit, $white);
             border-color: $color;
             background-color: $color;
+
+            @include state-and-active {
+                background-color: shade($color, $btn__contrast);
+            }
+
+            &[disabled] {
+                @include state-and-self {
+                    background-color: $color;
+                }
+            }
         }
     }
 }
@@ -18,8 +28,7 @@
             padding: $y $x;
 
             &.btn-rounded {
-                padding-left: ($x * 2);
-                padding-right: ($x * 2);
+                padding: $y ($x * 2);
             }
         }
     }
