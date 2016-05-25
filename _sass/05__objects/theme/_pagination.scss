@@ -12,95 +12,69 @@ $pagination__previous__icon:  $fa-var-angle-left;
         //
         //  Base
         .pagination {
+            display: flex;
+        }
+
+        .pagination-item {
             display: inline-block;
+            margin-left: negative($one__pixel);
+            padding: $pagination__y $pagination__x;
 
-            padding-left: 0;
+            border: $one__pixel solid;
 
-            > li {
-                display: inline-block;
-                float: left;
-            }
-
-            > li > a {
-                position: relative;
-
-                display: inline-block;
-
-                margin-left: negative($one__pixel);
-                padding: $pagination__y $pagination__x;
-
-                border: $one__pixel solid;
-            }
-
-            > li:first-child > a {
-                border-top-left-radius: $pagination__radius;
-                border-bottom-left-radius: $pagination__radius;
-            }
-
-            > li:last-child > a {
-                border-top-right-radius: $pagination__radius;
-                border-bottom-right-radius: $pagination__radius;
-            }
-
-            > .active > a,
-            > li > .active {
+            &.active {
                 @include state-and-self {
-                    z-index: 20;
-
+                    z-index: 2;
                     color: $white;
                     border-color: transparent;
                     background-color: $primary__color;
                 }
             }
 
-            > li > [disabled] {
-                box-shadow: none;
-            }
-        }
-
-        .pagination-rounded {
-            border-radius: ($pagination__y * 2) + $global__unit;
-
-            > li:first-child > a {
-                padding-left: ($pagination__x * 1.25);
-                border-bottom-left-radius: ($pagination__y * 2) + $global__unit;
-                border-top-left-radius: ($pagination__y * 2) + $global__unit;
+            &:first-child {
+                border-radius: $pagination__radius 0 0 $pagination__radius;
             }
 
-            >li:last-child > a {
-                padding-right: ($pagination__x * 1.25);
-                border-bottom-right-radius: ($pagination__y * 2) + $global__unit;
-                border-top-right-radius: ($pagination__y * 2) + $global__unit;
+            &:last-child {
+                border-radius: 0 $pagination__radius $pagination__radius 0;
             }
-        }
 
-        @if $pagination__use-icon {
-            .pagination li {
-
-                &:first-child > a:after,
-                &:last-child > a:after {
-                    line-height: 1;
+            @if $pagination__use-icon {
+                &:first-child:after,
+                &:last-child:after {
                     font-family: $fa-font-name;
                 }
 
-                &:first-child > a:after {
+                &:first-child:after {
                     content: "#{$pagination__previous__icon}";
                 }
 
-                &:last-child > a:after {
+                &:last-child:after {
                     content: "#{$pagination__next__icon}";
                 }
-            }
-        } @else {
-            .pagination li {
-
-                &:first-child > a:after {
+            } @else {
+                &:first-child:after {
                     content: "\00AB";
                 }
 
-                &:last-child > a:after {
+                &:last-child:after {
                     content: "\00BB";
                 }
+            }
+        }
+        //
+        //  Variations
+        .pagination-rounded {
+            $y: (($pagination__y * 2) + $global__unit);
+
+            .pagination-item:first-child {
+                padding-left: ($pagination__x * 1.25);
+                border-radius: $y 0 0 $y;
+            }
+
+            .pagination-item:last-child {
+                padding-right: ($pagination__x * 1.25);
+                border-radius: 0 $y $y 0;
             }
         }
         //

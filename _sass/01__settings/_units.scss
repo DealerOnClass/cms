@@ -4,6 +4,7 @@ $global__unit:      1em;
 //
 //  Global Units
 $global__contrast:  10%;
+$global__flex:      true;
 $global__gutter:    ($global__unit * 0.75);
 $global__radius:    ($global__unit * 0.25);
 $global__x:         ($global__unit * 0.75);
@@ -21,7 +22,6 @@ $zindex-modal-background:    1040 !default;
 $zindex-modal:               1050 !default;
 $zindex-popover:             1060 !default;
 $zindex-tooltip:             1070 !default;
-
 //
 //  Typography
 $global__font-ratio:   1.333;

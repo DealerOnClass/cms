@@ -51,6 +51,10 @@ $modal-backdrop__opacity:   0.5;
         .modal-body,
         .modal-footer {
 
+            &:only-child {
+                border: $modal__radius;
+            }
+
             &:first-child {
                 border-top-right-radius: $modal__radius;
                 border-top-left-radius: $modal__radius;
@@ -59,10 +63,6 @@ $modal-backdrop__opacity:   0.5;
             &:last-child {
                 border-bottom-right-radius: $modal__radius;
                 border-bottom-left-radius: $modal__radius;
-            }
-
-            &:only-child {
-                border: $modal__radius;
             }
         }
 
@@ -173,26 +173,25 @@ $modal-backdrop__opacity:   0.5;
             height: 50px;
         }
         //
-        //  Sizing
-        @if $output__global--sizes {
-            @if $output__modals--sizes {
-                @media (min-width: $screen-sm-min) {
-                    .modal-sm {
-                        width: $modal--sm__width;
-                    }
-                }
-
-                .modal-md {
-                    width: $modal--md__width;
-                }
-
-                @media (min-width: $screen-md-min) {
-                    .modal-lg {
-                        width: $modal--lg__width;
-                    }
-                }
+        //  Variations
+        @media (min-width: $screen-sm-min) {
+            .modal-sm {
+                width: $modal--sm__width;
             }
         }
+
+        .modal-md {
+            width: $modal--md__width;
+        }
+
+        @media (min-width: $screen-md-min) {
+            .modal-lg {
+                width: $modal--lg__width;
+            }
+        }
+        //  //
+        //  //  Sizing
+            //  @include modal-size-variation($modal__y, $modal__x, $default__sizing);
         //
         //  Colors
         @if $output__global--theme {

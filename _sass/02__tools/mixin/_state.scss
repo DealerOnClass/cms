@@ -38,6 +38,15 @@
     }
 }
 
+@mixin state-and-active-and-open {
+    &:hover,
+    &:active,
+    &.active,
+    &.open {
+        @content;
+    }
+}
+
 @mixin state-and-self {
     &,
     &:hover,

@@ -19,57 +19,48 @@ $dropdown__icon-use:  true !default;
         }
 
         .dropdown-menu {
-            list-style: none;
             position: absolute;
             z-index: $zindex-dropdown;
             top: 100%;
             left: 0;
-            padding: 0;
-            margin: 0;
 
             display: none;
             float: left;
-
-            border-radius: $dropdown__radius;
-            background-color: $white;
 
             .open > & {
                 display: block;
             }
         }
 
-        .dropdown-item,
-        .dropdown-menu > li > a {
+        .dropdown-item {
             position: relative;
-
             display: block;
-            clear: both;
-
             padding: $dropdown__y $dropdown__x;
-
             white-space: nowrap;
-
             background-color: $white;
-            border-right: $one__pixel solid;
-            border-left: $one__pixel solid;
-        }
+            border: $one__pixel solid;
 
-        .dropdown-item:first-child,
-        .dropdown-menu > li:first-child > a {
-            border-top: $one__pixel solid;
-            border-radius: $dropdown__radius $dropdown__radius 0 0;
-        }
+            &:first-child {
+                border-radius: $dropdown__radius $dropdown__radius 0 0;
+            }
 
-        .dropdown-item:last-child,
-        .dropdown-menu > li:last-child > a {
-            border-bottom: $one__pixel solid;
-            border-radius: 0 0 $dropdown__radius $dropdown__radius;
-        }
+            &:last-child {
+                border-radius: 0 0 $dropdown__radius $dropdown__radius;
+            }
 
-        .dropdown-item.active,
-        .dropdown-menu > .active > a,
-        .dropdown-menu > .open > a {
-            @include state-and-self {
+            &:only-child {
+                border-radius: $card__radius;
+            }
+
+            &:not(:first-child) {
+                border-top: 0;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 0;
+            }
+
+            @include state-and-active-and-open {
                 color: $white;
                 border-color: transparent;
                 background-color: $primary__color;
@@ -92,7 +83,6 @@ $dropdown__icon-use:  true !default;
                 }
             }
         }
-
         //
         //  Colors
         @if $output__global--theme {

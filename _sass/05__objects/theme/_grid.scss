@@ -68,7 +68,6 @@ $offcanvas-breakpoint-max:   ($offcanvas-breakpoint - 1) !default;
         .col {
             @include column($grid__gutter);
             position: relative;
-            box-sizing: border-box;
             float: left;
             min-width: 10em;
         }

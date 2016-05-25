@@ -70,3 +70,8 @@
 .page-interior-text {
     overflow-x: hidden;
 }
+
+[class*="page-interior"] .breadcrumb {
+    box-shadow: 0 $two__pixels $three__pixels rgba(0, 0, 0, 0.1);
+    margin-bottom: rhythm(1);
+}

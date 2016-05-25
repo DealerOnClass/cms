@@ -7,9 +7,8 @@
 
         .input-group-#{$class__name} {
 
-            .input-group-addon,
-            .form-control {
-                padding: $y $x;
+            .input-group-item {
+                padding: $y $unit__x;
             }
         }
     }

@@ -1,28 +1,21 @@
 @mixin pagination-color-variation($input__palette) {
     @each $class__name, $color in $input__palette {
         .pagination-#{$class__name} {
-            color: check-color($color, 80, inherit, $white);
 
-            > li > a {
-                color: inherit;
+            .pagination-item {
+                color: check-color($color, 80, inherit, $white);
                 border-color: transparent;
                 background-color: $color;
 
-                @include state {
+                @include state-and-active {
                     background-color: shade($color, $pagination__contrast);
                 }
-            }
 
-            > .active > a,
-            > li > .active {
-                @include state-and-self {
-                    border-color: transparent;
-                    background-color: shade($color, $pagination__contrast * 2);
+                &[disabled] {
+                    @include state-and-self {
+                        background-color: $color;
+                    }
                 }
-            }
-
-            > li > [disabled] {
-                background-color: $color;
             }
         }
     }
@@ -34,11 +27,8 @@
         $x: ($unit__x * strip-unit($size));
         $y: ($unit__y * strip-unit($size));
 
-        .pagination-#{$class__name} {
-
-            > li > a {
-                padding: $y $x;
-            }
+        .pagination-#{$class__name} .pagination-item {
+            padding: $y $x;
         }
     }
 }

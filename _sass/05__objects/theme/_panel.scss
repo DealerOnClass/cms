@@ -12,36 +12,30 @@ $panel-wizard-true-accordion:  true !default;
         //  Base
         .panel {
             position: relative;
+            border-radius: $card__radius;
 
-            border-radius: $panel__radius;
-        }
-
-        .panel-heading,
-        .panel-body,
-        .panel-footer {
-
-            &:only-child {
+            .panel-heading,
+            .panel-body,
+            .panel-footer {
+                position: relative;
                 border: $one__pixel solid;
-                border-radius: $panel__radius;
-            }
 
-            &:first-child {
-                border: $one__pixel solid;
-                border-radius: $panel__radius $panel__radius 0 0;
-            }
+                &:first-child {
+                    border-radius: $panel__radius $panel__radius 0 0;
+                }
 
-            &:last-child {
-                border: $one__pixel solid;
-                border-radius: 0 0 $panel__radius $panel__radius;
-            }
+                &:last-child {
+                    border-radius: 0 0 $panel__radius $panel__radius;
+                }
 
-            &:first-child + :last-child {
-                border-top: 0 none;
-            }
+                &:only-child {
+                    border: $one__pixel solid;
+                    border-radius: $panel__radius;
+                }
 
-            &:not(:last-child) {
-                border-right: $one__pixel solid;
-                border-left: $one__pixel solid;
+                &:not(:last-child) {
+                    border-bottom: 0;
+                }
             }
         }
 

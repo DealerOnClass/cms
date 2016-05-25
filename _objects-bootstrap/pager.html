@@ -3,6 +3,7 @@ navgroup: "objects"
 navorder: 1
 navtitle: "pager"
 category: [objects]
+published: false
 
 name: "pager"
 
@@ -10,36 +11,43 @@ base-grid: false
 base-grid-col: col-md-6
 base-hide-code: true
 base: |
-    <ul class="pager">
-        <li><a href="#">Previous</a></li>
-        <li><a href="#">Next</a></li>
-    </ul>
+    <div class="pager">
+        <a class="pager-item pager-previous" href="#">Previous</a>
+        <a class="pager-item pager-next" href="#">Next</a>
+    </div>
 
 variant: true
 variants-grid: false
 variants-grid-col: col-md-6
 variants-hide-code: true
 variants:
-    - name: floats
+    - name: directional
       base: |
-          <ul class="pager">
-              <li class="previous"><a href="#">Previous</a></li>
-              <li class="next"><a href="#">Next</a></li>
-          </ul>
+          <div class="pager pager-directional">
+              <a class="pager-item pager-previous" href="#">Previous</a>
+              <a class="pager-item pager-next" href="#">Next</a>
+          </div>
+
+    - name: justified
+      base: |
+          <div class="pager pager-justified">
+              <a class="pager-item pager-previous" href="#">Previous</a>
+              <a class="pager-item pager-next" href="#">Next</a>
+          </div>
 
     - name: rounded
       base: |
-          <ul class="pager pager-rounded">
-              <li class="previous"><a href="#">Previous</a></li>
-              <li class="next"><a href="#">Next</a></li>
-          </ul>
+          <div class="pager pager-rounded">
+              <a class="pager-item pager-previous" href="#">Previous</a>
+              <a class="pager-item pager-next" href="#">Next</a>
+          </div>
 
     - name: states
       base: |
-          <ul class="pager">
-              <li><a class="active" href="#">Previous</a></li>
-              <li><a disabled href="#">Next</a></li>
-          </ul>
+          <div class="pager pager-rounded">
+              <a class="pager-item pager-previous active" href="#">Previous</a>
+              <a class="pager-item pager-next" href="#" disabled>Next</a>
+          </div>
 
 size: true
 size-grid: false
@@ -47,10 +55,10 @@ size-grid-col: col-md-3
 size-hide-code: true
 size-base-use: true
 size-base: |
-    <ul class="pager">
-        <li><a href="#">Previous</a></li>
-        <li><a href="#">Next</a></li>
-    </ul>
+    <div class="pager">
+        <a class="pager-item pager-previous" href="#">Previous</a>
+        <a class="pager-item pager-next" href="#">Next</a>
+    </div>
 
 theme: true
 theme-grid: true
@@ -58,9 +66,9 @@ theme-grid-col: col-md-3
 theme-hide-code: true
 theme-base-use: true
 theme-base: |
-    <ul class="pager">
-        <li><a href="#">Previous</a></li>
-        <li><a href="#">Next</a></li>
-    </ul>
+    <div class="pager">
+        <a class="pager-item pager-previous" href="#">Previous</a>
+        <a class="pager-item pager-next" href="#">Next</a>
+    </div>
 
 ---

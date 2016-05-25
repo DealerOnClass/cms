@@ -3,38 +3,23 @@
         @if $dropdown__use-btn__color {
             .btn-#{$class__name} {
                 + .dropdown-menu {
-                    background-color: $color;
 
-                    .dropdown-item,
-                    > .dropdown-header,
-                    > li > a,
-                    > li:last-child > a {
+                    .dropdown-item {
                         color: check-color($color, 80, inherit, $white);
                         border-color: transparent;
                         background-color: $color;
-                    }
 
-                    .dropdown-item,
-                    > li > a {
-                        @include state {
+                        @include state-and-active-and-open {
                             background-color: shade($color, $btn__contrast);
                         }
-                    }
 
-                    .dropdown-item.active,
-                    > .active > a,
-                    > li > .active {
-                        @include state-and-self {
-                            background-color: shade($color, $btn__contrast * 2);
+                        &[disabled] {
+                            @include state-and-self {
+                                background-color: $color;
+                            }
                         }
                     }
 
-                    .dropdown-item[disabled],
-                    > li > [disabled] {
-                        @include state-and-self {
-                            background-color: $color;
-                        }
-                    }
                 }
 
                 .btn-group &.dropdown-toggle:nth-child(2n) + .dropdown-menu:after {
@@ -49,38 +34,19 @@
 
         .dropdown-#{$class__name} {
 
-            .dropdown-menu {
-                background-color: $color;
-            }
-
-            .dropdown-item,
-            > .dropdown-header,
-            > li > a,
-            > li:last-child > a {
+            .dropdown-item {
                 color: check-color($color, 80, inherit, $white);
                 border-color: transparent;
                 background-color: $color;
-            }
 
-            .dropdown-item,
-            > li > a {
-                @include state {
+                @include state-and-active-and-open {
                     background-color: shade($color, $btn__contrast);
                 }
-            }
 
-            .dropdown-item.active,
-            > .active > a,
-            > li > .active {
-                @include state-and-self {
-                    background-color: shade($color, $btn__contrast * 2);
-                }
-            }
-
-            .dropdown-item[disabled],
-            > li > [disabled] {
-                @include state-and-self {
-                    background-color: $color;
+                &[disabled] {
+                    @include state-and-self {
+                        background-color: $color;
+                    }
                 }
             }
         }

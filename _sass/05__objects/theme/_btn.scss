@@ -12,7 +12,6 @@ $btn__y:         $global__y;
             color: inherit;
             display: inline-block;
 
-            box-sizing: border-box;
             padding: $btn__y $btn__x;
 
             white-space: nowrap;
@@ -34,21 +33,12 @@ $btn__y:         $global__y;
 
         .btn-block {
             display: block;
-
             width: 100%;
-
-            //  & + & {
-            //      margin-top: rhythm(0.5);
-            //  }
         }
 
         .btn-rounded {
             border-radius: ($btn__y * 2) + $global__line-height;
             padding: $btn__y ($btn__x * 1.5);
-        }
-
-        .btn-square {
-            border-radius: 0;
         }
         //
         //  Sizing

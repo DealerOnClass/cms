@@ -9,119 +9,42 @@ $input-group__y:         $global__y;
         //
         //  Base
         .input-group {
-            position: relative; // For dropdowns
-
-            display: table;
-
-            border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
-
-            .form-control {
-                position: relative;
-                z-index: 2;
-
-                float: left;
-
-                width: 100%;
-                margin-bottom: 0;
-            }
+            display: flex;
         }
 
-        .input-group-addon,
-        .input-group-btn,
-        .input-group .form-control {
-            display: table-cell;
-
-            &:not(:first-child):not(:last-child) {
-                border-radius: 0;
-            }
-        }
-
-        .input-group-addon,
-        .input-group-btn {
-            width: 1%;
-
-            vertical-align: middle; // Match the inputs
-            white-space: nowrap;
-        }
-
-        .input-group-addon {
-            padding: $form__y $form__x;
-
-            text-align: center;
-
-            border: $one__pixel solid;
-            border-radius: $form__radius;
-            background-color: $gray__01;
-
-            [type='radio'],
-            [type='checkbox'] {
-                margin-top: 0;
-            }
-        }
-
-        .input-group-btn {
-            position: relative;
-
-            white-space: nowrap;
-
-            > .btn {
-                position: relative;
-            }
-
-            > .btn + .btn {
-                margin-left: negative($one__pixel);
-            }
-
-            > .btn,
-            > .dropdown-toggle {
-                z-index: 4;
-            }
+        .input-group-item {
+            max-width: 100%;
 
             &:first-child {
-                > .btn,
-                > .btn-group {
-                    margin-right: negative($six__pixels);
+                &,
+                > .dropdown-toggle {
+                    border-radius: $input-group__radius 0 0 $input-group__radius;
                 }
             }
 
             &:last-child {
-                > .btn,
-                > .btn-group {
-                    z-index: 4;
+                &,
+                > .dropdown-toggle {
+                    border-radius: 0 $input-group__radius $input-group__radius 0;
+                }
+            }
 
-                    margin-left: negative($six__pixels);
+            &:not(:last-child) {
+                &,
+                > .dropdown-toggle {
+                    border-right: 0;
                 }
             }
         }
 
-        .input-group .form-control:first-child,
-        .input-group-addon:first-child,
-        .input-group-btn:first-child > .btn,
-        .input-group-btn:first-child > .btn-group > .btn,
-        .input-group-btn:first-child > .dropdown-toggle,
-        .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-        .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-            border-bottom-right-radius: 0;
-            border-top-right-radius: 0;
-        }
+        .input-group-addon {
+            padding: $form__y $form__x;
+            border: $one__pixel solid;
 
-        .input-group-addon:first-child {
-            border-right: 0;
-        }
-
-        .input-group .form-control:last-child,
-        .input-group-addon:last-child,
-        .input-group-btn:last-child > .btn,
-        .input-group-btn:last-child > .btn-group > .btn,
-        .input-group-btn:last-child > .dropdown-toggle,
-        .input-group-btn:first-child > .btn:not(:first-child),
-        .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-            border-bottom-left-radius: 0;
-            border-top-left-radius: 0;
-        }
-
-        .input-group-addon:last-child {
-            border-left: 0;
+            &.dropdown {
+                padding: 0;
+                border: 0;
+            }
         }
         //
         //  Sizing

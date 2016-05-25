@@ -18,7 +18,7 @@ $output__badge--sizes:             true !default;
 $output__badge--theme:             true !default;
 //
 //  Breadcrumb
-$output__breadcrumb:               true !default;
+$output__breadcrumb:               false !default;
 $output__breadcrumb--sizes:        true !default;
 $output__breadcrumb--theme:        true !default;
 //
@@ -79,6 +79,7 @@ $output__media:                    true !default;
 //
 //  Modals
 $output__modals:                   true !default;
+$output__modals--sizes:            true !default;
 $output__modals--theme:            true !default;
 //
 //  Nav
@@ -92,17 +93,17 @@ $output__navbar--sizes:            true !default;
 $output__navbar--theme:            true !default;
 //
 //  Pager
-$output__pager:                    true !default;
+$output__pager:                    false !default;
 $output__pager--sizes:             true !default;
 $output__pager--theme:             true !default;
 //
 //  Pagination
-$output__pagination:               true !default;
+$output__pagination:               false !default;
 $output__pagination--sizes:        true !default;
 $output__pagination--theme:        true !default;
 //
 //  Panel
-$output__panel:                    true !default;
+$output__panel:                    false !default;
 $output__panel--sizes:             true !default;
 $output__panel--theme:             true !default;
 //
@@ -131,6 +132,6 @@ $output__table--sizes:             true !default;
 $output__table--theme:             true !default;
 //
 //  Well
-$output__well:                     true !default;
+$output__well:                     false !default;
 $output__well--sizes:              true !default;
 $output__well--theme:              true !default;

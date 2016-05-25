@@ -11,99 +11,26 @@
                     color: inherit;
                 }
 
-                @include state {
-                    background-color: shade($color, $navbar__contrast * .5);
+                @include state-and-active {
+                    background-color: shade($color, $navbar__contrast);
                 }
             }
 
-            .open > a,
-            .active > a,
-            .active {
-            //  .navbar-nav > .open > a,
-            //  .navbar-nav > .active > a,
-            //  .navbar-nav > li > .active,
-            //  .open > a,
-            //  .active > a,
-            //  .active {
-                @include state-and-self {
-                    background-color: shade($color, $navbar__contrast * 1.5);
-                }
+            .navbar-item.open > .dropdown-toggle {
+                background-color: shade($color, $navbar__contrast);
             }
-
-            .navbar-search-form .form-control {
-                color: check-color($color, 80, inherit, $white);
-                background-color: shade($color, $navbar__contrast * 1.5);
-            }
-        }
-
-        .navbar-#{$class__name} .dropdown-menu {
-            background-color: shade($color, $navbar__contrast * 1.5);
-
-            > li > a {
-                border-color: transparent;
-                background-color: shade($color, $navbar__contrast * 1.5);
-
-                @include state {
-                    background-color: shade($color, $navbar__contrast * 2);
-                }
-            }
-
-            > .open > a,
-            > .active > a,
-            > .active {
-                @include state-and-self {
-                    background-color: shade($color, $navbar__contrast * 2);
-                }
-            }
-
-            //  @media (max-width: $grid-float-breakpoint-max) {
-            //      background-color: shade($color, $navbar__contrast * 2);
-
-            //      > li > a {
-            //          @include state {
-            //              background-color: shade($color, $navbar__contrast * 3);
-            //          }
-            //      }
-
-            //      > li.open > a,
-            //      > li.active > a,
-            //      > a.active {
-            //          background-color: shade($color, $navbar__contrast * 3);
-            //      }
-            //  }
-        }
-
-        .navbar-#{$class__name}.navbar-stacked {
 
             .dropdown-menu {
+                background-color: shade($color, $navbar__contrast);
 
-                > li > a {
-                    background-color: shade($color, $navbar__contrast * 2);
+                a.dropdown-item {
+                    border-color: transparent;
+                    background-color: shade($color, $navbar__contrast);
 
-                    @include state {
-                        background-color: shade($color, $navbar__contrast * 3);
+                    @include state-and-active {
+                        background-color: shade($color, $navbar__contrast * 1.5);
                     }
                 }
-
-                > .open > a,
-                > .active > a,
-                > .active {
-                    @include state-and-self {
-                        background-color: shade($color, $navbar__contrast * 3);
-                    }
-                }
-            }
-        }
-
-        .navbar-#{$class__name} {
-
-            .navbar-sidebar-header {
-                background-color: check-color($color, 80, shade($color, $navbar__contrast / 2), shade($color, $navbar__contrast * 2));
-                color: check-color($color, 80, shade($color, 60%), tint($color, 60%));
-            }
-
-            .navbar-sidebar-title {
-                color: check-color($color, 80, shade($color, 60%), tint($color, 80%));
             }
         }
     }
@@ -117,11 +44,16 @@
 
         .navbar-#{$class__name} {
 
-            .nav > li > a,
-            .navbar-brand,
-            .form-control,
-            .navbar-toggle {
-                padding: $y $unit__x;
+            .navbar-item {
+
+                &.dropdown {
+                    padding: 0;
+                }
+
+                &,
+                &.dropdown > .dropdown-toggle {
+                    padding: $y $unit__x;
+                }
             }
         }
     }

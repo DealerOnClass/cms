@@ -129,7 +129,7 @@ $pagination__previous__icon:  $fa-var-angle-left;
             }
         }
 
-        .btn-group-centered {
+        .btn-group-justified {
             display: flex;
             justify-content: center;
         }
@@ -140,14 +140,6 @@ $pagination__previous__icon:  $fa-var-angle-left;
 
             .btn-group-item {
                 flex: 1 1 auto;
-
-                &.dropdown {
-                    display: flex;
-
-                    > .dropdown-toggle {
-                        flex-grow: 1;
-                    }
-                }
             }
         }
 

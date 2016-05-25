@@ -25,10 +25,22 @@ variants-grid: false
 variants-grid-col: col-md-6
 variants-hide-code: true
 variants:
-    - name: align middle
+    - name: right
       base: |
           <div class="media">
-              <div class="media-left media-middle">
+              <div class="media-body">
+                  <h4>Media heading</h4>
+                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+              </div>
+              <div class="media-right">
+                  <img class="img-circle" src="http://placehold.it/100x100" alt="Card image cap">
+              </div>
+          </div>
+
+    - name: middle
+      base: |
+          <div class="media media-middle">
+              <div class="media-left">
                   <img class="img-circle" src="http://placehold.it/100x100" alt="Card image cap">
               </div>
               <div class="media-body">
@@ -37,10 +49,10 @@ variants:
               </div>
           </div>
 
-    - name: align bottom
+    - name: bottom
       base: |
-          <div class="media">
-              <div class="media-left media-bottom">
+          <div class="media media-bottom">
+              <div class="media-left">
                   <img class="img-circle" src="http://placehold.it/100x100" alt="Card image cap">
               </div>
               <div class="media-body">

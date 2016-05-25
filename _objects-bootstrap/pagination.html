@@ -3,6 +3,7 @@ navgroup: "objects"
 navorder: 1
 navtitle: "pagination"
 category: [objects]
+published: false
 
 name: "pagination"
 
@@ -10,15 +11,15 @@ base-grid: false
 base-grid-col: col-md-6
 base-hide-code: true
 base: |
-    <ul class="pagination">
-        <li><a href="#" aria-label="Previous"></a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#" aria-label="Next"></a></li>
-    </ul>
+    <div class="pagination">
+        <a class="pagination-item" href="#" aria-label="Previous"></a>
+        <a class="pagination-item" href="#">1</a>
+        <a class="pagination-item" href="#">2</a>
+        <a class="pagination-item" href="#">3</a>
+        <a class="pagination-item" href="#">4</a>
+        <a class="pagination-item" href="#">5</a>
+        <a class="pagination-item" href="#" aria-label="Next"></a>
+    </div>
 
 variant: true
 variants-grid: false
@@ -27,28 +28,27 @@ variants-hide-code: true
 variants:
     - name: rounded
       base: |
-          <ul class="pagination pagination-rounded">
-              <li><a class="active" href="#" aria-label="Previous"></a></li>
-              <li><a href="#" disabled>1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#" aria-label="Next"></a></li>
-          </ul>
+          <div class="pagination pagination-rounded">
+              <a class="pagination-item" href="#" aria-label="Previous"></a>
+              <a class="pagination-item" href="#">1</a>
+              <a class="pagination-item" href="#">2</a>
+              <a class="pagination-item" href="#">3</a>
+              <a class="pagination-item" href="#">4</a>
+              <a class="pagination-item" href="#">5</a>
+              <a class="pagination-item" href="#" aria-label="Next"></a>
+          </div>
 
     - name: states
       base: |
-          <ul class="pagination">
-              <li><a class="active" href="#" aria-label="Previous"></a></li>
-              <li><a href="#" disabled>1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#" aria-label="Next"></a></li>
-          </ul>
-
+          <div class="pagination pagination-rounded">
+              <a class="pagination-item" href="#" aria-label="Previous"></a>
+              <a class="pagination-item active" href="#">1</a>
+              <a class="pagination-item" href="#">2</a>
+              <a class="pagination-item" href="#">3</a>
+              <a class="pagination-item" href="#">4</a>
+              <a class="pagination-item" href="#" disabled>5</a>
+              <a class="pagination-item" href="#" aria-label="Next"></a>
+          </div>
 
 size: true
 size-grid: false
@@ -56,15 +56,15 @@ size-grid-col: col-md-3
 size-hide-code: true
 size-base-use: true
 size-base: |
-    <ul class="pagination">
-        <li><a class="active" href="#" aria-label="Previous"></a></li>
-        <li><a href="#" disabled>1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#" aria-label="Next"></a></li>
-    </ul>
+    <div class="pagination pagination-rounded">
+        <a class="pagination-item" href="#" aria-label="Previous"></a>
+        <a class="pagination-item active" href="#">1</a>
+        <a class="pagination-item" href="#">2</a>
+        <a class="pagination-item" href="#">3</a>
+        <a class="pagination-item" href="#">4</a>
+        <a class="pagination-item" href="#" disabled>5</a>
+        <a class="pagination-item" href="#" aria-label="Next"></a>
+    </div>
 
 theme: true
 theme-grid: false
@@ -72,14 +72,14 @@ theme-grid-col: col-md-3
 theme-hide-code: true
 theme-base-use: true
 theme-base: |
-    <ul class="pagination">
-        <li><a class="active" href="#" aria-label="Previous"></a></li>
-        <li><a href="#" disabled>1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#" aria-label="Next"></a></li>
-    </ul>
+    <div class="pagination pagination-rounded">
+        <a class="pagination-item" href="#" aria-label="Previous"></a>
+        <a class="pagination-item active" href="#">1</a>
+        <a class="pagination-item" href="#">2</a>
+        <a class="pagination-item" href="#">3</a>
+        <a class="pagination-item" href="#">4</a>
+        <a class="pagination-item" href="#" disabled>5</a>
+        <a class="pagination-item" href="#" aria-label="Next"></a>
+    </div>
 
 ---

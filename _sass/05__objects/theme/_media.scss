@@ -9,45 +9,64 @@ $media__y:         $global__y;
     @if $output__media {
         //
         //  Base
-        .media,
-        .media-body {
-            zoom: 1;
+        .media {
+            display: flex;
         }
 
-        .media-body {
-            width: 10000px;
-            display: table-cell;
-            vertical-align: top;
-        }
-
-        .media-object {
-            display: block;
-        }
-
-        .media-right,
-        .media > .pull-right {
+        .media-right {
             padding-left: $media__gutter;
         }
 
-        .media-left,
-        .media > .pull-left {
+        .media-left {
             padding-right: $media__gutter;
         }
 
-        .media-left,
-        .media-right {
-            display: table-cell;
-
-            vertical-align: top;
-        }
-
         .media-middle {
-            vertical-align: middle;
+            align-items: center;
         }
 
         .media-bottom {
-            vertical-align: bottom;
+            align-items: flex-end;
         }
+        //  .media,
+        //  .media-body {
+        //      zoom: 1;
+        //  }
+
+        //  .media-body {
+        //      width: 10000px;
+        //      display: table-cell;
+        //      vertical-align: top;
+        //  }
+
+        //  .media-object {
+        //      display: block;
+        //  }
+
+        //  .media-right,
+        //  .media > .pull-right {
+        //      padding-left: $media__gutter;
+        //  }
+
+        //  .media-left,
+        //  .media > .pull-left {
+        //      padding-right: $media__gutter;
+        //  }
+
+        //  .media-left,
+        //  .media-right {
+        //      display: table-cell;
+
+        //      vertical-align: top;
+        //  }
+
+        //  .media-middle {
+        //      vertical-align: middle;
+        //  }
+
+        //  .media-bottom {
+        //      vertical-align: bottom;
+        //  }
         //
         //  Variations
         //

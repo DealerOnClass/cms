@@ -19,38 +19,39 @@ $navbar__y:         $global__y;
             padding-left: 0;
         }
 
+        .navbar > .container-fluid {
+            max-width: initial;
+        }
+
         .navbar-header,
         .navbar-nav.nav,
         .navbar-form {
             display: inline-flex;
-        }
 
-        .navbar-item {
-
-            &.dropdown {
-                padding: 0;
-            }
-
-            &,
-            &.dropdown > .dropdown-toggle {
+            .nav-item {
+                border: 0;
                 padding: $navbar__y $navbar__x;
+
+                &.dropdown {
+                    padding: 0;
+
+                    &,
+                    > .dropdown-toggle {
+                        border: 0;
+                    }
+                }
+
+                @include state-and-active-and-open {
+                    color: $white;
+                    border-color: $primary__color;
+                    background-color: $primary__color;
+                }
+
+                &[disabled] {
+                    color: inherit !important;
+                    background-color: transparent !important;
+                }
             }
-        }
-
-        a.navbar-item,
-        button.navbar-item,
-        .navbar-item.dropdown {
-
-            @include state-and-active-and-open {
-                color: $white;
-                border-color: $primary__color;
-                background-color: $primary__color;
-            }
-        }
-
-        .navbar-item[disabled] {
-            color: inherit !important;
-            background-color: transparent !important;
         }
 
         .navbar-header {
@@ -60,20 +61,22 @@ $navbar__y:         $global__y;
         }
 
         .navbar-collapse {
+            -webkit-overflow-scrolling: touch;
 
-            &.collapsing,
             &.in {
-
-                .navbar-nav {
-                    display: flex;
-                    flex-direction: column;
-                }
+                overflow-y: auto;
             }
 
             @media (min-width: $grid-float-breakpoint) {
+                width: auto;
+
                 &.collapse {
-                    display: flex;
+                    display: flex !important;
                     height: auto !important;
+                }
+
+                &.in {
+                    overflow-y: visible;
                 }
             }
         }

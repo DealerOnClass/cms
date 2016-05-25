@@ -3,6 +3,7 @@ navgroup: "objects"
 navorder: 1
 navtitle: "breadcrumb"
 category: [objects]
+published: false
 
 name: "breadcrumb"
 
@@ -10,11 +11,11 @@ base-grid: false
 base-grid-col: col-md-6
 base-hide-code: true
 base: |
-    <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Library</a></li>
-        <li class="active">Data</li>
-    </ol>
+    <div class="breadcrumb">
+        <a href="#" class="breadcrumb-item">Home</a>
+        <a href="#" class="breadcrumb-item">Library</a>
+        <span href="#" class="breadcrumb-item active">Data</span>
+    </div>
 
 variant: true
 variants-grid: false
@@ -23,19 +24,11 @@ variants-hide-code: true
 variants:
     - name: rounded
       base: |
-          <ol class="breadcrumb breadcrumb-rounded">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Library</a></li>
-              <li class="active">Data</li>
-          </ol>
-
-    - name: flush
-      base: |
-          <ol class="breadcrumb breadcrumb-flush">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Library</a></li>
-              <li class="active">Data</li>
-          </ol>
+          <div class="breadcrumb breadcrumb-rounded">
+              <a href="#" class="breadcrumb-item">Home</a>
+              <a href="#" class="breadcrumb-item">Library</a>
+              <span href="#" class="breadcrumb-item active">Data</span>
+          </div>
 
 size: true
 size-grid: false
@@ -43,11 +36,11 @@ size-grid-col: col-md-3
 size-hide-code: true
 size-base-use: true
 size-base: |
-    <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Library</a></li>
-        <li class="active">Data</li>
-    </ol>
+    <div class="breadcrumb">
+        <a href="#" class="breadcrumb-item">Home</a>
+        <a href="#" class="breadcrumb-item">Library</a>
+        <span href="#" class="breadcrumb-item active">Data</span>
+    </div>
 
 theme: true
 theme-grid: false
@@ -55,10 +48,10 @@ theme-grid-col: col-md-6
 theme-hide-code: true
 theme-base-use: true
 theme-base: |
-    <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Library</a></li>
-        <li class="active">Data</li>
-    </ol>
+    <div class="breadcrumb">
+        <a href="#" class="breadcrumb-item">Home</a>
+        <a href="#" class="breadcrumb-item">Library</a>
+        <span href="#" class="breadcrumb-item active">Data</span>
+    </div>
 
 ---

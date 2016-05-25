@@ -23,25 +23,6 @@ $nav__y:         $global__y;
                 border-color: transparent;
                 background-color: $primary__color;
             }
-
-            &.dropdown {
-                padding: 0;
-
-                .dropdown-menu {
-                    left: negative($one__pixel);
-                }
-
-                .dropdown-menu > li:first-child > a {
-                    border-top-right-radius: 0;
-                    border-top-left-radius: 0;
-                }
-
-                .dropdown-toggle {
-                    color: inherit;
-                    display: block;
-                    padding: $nav__y $nav__x;
-                }
-            }
         }
 
         .nav-tabs,
@@ -52,6 +33,10 @@ $nav__y:         $global__y;
             }
         }
 
+        .nav-justified .nav-item {
+            flex: 1 1 auto;
+        }
+
         .nav-tabs .nav-item {
             border-radius: $nav__radius $nav__radius 0 0;
             border-bottom-color: transparent;
@@ -60,31 +45,16 @@ $nav__y:         $global__y;
         .nav-pills .nav-item {
             border-radius: $nav__radius;
         }
-        //
-        //  Variations
-        .nav-justified .nav-item {
-            flex: 1 1 auto;
-        }
 
         .nav-stacked {
             flex-direction: column;
 
-            .nav-item + .nav-item {
+            .nav-item {
                 margin-top: $two__pixels;
                 margin-left: 0;
             }
         }
 
-        .nav-flush {
-
-            .nav-item {
-                border-radius: 0;
-            }
-
-            .nav-item + .nav-item {
-                margin: 0;
-            }
-        }
         //  .nav {
         //      @include clearfix;
 

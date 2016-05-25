@@ -47,9 +47,9 @@
 .text-muted-75 { opacity: 0.75; }
 
 //
+//
 @include text-color-variation($default__palette);
 @include text-color-variation($inverse__palette);
 @include text-color-variation($primary__palette);
 @include text-color-variation($neutral__palette);
 @include text-color-variation($state__palette);
-@include text-color-variation($opacity__palette);

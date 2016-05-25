@@ -29,12 +29,11 @@ $popover-arrow--outer__width:  $popover-arrow__inner__width + 1;
 
             //
             //  Popover above button
-            &.top,
-            &.popover-top,
+            //  &.top,
+            //  &.popover-top,
             &.bs-tether-element-attached-bottom {
                 margin-top: negative($popover-arrow--inner__width);
 
-                .arrow,
                 .popover-arrow {
                     bottom: negative($popover-arrow--outer__width) + $popover-arrow__offset;
                     left: 50%;
@@ -59,12 +58,11 @@ $popover-arrow--outer__width:  $popover-arrow__inner__width + 1;
 
             //
             //  Popover to right of button
-            &.right,
-            &.popover-right,
+            //  &.right,
+            //  &.popover-right,
             &.bs-tether-element-attached-left {
                 margin-left: $popover-arrow--inner__width;
 
-                .arrow,
                 .popover-arrow {
                     top: 50%;
                     left: negative($popover-arrow--outer__width) + $popover-arrow__offset;
@@ -88,12 +86,11 @@ $popover-arrow--outer__width:  $popover-arrow__inner__width + 1;
 
             //
             //  Popover below button
-            &.bottom,
-            &.popover-bottom,
+            //  &.bottom,
+            //  &.popover-bottom,
             &.bs-tether-element-attached-top {
                 margin-top: $popover-arrow--inner__width;
 
-                .arrow,
                 .popover-arrow {
                     top: negative($popover-arrow--outer__width) + $popover-arrow__offset;
                     left: 50%;
@@ -119,12 +116,11 @@ $popover-arrow--outer__width:  $popover-arrow__inner__width + 1;
 
             //
             //  Popover to left of button
-            &.left,
-            &.popover-left,
+            //  &.left,
+            //  &.popover-left,
             &.bs-tether-element-attached-right {
                 margin-left: negative($popover-arrow--inner__width);
 
-                .arrow,
                 .popover-arrow {
                     top: 50%;
                     right: negative($popover-arrow--outer__width) + $popover-arrow__offset;
@@ -180,7 +176,6 @@ $popover-arrow--outer__width:  $popover-arrow__inner__width + 1;
             }
         }
 
-        .arrow,
         .popover-arrow {
 
             &,
@@ -197,7 +192,6 @@ $popover-arrow--outer__width:  $popover-arrow__inner__width + 1;
             }
         }
 
-        .arrow,
         .popover-arrow {
             border-width: $popover-arrow--outer__width;
 

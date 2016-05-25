@@ -97,6 +97,10 @@ a {
     text-decoration: none;
 
     color: $link__color;
+}
+
+a,
+button {
 
     &:active {
         box-shadow: inset 0 $three__pixels $five__pixels rgba(0, 0, 0, 0.125);
@@ -122,11 +126,11 @@ em {
 [type="button"],
 button {
     font: inherit;
-    //  line-height: normal;
+    text-align: left;
 
     overflow: visible;
 
-    box-sizing: content-box;
+    box-sizing: inherit;
     padding: 0;
 
     user-select: none;
@@ -161,8 +165,7 @@ dt {
 }
 
 hr {
-    margin-top: $global__y * 2;
-    margin-bottom: $global__y * 2;
+    margin: ($global__y * 2) 0;
 
     border: 0 none;
     height: $one__pixel;

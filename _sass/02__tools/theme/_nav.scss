@@ -1,38 +1,25 @@
 @mixin nav-color-variation($input__palette) {
     @each $class__name, $color in $input__palette {
         .nav-#{$class__name} {
-            color: check-color($color, 80, inherit, $white);
 
-            a {
-                color: inherit;
-            }
-
-            > li > a {
+            .nav-item {
+                color: check-color($color, 80, inherit, $white);
                 border-color: transparent;
                 background-color: $color;
 
-                @include state {
-                    background-color: shade($color, $nav__contrast);
-                }
-            }
-
-            > li > .active,
-            > .active > a,
-            > .open > a {
-                @include state-and-self {
-                    border-color: transparent;
+                @include state-and-active-and-open {
                     @if ($color == white) {
                         color: $white;
                         background-color: $primary__color;
                     } @else {
-                        color: inherit;
-                        background-color: shade($color, $nav__contrast * 3);
+                        border-color: transparent;
+                        background-color: shade($color, $nav__contrast);
                     }
                 }
-            }
 
-            > li > [disabled] {
-                background-color: $color;
+                &[disabled] {
+                    background-color: $color;
+                }
             }
 
             .dropdown-menu {
@@ -40,6 +27,7 @@
                 background-color: shade($color, $nav__contrast);
 
                 > li > a {
+                    color: inherit;
                     border-color: shade($color, $nav__contrast);
                     background-color: shade($color, $nav__contrast);
 
@@ -59,7 +47,7 @@
         $x: ($unit__x * strip-unit($size));
         $y: ($unit__y * strip-unit($size));
 
-        .nav-#{$class__name} {
+        .nav-#{$class__name} .nav-item {
             padding: $y $x;
         }
     }

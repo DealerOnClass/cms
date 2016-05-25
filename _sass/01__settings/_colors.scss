@@ -46,7 +46,7 @@ $default__palette: (
 
 $inverse__palette: (
     'inverse':       $inverse__color,
-    'inverse-dark':  mix($inverse__color, $gray__09, 70%),
+    //  'inverse-dark':  mix($inverse__color, $gray__09, 70%),
 ) !default;
 
 $primary__palette: (
@@ -67,11 +67,7 @@ $state__palette: (
     'danger':     $state--danger,
 ) !default;
 
-$opacity__palette: (
-    '20':         rgba(0, 0, 0, 0.2),
-) !default;
-
 $classic__palette: (
     'white':    $white,
-    'black':    $black,
+    //  'black':    $black,
 ) !default;

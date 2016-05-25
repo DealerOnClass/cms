@@ -5,7 +5,7 @@
             border-color: transparent;
             background-color: $color;
 
-            > li > a {
+            a.breadcrumb-item {
                 @include state {
                     background-color: shade($color, $breadcrumb__contrast);
                 }
@@ -20,15 +20,8 @@
         $x: ($unit__x * strip-unit($size));
         $y: ($unit__y * strip-unit($size));
 
-        .breadcrumb-#{$class__name} > li {
-            &.active,
-            > a {
-                padding: $y $unit__x;
-            }
-
-            > a:after {
-                margin-left: $x;
-            }
+        .breadcrumb-#{$class__name} .breadcrumb-item {
+            padding: $y 0 $y $unit__x;
         }
     }
 }

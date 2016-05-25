@@ -43,6 +43,7 @@ $alert__y:         $global__y;
                 @include alert-color-variation($primary__palette);
                 @include alert-color-variation($neutral__palette);
                 @include alert-color-variation($state__palette);
+                @include alert-color-variation($classic__palette);
             }
         }
     }

@@ -10,44 +10,35 @@ $card__y:         $global__y;
         //  Base
         .card {
             position: relative;
-
             border-radius: $card__radius;
-            margin-bottom: rhythm(1);
-        }
 
-        .card-header,
-        .card-img,
-        .card-block,
-        .card-footer {
-            position: relative;
-
-            &:only-child {
+            .card-header,
+            .card-img,
+            .card-block,
+            .card-footer {
+                position: relative;
                 border: $one__pixel solid;
-                border-radius: $card__radius;
-            }
 
-            &:first-child {
-                border: $one__pixel solid;
-                border-radius: $card__radius $card__radius 0 0;
-            }
+                &:first-child {
+                    border-radius: $card__radius $card__radius 0 0;
+                }
 
-            &:last-child {
-                border: $one__pixel solid;
-                border-radius: 0 0 $card__radius $card__radius;
-            }
+                &:last-child {
+                    border-radius: 0 0 $card__radius $card__radius;
+                }
 
-            &:first-child + :last-child {
-                border-top: 0 none;
-            }
+                &:only-child {
+                    border: $one__pixel solid;
+                    border-radius: $card__radius;
+                }
 
-            &:not(:last-child) {
-                border-right: $one__pixel solid;
-                border-left: $one__pixel solid;
+                &:not(:last-child) {
+                    border-bottom: 0;
+                }
             }
         }
 
         .card-block {
-            box-sizing: border-box;
             padding: $card__x;
 
             &.card {

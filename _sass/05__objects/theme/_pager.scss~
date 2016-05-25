@@ -16,67 +16,98 @@ $pager__previous__icon:  $fa-var-angle-left;
             display: flex;
         }
 
-        a.pager-item {
-            display: inline-block;
+        .pager-item {
+            //
         }
 
-        .pager-item {
-            padding: $pager__y $pager__x;
-            border: $one__pixel solid;
-            border-radius: $pager__radius;
+        .pager {
+            @include clearfix;
 
-            &.active {
+            padding-left: 0;
+
+            list-style: none;
+
+            text-align: center;
+
+            > li {
+                display: inline;
+            }
+
+            > li > a {
+                display: inline-block;
+                padding: $pager__y $pager__x;
+
+                border: $one__pixel solid;
+                border-radius: $pager__radius;
+            }
+
+            > .active > a,
+            > li > .active {
                 @include state-and-self {
                     color: $white;
                     border-color: transparent;
                     background-color: $primary__color;
                 }
             }
-        }
-        //
-        //  Variations
-        .pager-directional {
-            justify-content: space-between;
+
+            > .next {
+                float: right;
+            }
+
+            > .previous {
+                float: left;
+            }
         }
 
-        .pager-flush .pager-item {
-            border-radius: 0;
+        .pager-rounded {
+
+            > li > a {
+                border-radius: ($pager__y * 2) + $global__line-height;
+            }
+        }
+
+        .pager-flush {
+
+            > li > a {
+                border-radius: 0;
+            }
         }
 
         .pager-justified {
+            display: flex;
 
-            .pager-item {
+            > li {
                 flex: 1 0 auto;
             }
 
-            .pager-previous {
+            > li > a {
+                display: block;
+            }
+
+            .previous {
                 text-align: left;
             }
 
-            .pager-next {
+            .next {
                 text-align: right;
             }
-        }
-
-        .pager-rounded .pager-item {
-            border-radius: ($pager__y * 2) + $global__line-height;
         }
 
         @if $pager__use-icon {
             .pager {
 
-                .pager-next:after,
-                .pager-previous:before {
+                .next > a:after,
+                .previous > a:before {
                     line-height: 1;
                     font-family: $fa-font-name;
                 }
 
-                .pager-next:after {
+                .next > a:after {
                     content: "#{$pager__next__icon}";
                     margin-left: $pager__x / 2;
                 }
 
-                .pager-previous:before {
+                .previous > a:before {
                     content: "#{$pager__previous__icon}";
                     margin-right: $pager__x / 2;
                 }
@@ -84,12 +115,12 @@ $pager__previous__icon:  $fa-var-angle-left;
         } @else {
             .pager {
 
-                .pager-next:after {
+                .next > a:after {
                     content: "\00BB";
                     margin-left: $pager__x / 2;
                 }
 
-                .pager-previous:before {
+                .previous > a:before {
                     content: "\00AB";
                     margin-right: $pager__x / 2;
                 }

@@ -153,12 +153,12 @@ $form__y:         $global__y;
             }
         }
 
-        [type='radio'],
-        [type='checkbox'] {
-            position: absolute;
+        //  [type='radio'],
+        //  [type='checkbox'] {
+        //      position: absolute;
 
-            margin-left: $form__x * -1.5;
-        }
+        //      margin-left: $form__x * -1.5;
+        //  }
 
         //  .radio + .radio,
         //  .checkbox + .checkbox {
