@@ -1,18 +1,23 @@
 @mixin btn-group-color-variation($input__palette) {
     @each $class__name, $color in $input__palette {
-        .btn-group-#{$class__name} .btn {
-            color: check-color($color, 80, inherit, $white);
-            border-color: $color;
+        .btn-group-#{$class__name} {
+            border-color: transparent;
             background-color: $color;
 
-            @include state-and-active {
+            a.btn {
                 color: check-color($color, 80, inherit, $white);
-                background-color: shade($color, $btn__contrast);
-            }
+                border-color: $color;
+                background-color: $color;
 
-            &[disabled] {
-                @include state-and-self {
-                    background-color: $color;
+                @include state-and-active {
+                    color: check-color($color, 80, inherit, $white);
+                    background-color: shade($color, $btn__contrast);
+                }
+
+                &[disabled] {
+                    @include state-and-self {
+                        background-color: $color;
+                    }
                 }
             }
         }

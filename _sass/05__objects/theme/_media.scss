@@ -13,6 +13,10 @@ $media__y:         $global__y;
             display: flex;
         }
 
+        .media-body {
+            flex-grow: 1;
+        }
+
         .media-right {
             padding-left: $media__gutter;
         }

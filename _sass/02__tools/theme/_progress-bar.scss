@@ -13,8 +13,8 @@
         $x: ($unit__x * strip-unit($size));
         $y: ($unit__y * strip-unit($size));
 
-        .progress-bar-#{$class__name} {
-            height: ($y * 2) + $global__unit;
+        .progress-#{$class__name} {
+            height: ($y * negative(0.5)) + $global__unit;
         }
     }
 }

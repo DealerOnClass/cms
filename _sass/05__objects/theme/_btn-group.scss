@@ -81,7 +81,6 @@ $pagination__previous__icon:  $fa-var-angle-left;
 
             .btn-group-item {
                 margin: 0 !important;
-                border: 0 none!important;
 
                 &:not(:last-child):after {
                     margin-left: $breadcrumb__x;
@@ -100,29 +99,29 @@ $pagination__previous__icon:  $fa-var-angle-left;
 
             .btn-group-item {
 
-                &:last-child {
+                &.is-next {
                     text-align: right;
                 }
 
                 @if $pagination__use-icon {
-                    &:first-child:before,
-                    &:last-child:after {
+                    &.is-previous:before,
+                    &.is-next:after {
                         font-family: $fa-font-name;
                     }
 
-                    &:first-child:before {
+                    &.is-previous:before {
                         content: "#{$pagination__previous__icon}";
                     }
 
-                    &:last-child:after {
+                    &.is-next:after {
                         content: "#{$pagination__next__icon}";
                     }
                 } @else {
-                    &:first-child:before {
+                    &.is-previous:before {
                         content: "\00AB";
                     }
 
-                    &:last-child:after {
+                    &.is-next:after {
                         content: "\00BB";
                     }
                 }
@@ -152,6 +151,9 @@ $pagination__previous__icon:  $fa-var-angle-left;
         }
 
         .btn-group-flush {
+
+            border: 0 none;
+            border-radius: 0 !important;
 
             .btn-group-item {
                 border-color: transparent !important;

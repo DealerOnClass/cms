@@ -143,7 +143,7 @@ $offcanvas-nav-width: 15em;
 
     z-index: $zindex-offcanvas;
 
-    overflow-y: auto;
+    overflow-y: scroll;
 
     width: $offcanvas-nav-width;
     height: calc(100% - #{$oncanvas-nav-height});
@@ -371,6 +371,7 @@ $offcanvas-nav-width: 15em;
 }
 
 #something-otherthan .js-navbar-sticky {
+    position: relative;
     top: -1px;
     transition: border-radius 0.25s ease-in-out;
     box-shadow: 0 $two__pixels $three__pixels rgba(0, 0, 0, 0.1);
@@ -393,6 +394,7 @@ $offcanvas-nav-width: 15em;
 //
 //  Context Specific
 .page-navbar {
+    backface-visibility: hidden;
     box-shadow: 0 $two__pixels $three__pixels rgba(0, 0, 0, 0.1);
 }
 

@@ -38,13 +38,29 @@ $navbar__y:         $global__y;
         }
 
         a.navbar-item,
-        button.navbar-item,
+        button.navbar-item {
+
+            @include state-and-active {
+                color: $white;
+                border-color: $primary__color;
+                background-color: $primary__color;
+            }
+        }
+
         .navbar-item.dropdown {
 
             @include state-and-active-and-open {
                 color: $white;
                 border-color: $primary__color;
                 background-color: $primary__color;
+            }
+
+            a.dropdown-item {
+                @include state-and-active {
+                    color: $white;
+                    border-color: $primary__color;
+                    background-color: $primary__color;
+                }
             }
         }
 

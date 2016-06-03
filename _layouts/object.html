@@ -10,12 +10,12 @@ layout: default
 <header class="header page-header">
     <div class="btn-group btn-group-pagination btn-group-flush btn-group-md btn-group-justified btn-group-white page-navbar">
         {% if page.previous and page.previous.category contains "objects" %}
-        <a class="btn-group-item btn" href="{{ page.previous.url | prepend: site.baseurl }}">
+        <a class="btn-group-item btn is-previous" href="{{ page.previous.url | prepend: site.baseurl }}">
             {{ page.previous.navtitle | capitalize }}
         </a>
         {% endif %}
         {% if page.next and page.next.category contains "objects" %}
-        <a class="btn-group-item btn" href="{{ page.next.url | prepend: site.baseurl }}">
+        <a class="btn-group-item btn is-next" href="{{ page.next.url | prepend: site.baseurl }}">
             {{ page.next.navtitle | capitalize }}
         </a>
         {% endif %}

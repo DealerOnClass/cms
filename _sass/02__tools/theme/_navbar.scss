@@ -1,34 +1,34 @@
 @mixin navbar-color-variation($input__palette) {
     @each $class__name, $color in $input__palette {
         .navbar-#{$class__name} {
+
             color: check-color($color, 80, inherit, $white);
             border: 0 none;
             background-color: $color;
 
-            a,
-            button {
+            a.navbar-item,
+            button.navbar-item {
                 @if ($color != white) {
-                    color: inherit;
-                }
-
-                @include state-and-active {
-                    background-color: shade($color, $navbar__contrast);
-                }
-            }
-
-            .navbar-item.open > .dropdown-toggle {
-                background-color: shade($color, $navbar__contrast);
-            }
-
-            .dropdown-menu {
-                background-color: shade($color, $navbar__contrast);
-
-                a.dropdown-item {
-                    border-color: transparent;
-                    background-color: shade($color, $navbar__contrast);
-
                     @include state-and-active {
-                        background-color: shade($color, $navbar__contrast * 1.5);
+                        background-color: shade($color, $navbar__contrast);
+                    }
+                }
+            }
+
+            .navbar-item.dropdown {
+                @if ($color != white) {
+                    @include state-and-active-and-open {
+                        background-color: shade($color, $navbar__contrast);
+                    }
+
+                    .dropdown-menu {
+                        background-color: shade($color, $navbar__contrast);
+                    }
+
+                    a.dropdown-item {
+                        @include state-and-active {
+                            background-color: shade($color, $navbar__contrast * 1.5);
+                        }
                     }
                 }
             }

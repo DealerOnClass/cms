@@ -4,67 +4,52 @@ title:      Leads Screen
 navgroup:   "mockups"
 navorder:   2
 ---
-<ol class="breadcrumb breadcrumb-white breadcrumb-md page-navbar">
-    <li>
-        <a href="#">Home</a>
-    </li>
-    <li class="active">Search Leads</li>
-</ol>
+<div class="btn-group btn-group-breadcrumb btn-group-flush btn-group-white btn-group-md page-navbar" aria-label="Basic example">
+    <a class="btn-group-item btn" href="#">home</a>
+    <span class="btn-group-item btn" href="#">Search Leads</span>
+</div>
 <div id="something-otherthan" class="container hero" style="max-width: 85%; padding-bottom: 0;">
     <nav class="navbar navbar-white navbar-borderless navbar-md js-navbar-sticky navbar-flush" data-sticky-offset=".oncanvas-nav">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse0">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <div class="nav navbar-nav">
+                <div class="navbar-item dropdown" href="#">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Lead Source
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="">Option 1</a></li>
-                        <li><a href="">Option 2</a></li>
-                        <li><a href="">Option 3</a></li>
-                        <li><a href="">Option 4</a></li>
-                        <li><a href="">Option 5</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <form class="navbar-form form-inline">
-                        <input class="form-control form-control-transparent" placeholder="Search..." type="text">
-                    </form>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="navbar-text">From:</li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+            <form class="navbar-form form-inline">
+                <input class="form-control form-control-transparent" placeholder="Search..." type="text">
+            </form>
+            <div class="nav navbar-nav">
+                <span class="navbar-item">From:</span>
+                <div class="navbar-item dropdown" href="#">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         2/19/2016
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="">Option 1</a></li>
-                        <li><a href="">Option 2</a></li>
-                        <li><a href="">Option 3</a></li>
-                        <li><a href="">Option 4</a></li>
-                        <li><a href="">Option 5</a></li>
-                    </ul>
-                </li>
-                <li class="navbar-text" style="margin-right: 0; margin-left: 0;">to:</li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+                <span class="navbar-item">to:</span>
+                <div class="navbar-item dropdown" href="#">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         3/19/2016
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="">Option 1</a></li>
-                        <li><a href="">Option 2</a></li>
-                        <li><a href="">Option 3</a></li>
-                        <li><a href="">Option 4</a></li>
-                        <li><a href="">Option 5</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">
-                        Export
-                    </a>
-                </li>
-            </ul>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 </div>
