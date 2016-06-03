@@ -4261,9 +4261,12 @@ var Tab = (function ($) {
     LI: 'li',
     DROPDOWN: '.dropdown',
     UL: 'ul:not(.dropdown-menu)',
-    FADE_CHILD: '> li .fade, > .fade',
+    NAV: 'nav',
+    //  FADE_CHILD: '> li .fade, > .fade',
+    FADE_CHILD: '> .nav-item.fade, > .fade',
     ACTIVE: '.active',
-    ACTIVE_CHILD: '> li > .active, > .active',
+    //  ACTIVE_CHILD: '> li > .active, > .active',
+    ACTIVE_CHILD: '> .nav-item.active, > .active',
     DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"]',
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
@@ -4304,7 +4307,8 @@ var Tab = (function ($) {
 
         var target = undefined;
         var previous = undefined;
-        var ulElement = $(this._element).closest(Selector.UL)[0];
+        //  var ulElement = $(this._element).closest(Selector.UL)[0];
+        var ulElement = $(this._element).closest(Selector.NAV)[0];
         var selector = Util.getSelectorFromElement(this._element);
 
         if (ulElement) {
