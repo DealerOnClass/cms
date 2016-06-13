@@ -882,9 +882,7 @@ hr {
       display: -ms-flexbox;
       display: flex; }
       .btn-group-justified .btn-group-item.dropdown > .dropdown-toggle {
-        -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1; }
+        -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; }
 
 .btn-group-flush {
   border: 0 none;
