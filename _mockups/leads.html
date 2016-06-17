@@ -11,43 +11,51 @@ navorder:   2
 <div id="something-otherthan" class="container hero" style="max-width: 85%; padding-bottom: 0;">
     <nav class="navbar navbar-white navbar-borderless navbar-md js-navbar-sticky navbar-flush" data-sticky-offset=".oncanvas-nav">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse0">
-            <div class="nav navbar-nav">
-                <div class="navbar-item dropdown" href="#">
-                    <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Lead Source
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+            <div class="navbar-group">
+                <div class="nav navbar-nav">
+                    <div class="navbar-item dropdown" href="#">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Lead Source
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="navbar-form form-inline">
+                    <input class="form-control form-control-transparent" placeholder="Search..." type="text">
+                </form>
+                <div class="nav navbar-nav">
+                    <span class="navbar-item">From:</span>
+                    <div class="navbar-item dropdown" href="#">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            2/19/2016
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                    <span class="navbar-item">to:</span>
+                    <div class="navbar-item dropdown" href="#">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            3/19/2016
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <form class="navbar-form form-inline">
-                <input class="form-control form-control-transparent" placeholder="Search..." type="text">
-            </form>
-            <div class="nav navbar-nav">
-                <span class="navbar-item">From:</span>
-                <div class="navbar-item dropdown" href="#">
-                    <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        2/19/2016
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-                <span class="navbar-item">to:</span>
-                <div class="navbar-item dropdown" href="#">
-                    <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        3/19/2016
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+            <div class="navbar-group">
+                <div class="nav navbar-nav">
+                    <button class="navbar-item" type="submit">Submit</button>
+                    <button class="navbar-item" type="submit">Export</button>
                 </div>
             </div>
         </div>
@@ -623,23 +631,14 @@ navorder:   2
                     </div>
                     <div class="row">
                         <div class="col-sm-3">
-                            <ul class="nav nav-pills nav-stacked nav-flush nav-white">
-                                <li class="active">
-                                    <a href="#tab1" data-toggle="tab">Contact Details</a>
-                                </li>
-                                <li>
-                                    <a href="#tab2" data-toggle="tab">Campaign Details</a>
-                                </li>
-                                <li>
-                                    <a href="#tab3" data-toggle="tab">Lead Details</a>
-                                </li>
-                                <li>
-                                    <a href="#tab4" data-toggle="tab">Purchase Vehicle</a>
-                                </li>
-                                <li>
-                                    <a href="#tab5" data-toggle="tab">Trade-In Vehicle</a>
-                                </li>
-                            </ul>
+                            <nav class="nav nav-pills nav-stacked nav-flush nav-white">
+                                <a class="nav-item active" href="#tab1" data-toggle="tab">Contact Details</a>
+                                <a class="nav-item" href="#tab2" data-toggle="tab">Campaign Details</a>
+                                <a class="nav-item" href="#tab3" data-toggle="tab">Lead Details</a>
+                                <a class="nav-item" href="#tab4" data-toggle="tab">Purchase Vehicle</a>
+                                <a class="nav-item" href="#tab5" data-toggle="tab">Trade-In Vehicle</a>
+                                <a class="nav-item" href="#tab6" data-toggle="tab">Lead Delivery Details</a>
+                            </nav>
                         </div>
                         <div class="col-sm-9">
                             <div class="tab-content">
@@ -865,6 +864,55 @@ navorder:   2
                                                     </span>
                                                 </li>
                                             </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab6" class="tab-pane fade">
+                                    <div id="accordion" class="list-group list-group-white" role="tablist" aria-multiselectable="true">
+                                        <a class="list-group-item list-group-link" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            <div style="width: 100%">
+                                                <h3 class="clearfix">Default ADF</h3>
+                                                <div class="row">
+                                                    <div class="col-sm-4">To: mooree@fitzmall.com</div>
+                                                    <div class="col-sm-4">3/25/2016 8:15:43AM</div>
+                                                    <div class="col-sm-4 text-right">Sent <i class="text-success fa fa-circle"></i></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="list-group-item">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                        <a class="list-group-item list-group-link collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <div style="width: 100%">
+                                                <h3 class="clearfix">Default Text</h3>
+                                                <div class="row">
+                                                    <div class="col-sm-4">To: mooree@fitzmall.com</div>
+                                                    <div class="col-sm-4">3/25/2016 8:15:43AM</div>
+                                                    <div class="col-sm-4 text-right">Broken <i class="text-danger fa fa-circle"></i></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="list-group-item">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                        <a class="list-group-item list-group-link collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <div style="width: 100%">
+                                                <h3 class="clearfix">Default Cheese</h3>
+                                                <div class="row">
+                                                    <div class="col-sm-4">To: mooree@fitzmall.com</div>
+                                                    <div class="col-sm-4">3/25/2016 8:15:43AM</div>
+                                                    <div class="col-sm-4 text-right">Sending <i class="text-warning fa fa-circle"></i></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="list-group-item">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

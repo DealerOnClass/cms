@@ -2541,10 +2541,10 @@ var Tab = (function ($) {
     UL: 'ul:not(.dropdown-menu)',
     NAV: 'nav',
     //  FADE_CHILD: '> li .fade, > .fade',
-    FADE_CHILD: '> .nav-item.fade, > .fade',
+    FADE_CHILD: '.nav-item.fade, > .fade',
     ACTIVE: '.active',
     //  ACTIVE_CHILD: '> li > .active, > .active',
-    ACTIVE_CHILD: '> .nav-item.active, > .active',
+    ACTIVE_CHILD: '.nav-item.active, > .active',
     DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"]',
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'

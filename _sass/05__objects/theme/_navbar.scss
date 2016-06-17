@@ -76,6 +76,7 @@ $navbar__y:         $global__y;
         }
 
         .navbar-collapse {
+			justify-content: space-between;
 
             &.collapsing,
             &.in {

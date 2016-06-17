@@ -19,17 +19,17 @@ $list-group__y:         $global__y;
             padding: $list-group__y $list-group__x;
             border: $one__pixel solid;
 
-            //	&:first-child {
-            //	    border-radius: $list-group__radius $list-group__radius 0 0;
-            //	}
+            &:first-child {
+                border-radius: $list-group__radius $list-group__radius 0 0;
+            }
 
-            //	&:last-child {
-            //	    border-radius: 0 0 $list-group__radius $list-group__radius;
-            //	}
+            &:last-child {
+                border-radius: 0 0 $list-group__radius $list-group__radius;
+            }
 
-            //	&:only-child {
-            //	    border-radius: $list-group__radius;
-            //	}
+            &:only-child {
+                border-radius: $list-group__radius;
+            }
 
             &:not(:first-child) {
                 border-top: 0;
@@ -69,7 +69,6 @@ $list-group__y:         $global__y;
                 @include list-group-color-variation($primary__palette);
                 @include list-group-color-variation($neutral__palette);
                 @include list-group-color-variation($state__palette);
-                @include list-group-color-variation($classic__palette);
             }
         }
     }

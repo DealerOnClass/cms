@@ -362,6 +362,8 @@ $offcanvas-nav-width: 15em;
 }
 
 #something {
+	position: relative;
+	z-index: 950;
     transition: top 0.25s ease-in-out;
 
     .is-sticky #something-else {
@@ -370,11 +372,15 @@ $offcanvas-nav-width: 15em;
     }
 }
 
-#something-otherthan .js-navbar-sticky {
-    position: relative;
-    top: -1px;
-    transition: border-radius 0.25s ease-in-out;
-    box-shadow: 0 $two__pixels $three__pixels rgba(0, 0, 0, 0.1);
+#something-otherthan {
+
+	.js-navbar-sticky {
+		z-index: 1000;
+		position: relative;
+		top: -1px;
+		transition: border-radius 0.25s ease-in-out;
+		box-shadow: 0 $two__pixels $three__pixels rgba(0, 0, 0, 0.1);
+	}
 }
 
 .slide-is-active #something {
