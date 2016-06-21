@@ -39,7 +39,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
 
 //
 //  Jekyll Serve
-gulp.task('browser-sync', ['sass', 'scripts', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'sass_export', 'scripts', 'jekyll-build'], function() {
     browserSync.init({
         server: '_site',
         notify: true
@@ -60,6 +60,25 @@ gulp.task('sass', function() {
         //      discardComments: { removeAll: true }
         //  }))
         .pipe(gulp.dest('./_includes'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
+//
+//  Sass Compile
+gulp.task('sass_export', function() {
+    gulp.src('./export/**/*.scss')
+        .pipe(plumber())
+        .pipe(sass())
+        .pipe(autoprefixer({
+            browsers:  ['last 2 versions'],
+            cascade:   false
+        }))
+        //  .pipe(cssnano({
+        //      discardComments: { removeAll: true }
+        //  }))
+        .pipe(gulp.dest('./export/css/'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -104,6 +123,7 @@ gulp.task('scripts', function() {
 //  Watch
 gulp.task('watch', function () {
     gulp.watch('./_sass/**/*.scss', ['sass']);
+    gulp.watch('./export/**/*.scss', ['sass_export']);
     gulp.watch('./js/**/*.js', ['scripts']);
     gulp.watch(
         [
